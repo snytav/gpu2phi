@@ -1,0 +1,43 @@
+oarticle size 72 9 
+printf default limit 1 
+printf limit set to 2048 
+err 0 
+dnhy000009.datSORT m     2.00400e-02 q_m     5.44662e-04      80000 (sum      80000) particles in     3672 cells: MIN          0 MAX         80 average         21 
+SORT m    -1.00000e-02 q_m    -1.00000e+00     160000 (sum     240000) particles in     3672 cells: MIN          0 MAX        241 average         65 
+SORT m    -4.00000e-05 q_m    -1.00000e+00      80000 (sum     320000) particles in     3672 cells: MIN          0 MAX        296 average         87 
+Device cell array allocated error 0 no error 
+----------------------------------------------------------- plasma check before move 1.00000
+GPU memory total 5375 free 1960
+before Step  64 free 36523 
+32587 x1     9.007438256255753e-01 
+bCurrentToMesh 32587 x1     9.007438256255753e-01 
+inCurrentToMesh 32587 x1     9.007438256255753e-01 
+inCurrentToMesh  32587 m 0 
+inCurrentToMesh_b_pqr 32587 x1     9.007438256255753e-01 
+pqr 32587 x1     9.007438256255753e-01 
+pqr su 32587 x1     9.007438256255753e-01     1.947202451936247e-04 
+deleteLAST FN       3504 n 187 i 240 num 241 
+deleteLAST FN       3504 n 187 i 240 num 240 
+deleteLAST FN      76553 n 237 i 239 num 240 
+deleteLAST FN      76553 n 237 i 239 num 239 
+GPU-Plasma
+after  Step 64 free 32226 
+GPU memory total 5375 free 1951
+============================================================================================
+before Step  65 free 32226 
+32587 x1     9.009385458704819e-01 
+bCurrentToMesh 32587 x1     9.009385458704819e-01 
+inCurrentToMesh 32587 x1     9.009385458704819e-01 
+inCurrentToMesh  32587 m 3 
+32587 s 6.340209e-02 rz 1.832000e-01 ry 4.545175e-02 denom 1.075474e-10 x2 9.007562e-01 
+inCurrentToMesh_before_couple 32587 x2     9.007561712958518e-01 
+pqr 32587 x1     9.007561712958518e-01 
+pqr su 32587 x1     9.007561712958518e-01     1.234567027652567e-05 
+inCurrentToMesh between 32587 x2     9.007561712958518e-01 
+pqr 32587 x1     9.009385458704819e-01 
+pqr su 32587 x1     9.009385458704819e-01     1.823745746301064e-04 
+GPU-Plasma
+after  Step 65 free 32227 
+GPU memory total 5375 free 1951
+============================================================================================
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ plasma check after move 1.00000

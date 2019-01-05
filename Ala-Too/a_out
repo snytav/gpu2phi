@@ -1,0 +1,10 @@
+err 0 
+dnhy000001.datSORT m     2.00400e-02 q_m     5.44662e-04      80000 (sum      80000) particles in      612 cells: MIN          0 MAX        243 average        130 
+SORT m    -1.00000e-02 q_m    -1.00000e+00     160000 (sum     240000) particles in      612 cells: MIN          0 MAX        729 average        392 
+SORT m    -4.00000e-05 q_m    -1.00000e+00      15907 (sum     255907) particles in      612 cells: MIN          0 MAX        916 average        418 
+gpu_plasma.h : size = 612
+----------------------------------------------------------- plasma check before move 1.00000
+function Diagnose executed on sl032 
+QQ
+sort 0 fn          1 x     7.36684e-01 
+function Diagnose executed in 1.749700e-02 sec 

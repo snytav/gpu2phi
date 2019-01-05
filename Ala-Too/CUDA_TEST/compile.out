@@ -1,0 +1,1701 @@
+archAPI.h(206): warning: statement is unreachable
+
+archAPI.h(216): warning: missing return statement at end of non-void function "MemoryAllocate"
+
+archAPI.h(237): warning: missing return statement at end of non-void function "MemorySet"
+
+archAPI.h(260): warning: statement is unreachable
+
+particle.h(139): warning: variable "d" is used before its value is set
+
+read_particles.c(235): warning: variable "pos" was set but never used
+
+read_particles.c(287): warning: variable "err" was set but never used
+
+gpu_plasma.h(116): warning: conversion from a string literal to "char *" is deprecated
+
+gpu_plasma.h(1294): warning: variable "qq" was declared but never referenced
+
+main.cu(74): warning: variable "start_nt" was set but never used
+
+gpu_plasma.h(599): warning: variable "n_global" was declared but never referenced
+
+gpu_plasma.h(628): warning: variable "dbg_t" was declared but never referenced
+
+cell.h(2232): warning: variable "flag" was declared but never referenced
+          detected during instantiation of "void GPU_StepAllCells_SingleNode(Cell<Particle, dims> **, KernelParams *, unsigned int, unsigned int, unsigned int, unsigned int, unsigned int, unsigned int) [with Cell=GPUCell, dims=2]" 
+gpu_plasma.h(992): here
+
+cell.h(339): warning: variable "i" was declared but never referenced
+          detected during:
+            instantiation of "int Cell<Particle, dims>::Move(unsigned int, int *, CurrentTensor *, CurrentTensor *, double, double, double *, int, CellDouble *, CellDouble *, CellDouble *, CellDouble *, CellDouble *, CellDouble *, double *, int) [with Particle=Particle, dims=2]" 
+gpu_plasma.h(780): here
+            instantiation of "void GPU_StepAllCells_SingleNode(Cell<Particle, dims> **, KernelParams *, unsigned int, unsigned int, unsigned int, unsigned int, unsigned int, unsigned int) [with Cell=GPUCell, dims=2]" 
+gpu_plasma.h(992): here
+
+cell.h(1632): warning: calling a __host__ function from a __host__ __device__ function is not allowed
+          detected during:
+            instantiation of "int Cell<Particle, dims>::Reflect(Particle *, int) [with Particle=Particle, dims=2]" 
+(2352): here
+            instantiation of "int Cell<Particle, dims>::Move(unsigned int, int *, CurrentTensor *, CurrentTensor *, double, double, double *, int, CellDouble *, CellDouble *, CellDouble *, CellDouble *, CellDouble *, CellDouble *, double *, int) [with Particle=Particle, dims=2]" 
+gpu_plasma.h(780): here
+            instantiation of "void GPU_StepAllCells_SingleNode(Cell<Particle, dims> **, KernelParams *, unsigned int, unsigned int, unsigned int, unsigned int, unsigned int, unsigned int) [with Cell=GPUCell, dims=2]" 
+gpu_plasma.h(992): here
+
+cell.h(268): warning: variable "size_p" was declared but never referenced
+          detected during:
+            instantiation of "int Cell<Particle, dims>::Move(unsigned int, int *, CurrentTensor *, CurrentTensor *, double, double, double *, int, CellDouble *, CellDouble *, CellDouble *, CellDouble *, CellDouble *, CellDouble *, double *, int) [with Particle=Particle, dims=2]" 
+gpu_plasma.h(780): here
+            instantiation of "void GPU_StepAllCells_SingleNode(Cell<Particle, dims> **, KernelParams *, unsigned int, unsigned int, unsigned int, unsigned int, unsigned int, unsigned int) [with Cell=GPUCell, dims=2]" 
+gpu_plasma.h(992): here
+
+cell.h(269): warning: variable "pos" was declared but never referenced
+          detected during:
+            instantiation of "int Cell<Particle, dims>::Move(unsigned int, int *, CurrentTensor *, CurrentTensor *, double, double, double *, int, CellDouble *, CellDouble *, CellDouble *, CellDouble *, CellDouble *, CellDouble *, double *, int) [with Particle=Particle, dims=2]" 
+gpu_plasma.h(780): here
+            instantiation of "void GPU_StepAllCells_SingleNode(Cell<Particle, dims> **, KernelParams *, unsigned int, unsigned int, unsigned int, unsigned int, unsigned int, unsigned int) [with Cell=GPUCell, dims=2]" 
+gpu_plasma.h(992): here
+
+cell.h(293): warning: variable "i" was declared but never referenced
+          detected during:
+            instantiation of "int Cell<Particle, dims>::Move(unsigned int, int *, CurrentTensor *, CurrentTensor *, double, double, double *, int, CellDouble *, CellDouble *, CellDouble *, CellDouble *, CellDouble *, CellDouble *, double *, int) [with Particle=Particle, dims=2]" 
+gpu_plasma.h(780): here
+            instantiation of "void GPU_StepAllCells_SingleNode(Cell<Particle, dims> **, KernelParams *, unsigned int, unsigned int, unsigned int, unsigned int, unsigned int, unsigned int) [with Cell=GPUCell, dims=2]" 
+gpu_plasma.h(992): here
+
+cell.h(274): warning: variable "data" was set but never used
+          detected during:
+            instantiation of "void Cell<Particle, dims>::writeParticleToSurface(int, Particle *) [with Particle=Particle, dims=2]" 
+(2364): here
+            instantiation of "int Cell<Particle, dims>::Move(unsigned int, int *, CurrentTensor *, CurrentTensor *, double, double, double *, int, CellDouble *, CellDouble *, CellDouble *, CellDouble *, CellDouble *, CellDouble *, double *, int) [with Particle=Particle, dims=2]" 
+gpu_plasma.h(780): here
+            instantiation of "void GPU_StepAllCells_SingleNode(Cell<Particle, dims> **, KernelParams *, unsigned int, unsigned int, unsigned int, unsigned int, unsigned int, unsigned int) [with Cell=GPUCell, dims=2]" 
+gpu_plasma.h(992): here
+
+gpu_plasma.h(854): warning: variable "d" was declared but never referenced
+
+gpu_plasma.h(855): warning: variable "cnp" was declared but never referenced
+
+gpu_plasma.h(855): warning: variable "sts" was declared but never referenced
+
+gpu_plasma.h(856): warning: variable "index" was declared but never referenced
+
+gpu_plasma.h(371): warning: variable "new_c" was declared but never referenced
+
+gpu_plasma.h(368): warning: variable "n" was set but never used
+          detected during instantiation of "void GPU_MakeDepartureLists_SingleNode(Cell<Particle, dims> **, KernelParams *, unsigned int, unsigned int, unsigned int, unsigned int, unsigned int, unsigned int) [with Cell=GPUCell, dims=2]" 
+(1004): here
+
+gpu_plasma.h(440): warning: variable "pos" was declared but never referenced
+
+gpu_plasma.h(677): warning: variable "qq" was declared but never referenced
+
+gpu_plasma.h(684): warning: variable "qq" was declared but never referenced
+
+gpu_plasma.h(672): warning: variable "cell_num" was set but never used
+          detected during instantiation of "void GPU_GetFlownBeamNumber_SingleNode(Cell<Particle, dims> **, KernelParams *, unsigned int, unsigned int, unsigned int, unsigned int, unsigned int, unsigned int) [with Cell=GPUCell, dims=2]" 
+(1011): here
+
+gpu_plasma.h(522): warning: variable "qq" was declared but never referenced
+
+gpu_plasma.h(4535): warning: conversion from a string literal to "char *" is deprecated
+          detected during:
+            instantiation of "void GPUPlasma<Cell, dims>::InitializeCPU() [with Cell=GPUCell, dims=2]" 
+(1610): here
+            instantiation of "void GPUPlasma<Cell, dims>::Initialize() [with Cell=GPUCell, dims=2]" 
+main.cu(63): here
+
+gpu_plasma.h(4536): warning: conversion from a string literal to "char *" is deprecated
+          detected during:
+            instantiation of "void GPUPlasma<Cell, dims>::InitializeCPU() [with Cell=GPUCell, dims=2]" 
+(1610): here
+            instantiation of "void GPUPlasma<Cell, dims>::Initialize() [with Cell=GPUCell, dims=2]" 
+main.cu(63): here
+
+gpu_plasma.h(4537): warning: conversion from a string literal to "char *" is deprecated
+          detected during:
+            instantiation of "void GPUPlasma<Cell, dims>::InitializeCPU() [with Cell=GPUCell, dims=2]" 
+(1610): here
+            instantiation of "void GPUPlasma<Cell, dims>::Initialize() [with Cell=GPUCell, dims=2]" 
+main.cu(63): here
+
+gpu_plasma.h(4583): warning: variable "dbg_ion_x" was declared but never referenced
+          detected during:
+            instantiation of "void GPUPlasma<Cell, dims>::InitializeCPU() [with Cell=GPUCell, dims=2]" 
+(1610): here
+            instantiation of "void GPUPlasma<Cell, dims>::Initialize() [with Cell=GPUCell, dims=2]" 
+main.cu(63): here
+
+gpu_plasma.h(4583): warning: variable "dbg_ion_y" was declared but never referenced
+          detected during:
+            instantiation of "void GPUPlasma<Cell, dims>::InitializeCPU() [with Cell=GPUCell, dims=2]" 
+(1610): here
+            instantiation of "void GPUPlasma<Cell, dims>::Initialize() [with Cell=GPUCell, dims=2]" 
+main.cu(63): here
+
+gpu_plasma.h(4583): warning: variable "dbg_ion_z" was declared but never referenced
+          detected during:
+            instantiation of "void GPUPlasma<Cell, dims>::InitializeCPU() [with Cell=GPUCell, dims=2]" 
+(1610): here
+            instantiation of "void GPUPlasma<Cell, dims>::Initialize() [with Cell=GPUCell, dims=2]" 
+main.cu(63): here
+
+gpu_plasma.h(4584): warning: variable "dbg_ion_px" was declared but never referenced
+          detected during:
+            instantiation of "void GPUPlasma<Cell, dims>::InitializeCPU() [with Cell=GPUCell, dims=2]" 
+(1610): here
+            instantiation of "void GPUPlasma<Cell, dims>::Initialize() [with Cell=GPUCell, dims=2]" 
+main.cu(63): here
+
+gpu_plasma.h(4584): warning: variable "dbg_ion_py" was declared but never referenced
+          detected during:
+            instantiation of "void GPUPlasma<Cell, dims>::InitializeCPU() [with Cell=GPUCell, dims=2]" 
+(1610): here
+            instantiation of "void GPUPlasma<Cell, dims>::Initialize() [with Cell=GPUCell, dims=2]" 
+main.cu(63): here
+
+gpu_plasma.h(4584): warning: variable "dbg_ion_pz" was declared but never referenced
+          detected during:
+            instantiation of "void GPUPlasma<Cell, dims>::InitializeCPU() [with Cell=GPUCell, dims=2]" 
+(1610): here
+            instantiation of "void GPUPlasma<Cell, dims>::Initialize() [with Cell=GPUCell, dims=2]" 
+main.cu(63): here
+
+gpu_plasma.h(4584): warning: variable "ion_q_m" was declared but never referenced
+          detected during:
+            instantiation of "void GPUPlasma<Cell, dims>::InitializeCPU() [with Cell=GPUCell, dims=2]" 
+(1610): here
+            instantiation of "void GPUPlasma<Cell, dims>::Initialize() [with Cell=GPUCell, dims=2]" 
+main.cu(63): here
+
+gpu_plasma.h(4584): warning: variable "ion_m" was declared but never referenced
+          detected during:
+            instantiation of "void GPUPlasma<Cell, dims>::InitializeCPU() [with Cell=GPUCell, dims=2]" 
+(1610): here
+            instantiation of "void GPUPlasma<Cell, dims>::Initialize() [with Cell=GPUCell, dims=2]" 
+main.cu(63): here
+
+gpu_plasma.h(4585): warning: variable "total_ions" was declared but never referenced
+          detected during:
+            instantiation of "void GPUPlasma<Cell, dims>::InitializeCPU() [with Cell=GPUCell, dims=2]" 
+(1610): here
+            instantiation of "void GPUPlasma<Cell, dims>::Initialize() [with Cell=GPUCell, dims=2]" 
+main.cu(63): here
+
+gpu_plasma.h(4586): warning: variable "dbg_el_x" was declared but never referenced
+          detected during:
+            instantiation of "void GPUPlasma<Cell, dims>::InitializeCPU() [with Cell=GPUCell, dims=2]" 
+(1610): here
+            instantiation of "void GPUPlasma<Cell, dims>::Initialize() [with Cell=GPUCell, dims=2]" 
+main.cu(63): here
+
+gpu_plasma.h(4586): warning: variable "dbg_el_y" was declared but never referenced
+          detected during:
+            instantiation of "void GPUPlasma<Cell, dims>::InitializeCPU() [with Cell=GPUCell, dims=2]" 
+(1610): here
+            instantiation of "void GPUPlasma<Cell, dims>::Initialize() [with Cell=GPUCell, dims=2]" 
+main.cu(63): here
+
+gpu_plasma.h(4586): warning: variable "dbg_el_z" was declared but never referenced
+          detected during:
+            instantiation of "void GPUPlasma<Cell, dims>::InitializeCPU() [with Cell=GPUCell, dims=2]" 
+(1610): here
+            instantiation of "void GPUPlasma<Cell, dims>::Initialize() [with Cell=GPUCell, dims=2]" 
+main.cu(63): here
+
+gpu_plasma.h(4587): warning: variable "dbg_el_px" was declared but never referenced
+          detected during:
+            instantiation of "void GPUPlasma<Cell, dims>::InitializeCPU() [with Cell=GPUCell, dims=2]" 
+(1610): here
+            instantiation of "void GPUPlasma<Cell, dims>::Initialize() [with Cell=GPUCell, dims=2]" 
+main.cu(63): here
+
+gpu_plasma.h(4587): warning: variable "dbg_el_py" was declared but never referenced
+          detected during:
+            instantiation of "void GPUPlasma<Cell, dims>::InitializeCPU() [with Cell=GPUCell, dims=2]" 
+(1610): here
+            instantiation of "void GPUPlasma<Cell, dims>::Initialize() [with Cell=GPUCell, dims=2]" 
+main.cu(63): here
+
+gpu_plasma.h(4587): warning: variable "dbg_el_pz" was declared but never referenced
+          detected during:
+            instantiation of "void GPUPlasma<Cell, dims>::InitializeCPU() [with Cell=GPUCell, dims=2]" 
+(1610): here
+            instantiation of "void GPUPlasma<Cell, dims>::Initialize() [with Cell=GPUCell, dims=2]" 
+main.cu(63): here
+
+gpu_plasma.h(4587): warning: variable "el_q_m" was declared but never referenced
+          detected during:
+            instantiation of "void GPUPlasma<Cell, dims>::InitializeCPU() [with Cell=GPUCell, dims=2]" 
+(1610): here
+            instantiation of "void GPUPlasma<Cell, dims>::Initialize() [with Cell=GPUCell, dims=2]" 
+main.cu(63): here
+
+gpu_plasma.h(4587): warning: variable "el_m" was declared but never referenced
+          detected during:
+            instantiation of "void GPUPlasma<Cell, dims>::InitializeCPU() [with Cell=GPUCell, dims=2]" 
+(1610): here
+            instantiation of "void GPUPlasma<Cell, dims>::Initialize() [with Cell=GPUCell, dims=2]" 
+main.cu(63): here
+
+gpu_plasma.h(4588): warning: variable "total_electrons" was declared but never referenced
+          detected during:
+            instantiation of "void GPUPlasma<Cell, dims>::InitializeCPU() [with Cell=GPUCell, dims=2]" 
+(1610): here
+            instantiation of "void GPUPlasma<Cell, dims>::Initialize() [with Cell=GPUCell, dims=2]" 
+main.cu(63): here
+
+gpu_plasma.h(4589): warning: variable "dbg_beam_x" was declared but never referenced
+          detected during:
+            instantiation of "void GPUPlasma<Cell, dims>::InitializeCPU() [with Cell=GPUCell, dims=2]" 
+(1610): here
+            instantiation of "void GPUPlasma<Cell, dims>::Initialize() [with Cell=GPUCell, dims=2]" 
+main.cu(63): here
+
+gpu_plasma.h(4589): warning: variable "dbg_beam_y" was declared but never referenced
+          detected during:
+            instantiation of "void GPUPlasma<Cell, dims>::InitializeCPU() [with Cell=GPUCell, dims=2]" 
+(1610): here
+            instantiation of "void GPUPlasma<Cell, dims>::Initialize() [with Cell=GPUCell, dims=2]" 
+main.cu(63): here
+
+gpu_plasma.h(4589): warning: variable "dbg_beam_z" was declared but never referenced
+          detected during:
+            instantiation of "void GPUPlasma<Cell, dims>::InitializeCPU() [with Cell=GPUCell, dims=2]" 
+(1610): here
+            instantiation of "void GPUPlasma<Cell, dims>::Initialize() [with Cell=GPUCell, dims=2]" 
+main.cu(63): here
+
+gpu_plasma.h(4590): warning: variable "dbg_beam_px" was declared but never referenced
+          detected during:
+            instantiation of "void GPUPlasma<Cell, dims>::InitializeCPU() [with Cell=GPUCell, dims=2]" 
+(1610): here
+            instantiation of "void GPUPlasma<Cell, dims>::Initialize() [with Cell=GPUCell, dims=2]" 
+main.cu(63): here
+
+gpu_plasma.h(4590): warning: variable "dbg_beam_py" was declared but never referenced
+          detected during:
+            instantiation of "void GPUPlasma<Cell, dims>::InitializeCPU() [with Cell=GPUCell, dims=2]" 
+(1610): here
+            instantiation of "void GPUPlasma<Cell, dims>::Initialize() [with Cell=GPUCell, dims=2]" 
+main.cu(63): here
+
+gpu_plasma.h(4590): warning: variable "dbg_beam_pz" was declared but never referenced
+          detected during:
+            instantiation of "void GPUPlasma<Cell, dims>::InitializeCPU() [with Cell=GPUCell, dims=2]" 
+(1610): here
+            instantiation of "void GPUPlasma<Cell, dims>::Initialize() [with Cell=GPUCell, dims=2]" 
+main.cu(63): here
+
+gpu_plasma.h(4590): warning: variable "beam_q_m" was declared but never referenced
+          detected during:
+            instantiation of "void GPUPlasma<Cell, dims>::InitializeCPU() [with Cell=GPUCell, dims=2]" 
+(1610): here
+            instantiation of "void GPUPlasma<Cell, dims>::Initialize() [with Cell=GPUCell, dims=2]" 
+main.cu(63): here
+
+gpu_plasma.h(4590): warning: variable "beam_m" was declared but never referenced
+          detected during:
+            instantiation of "void GPUPlasma<Cell, dims>::InitializeCPU() [with Cell=GPUCell, dims=2]" 
+(1610): here
+            instantiation of "void GPUPlasma<Cell, dims>::Initialize() [with Cell=GPUCell, dims=2]" 
+main.cu(63): here
+
+gpu_plasma.h(4591): warning: variable "total_beam_electrons" was declared but never referenced
+          detected during:
+            instantiation of "void GPUPlasma<Cell, dims>::InitializeCPU() [with Cell=GPUCell, dims=2]" 
+(1610): here
+            instantiation of "void GPUPlasma<Cell, dims>::Initialize() [with Cell=GPUCell, dims=2]" 
+main.cu(63): here
+
+gpu_plasma.h(3612): warning: variable "f" is used before its value is set
+          detected during:
+            instantiation of "void GPUPlasma<Cell, dims>::LoadTestData(int, int) [with Cell=GPUCell, dims=2]" 
+(5704): here
+            instantiation of "void GPUPlasma<Cell, dims>::InitializeCPU() [with Cell=GPUCell, dims=2]" 
+(1610): here
+            instantiation of "void GPUPlasma<Cell, dims>::Initialize() [with Cell=GPUCell, dims=2]" 
+main.cu(63): here
+
+gpu_plasma.h(3615): warning: variable "masses" is used before its value is set
+          detected during:
+            instantiation of "void GPUPlasma<Cell, dims>::LoadTestData(int, int) [with Cell=GPUCell, dims=2]" 
+(5704): here
+            instantiation of "void GPUPlasma<Cell, dims>::InitializeCPU() [with Cell=GPUCell, dims=2]" 
+(1610): here
+            instantiation of "void GPUPlasma<Cell, dims>::Initialize() [with Cell=GPUCell, dims=2]" 
+main.cu(63): here
+
+gpu_plasma.h(3438): warning: variable "qq" was declared but never referenced
+          detected during:
+            instantiation of "void GPUPlasma<Cell, dims>::InitBinaryParticles(std::vector<Particle, std::allocator<Particle>> &, int, double *, double *, double *, double *, double *, double *, double, double, int, double *, double *, double *, double *, double *, double *, double, double, int, double *, double *, double *, double *, double *, double *, double, double, int) [with Cell=GPUCell, dims=2]" 
+(4743): here
+            instantiation of "void GPUPlasma<Cell, dims>::LoadTestData(int, int) [with Cell=GPUCell, dims=2]" 
+(5704): here
+            instantiation of "void GPUPlasma<Cell, dims>::InitializeCPU() [with Cell=GPUCell, dims=2]" 
+(1610): here
+            instantiation of "void GPUPlasma<Cell, dims>::Initialize() [with Cell=GPUCell, dims=2]" 
+main.cu(63): here
+
+gpu_plasma.h(3375): warning: variable "err" was declared but never referenced
+          detected during:
+            instantiation of "void GPUPlasma<Cell, dims>::InitBinaryParticles(std::vector<Particle, std::allocator<Particle>> &, int, double *, double *, double *, double *, double *, double *, double, double, int, double *, double *, double *, double *, double *, double *, double, double, int, double *, double *, double *, double *, double *, double *, double, double, int) [with Cell=GPUCell, dims=2]" 
+(4743): here
+            instantiation of "void GPUPlasma<Cell, dims>::LoadTestData(int, int) [with Cell=GPUCell, dims=2]" 
+(5704): here
+            instantiation of "void GPUPlasma<Cell, dims>::InitializeCPU() [with Cell=GPUCell, dims=2]" 
+(1610): here
+            instantiation of "void GPUPlasma<Cell, dims>::Initialize() [with Cell=GPUCell, dims=2]" 
+main.cu(63): here
+
+gpu_plasma.h(3662): warning: variable "f" is used before its value is set
+          detected during:
+            instantiation of "void GPUPlasma<Cell, dims>::LoadTestData(int, int) [with Cell=GPUCell, dims=2]" 
+(5704): here
+            instantiation of "void GPUPlasma<Cell, dims>::InitializeCPU() [with Cell=GPUCell, dims=2]" 
+(1610): here
+            instantiation of "void GPUPlasma<Cell, dims>::Initialize() [with Cell=GPUCell, dims=2]" 
+main.cu(63): here
+
+gpu_plasma.h(3664): warning: variable "m" is used before its value is set
+          detected during:
+            instantiation of "void GPUPlasma<Cell, dims>::LoadTestData(int, int) [with Cell=GPUCell, dims=2]" 
+(5704): here
+            instantiation of "void GPUPlasma<Cell, dims>::InitializeCPU() [with Cell=GPUCell, dims=2]" 
+(1610): here
+            instantiation of "void GPUPlasma<Cell, dims>::Initialize() [with Cell=GPUCell, dims=2]" 
+main.cu(63): here
+
+gpucell.h(402): warning: variable "h_copy_of_d_src" was declared but never referenced
+          detected during:
+            instantiation of "void GPUPlasma<Cell, dims>::InitializeCPU() [with Cell=GPUCell, dims=2]" 
+gpu_plasma.h(1610): here
+            instantiation of "void GPUPlasma<Cell, dims>::Initialize() [with Cell=GPUCell, dims=2]" 
+main.cu(63): here
+
+gpucell.h(404): warning: variable "code" was declared but never referenced
+          detected during:
+            instantiation of "void GPUPlasma<Cell, dims>::InitializeCPU() [with Cell=GPUCell, dims=2]" 
+gpu_plasma.h(1610): here
+            instantiation of "void GPUPlasma<Cell, dims>::Initialize() [with Cell=GPUCell, dims=2]" 
+main.cu(63): here
+
+check_field.h(355): warning: statement is unreachable
+          detected during instantiation of "void GPUPlasma<Cell, dims>::Initialize() [with Cell=GPUCell, dims=2]" 
+main.cu(63): here
+
+check_field.h(355): warning: conversion from a string literal to "char *" is deprecated
+          detected during instantiation of "void GPUPlasma<Cell, dims>::Initialize() [with Cell=GPUCell, dims=2]" 
+main.cu(63): here
+
+check_field.h(356): warning: conversion from a string literal to "char *" is deprecated
+          detected during instantiation of "void GPUPlasma<Cell, dims>::Initialize() [with Cell=GPUCell, dims=2]" 
+main.cu(63): here
+
+check_field.h(357): warning: conversion from a string literal to "char *" is deprecated
+          detected during instantiation of "void GPUPlasma<Cell, dims>::Initialize() [with Cell=GPUCell, dims=2]" 
+main.cu(63): here
+
+check_field.h(358): warning: conversion from a string literal to "char *" is deprecated
+          detected during instantiation of "void GPUPlasma<Cell, dims>::Initialize() [with Cell=GPUCell, dims=2]" 
+main.cu(63): here
+
+gpu_plasma.h(1962): warning: variable "q" was declared but never referenced
+          detected during instantiation of "void GPUPlasma<Cell, dims>::Initialize() [with Cell=GPUCell, dims=2]" 
+main.cu(63): here
+
+gpu_plasma.h(1978): warning: variable "q" was declared but never referenced
+          detected during instantiation of "void GPUPlasma<Cell, dims>::Initialize() [with Cell=GPUCell, dims=2]" 
+main.cu(63): here
+
+gpu_plasma.h(1985): warning: variable "mfree" was set but never used
+          detected during instantiation of "void GPUPlasma<Cell, dims>::Initialize() [with Cell=GPUCell, dims=2]" 
+main.cu(63): here
+
+gpu_plasma.h(1985): warning: variable "mtot" was set but never used
+          detected during instantiation of "void GPUPlasma<Cell, dims>::Initialize() [with Cell=GPUCell, dims=2]" 
+main.cu(63): here
+
+gpu_plasma.h(1936): warning: variable "h_copy" was declared but never referenced
+          detected during instantiation of "void GPUPlasma<Cell, dims>::Initialize() [with Cell=GPUCell, dims=2]" 
+main.cu(63): here
+
+gpu_plasma.h(1936): warning: variable "h_c" was declared but never referenced
+          detected during instantiation of "void GPUPlasma<Cell, dims>::Initialize() [with Cell=GPUCell, dims=2]" 
+main.cu(63): here
+
+gpu_plasma.h(1937): warning: variable "t" was declared but never referenced
+          detected during instantiation of "void GPUPlasma<Cell, dims>::Initialize() [with Cell=GPUCell, dims=2]" 
+main.cu(63): here
+
+gpu_plasma.h(2635): warning: conversion from a string literal to "char *" is deprecated
+
+gpu_plasma.h(2649): warning: conversion from a string literal to "char *" is deprecated
+
+gpu_plasma.h(2653): warning: conversion from a string literal to "char *" is deprecated
+
+gpu_plasma.h(2665): warning: conversion from a string literal to "char *" is deprecated
+
+gpu_plasma.h(2675): warning: conversion from a string literal to "char *" is deprecated
+
+gpu_plasma.h(2686): warning: conversion from a string literal to "char *" is deprecated
+
+gpu_plasma.h(6813): warning: missing return statement at end of non-void function "GPUPlasma<Cell, dims>::memory_monitor"
+          detected during instantiation of "void GPUPlasma<Cell, dims>::Step(int) [with Cell=GPUCell, dims=2]" 
+main.cu(97): here
+
+gpu_plasma.h(2391): warning: conversion from a string literal to "char *" is deprecated
+          detected during instantiation of "void GPUPlasma<Cell, dims>::Step(int) [with Cell=GPUCell, dims=2]" 
+main.cu(97): here
+
+gpu_plasma.h(2391): warning: conversion from a string literal to "char *" is deprecated
+          detected during instantiation of "void GPUPlasma<Cell, dims>::Step(int) [with Cell=GPUCell, dims=2]" 
+main.cu(97): here
+
+gpu_plasma.h(2392): warning: conversion from a string literal to "char *" is deprecated
+          detected during instantiation of "void GPUPlasma<Cell, dims>::Step(int) [with Cell=GPUCell, dims=2]" 
+main.cu(97): here
+
+gpu_plasma.h(2392): warning: conversion from a string literal to "char *" is deprecated
+          detected during instantiation of "void GPUPlasma<Cell, dims>::Step(int) [with Cell=GPUCell, dims=2]" 
+main.cu(97): here
+
+gpu_plasma.h(2393): warning: conversion from a string literal to "char *" is deprecated
+          detected during instantiation of "void GPUPlasma<Cell, dims>::Step(int) [with Cell=GPUCell, dims=2]" 
+main.cu(97): here
+
+gpu_plasma.h(2393): warning: conversion from a string literal to "char *" is deprecated
+          detected during instantiation of "void GPUPlasma<Cell, dims>::Step(int) [with Cell=GPUCell, dims=2]" 
+main.cu(97): here
+
+gpu_plasma.h(2395): warning: conversion from a string literal to "char *" is deprecated
+          detected during instantiation of "void GPUPlasma<Cell, dims>::Step(int) [with Cell=GPUCell, dims=2]" 
+main.cu(97): here
+
+gpu_plasma.h(2395): warning: conversion from a string literal to "char *" is deprecated
+          detected during instantiation of "void GPUPlasma<Cell, dims>::Step(int) [with Cell=GPUCell, dims=2]" 
+main.cu(97): here
+
+gpu_plasma.h(2396): warning: conversion from a string literal to "char *" is deprecated
+          detected during instantiation of "void GPUPlasma<Cell, dims>::Step(int) [with Cell=GPUCell, dims=2]" 
+main.cu(97): here
+
+gpu_plasma.h(2396): warning: conversion from a string literal to "char *" is deprecated
+          detected during instantiation of "void GPUPlasma<Cell, dims>::Step(int) [with Cell=GPUCell, dims=2]" 
+main.cu(97): here
+
+gpu_plasma.h(2397): warning: conversion from a string literal to "char *" is deprecated
+          detected during instantiation of "void GPUPlasma<Cell, dims>::Step(int) [with Cell=GPUCell, dims=2]" 
+main.cu(97): here
+
+gpu_plasma.h(2397): warning: conversion from a string literal to "char *" is deprecated
+          detected during instantiation of "void GPUPlasma<Cell, dims>::Step(int) [with Cell=GPUCell, dims=2]" 
+main.cu(97): here
+
+gpu_plasma.h(2399): warning: conversion from a string literal to "char *" is deprecated
+          detected during instantiation of "void GPUPlasma<Cell, dims>::Step(int) [with Cell=GPUCell, dims=2]" 
+main.cu(97): here
+
+gpu_plasma.h(2399): warning: conversion from a string literal to "char *" is deprecated
+          detected during instantiation of "void GPUPlasma<Cell, dims>::Step(int) [with Cell=GPUCell, dims=2]" 
+main.cu(97): here
+
+gpu_plasma.h(2400): warning: conversion from a string literal to "char *" is deprecated
+          detected during instantiation of "void GPUPlasma<Cell, dims>::Step(int) [with Cell=GPUCell, dims=2]" 
+main.cu(97): here
+
+gpu_plasma.h(2400): warning: conversion from a string literal to "char *" is deprecated
+          detected during instantiation of "void GPUPlasma<Cell, dims>::Step(int) [with Cell=GPUCell, dims=2]" 
+main.cu(97): here
+
+gpu_plasma.h(2401): warning: conversion from a string literal to "char *" is deprecated
+          detected during instantiation of "void GPUPlasma<Cell, dims>::Step(int) [with Cell=GPUCell, dims=2]" 
+main.cu(97): here
+
+gpu_plasma.h(2401): warning: conversion from a string literal to "char *" is deprecated
+          detected during instantiation of "void GPUPlasma<Cell, dims>::Step(int) [with Cell=GPUCell, dims=2]" 
+main.cu(97): here
+
+gpu_plasma.h(2405): warning: conversion from a string literal to "char *" is deprecated
+          detected during instantiation of "void GPUPlasma<Cell, dims>::Step(int) [with Cell=GPUCell, dims=2]" 
+main.cu(97): here
+
+gpu_plasma.h(2405): warning: conversion from a string literal to "char *" is deprecated
+          detected during instantiation of "void GPUPlasma<Cell, dims>::Step(int) [with Cell=GPUCell, dims=2]" 
+main.cu(97): here
+
+gpu_plasma.h(2406): warning: conversion from a string literal to "char *" is deprecated
+          detected during instantiation of "void GPUPlasma<Cell, dims>::Step(int) [with Cell=GPUCell, dims=2]" 
+main.cu(97): here
+
+gpu_plasma.h(2406): warning: conversion from a string literal to "char *" is deprecated
+          detected during instantiation of "void GPUPlasma<Cell, dims>::Step(int) [with Cell=GPUCell, dims=2]" 
+main.cu(97): here
+
+gpu_plasma.h(2407): warning: conversion from a string literal to "char *" is deprecated
+          detected during instantiation of "void GPUPlasma<Cell, dims>::Step(int) [with Cell=GPUCell, dims=2]" 
+main.cu(97): here
+
+gpu_plasma.h(2407): warning: conversion from a string literal to "char *" is deprecated
+          detected during instantiation of "void GPUPlasma<Cell, dims>::Step(int) [with Cell=GPUCell, dims=2]" 
+main.cu(97): here
+
+gpu_plasma.h(2409): warning: conversion from a string literal to "char *" is deprecated
+          detected during instantiation of "void GPUPlasma<Cell, dims>::Step(int) [with Cell=GPUCell, dims=2]" 
+main.cu(97): here
+
+gpu_plasma.h(2409): warning: conversion from a string literal to "char *" is deprecated
+          detected during instantiation of "void GPUPlasma<Cell, dims>::Step(int) [with Cell=GPUCell, dims=2]" 
+main.cu(97): here
+
+gpu_plasma.h(2410): warning: conversion from a string literal to "char *" is deprecated
+          detected during instantiation of "void GPUPlasma<Cell, dims>::Step(int) [with Cell=GPUCell, dims=2]" 
+main.cu(97): here
+
+gpu_plasma.h(2410): warning: conversion from a string literal to "char *" is deprecated
+          detected during instantiation of "void GPUPlasma<Cell, dims>::Step(int) [with Cell=GPUCell, dims=2]" 
+main.cu(97): here
+
+gpu_plasma.h(2411): warning: conversion from a string literal to "char *" is deprecated
+          detected during instantiation of "void GPUPlasma<Cell, dims>::Step(int) [with Cell=GPUCell, dims=2]" 
+main.cu(97): here
+
+gpu_plasma.h(2411): warning: conversion from a string literal to "char *" is deprecated
+          detected during instantiation of "void GPUPlasma<Cell, dims>::Step(int) [with Cell=GPUCell, dims=2]" 
+main.cu(97): here
+
+gpu_plasma.h(2386): warning: variable "t_check" was set but never used
+          detected during instantiation of "void GPUPlasma<Cell, dims>::Step(int) [with Cell=GPUCell, dims=2]" 
+main.cu(97): here
+
+gpu_plasma.h(4973): warning: variable "t_jy" was declared but never referenced
+          detected during:
+            instantiation of "void GPUPlasma<Cell, dims>::ComputeField_FirstHalfStep(double *, double *, double *, int, double *, double *, double *, double *, double *, double *, double *, double *, double *) [with Cell=GPUCell, dims=2]" 
+(2638): here
+            instantiation of "void GPUPlasma<Cell, dims>::Step(int) [with Cell=GPUCell, dims=2]" 
+main.cu(97): here
+
+gpu_plasma.h(4973): warning: variable "t_jz" was declared but never referenced
+          detected during:
+            instantiation of "void GPUPlasma<Cell, dims>::ComputeField_FirstHalfStep(double *, double *, double *, int, double *, double *, double *, double *, double *, double *, double *, double *, double *) [with Cell=GPUCell, dims=2]" 
+(2638): here
+            instantiation of "void GPUPlasma<Cell, dims>::Step(int) [with Cell=GPUCell, dims=2]" 
+main.cu(97): here
+
+gpu_plasma.h(2554): warning: conversion from a string literal to "char *" is deprecated
+          detected during:
+            instantiation of "void GPUPlasma<Cell, dims>::ComputeField_FirstHalfStep(double *, double *, double *, int, double *, double *, double *, double *, double *, double *, double *, double *, double *) [with Cell=GPUCell, dims=2]" 
+(2638): here
+            instantiation of "void GPUPlasma<Cell, dims>::Step(int) [with Cell=GPUCell, dims=2]" 
+main.cu(97): here
+
+gpu_plasma.h(2560): warning: conversion from a string literal to "char *" is deprecated
+          detected during:
+            instantiation of "void GPUPlasma<Cell, dims>::ComputeField_FirstHalfStep(double *, double *, double *, int, double *, double *, double *, double *, double *, double *, double *, double *, double *) [with Cell=GPUCell, dims=2]" 
+(2638): here
+            instantiation of "void GPUPlasma<Cell, dims>::Step(int) [with Cell=GPUCell, dims=2]" 
+main.cu(97): here
+
+gpu_plasma.h(2566): warning: conversion from a string literal to "char *" is deprecated
+          detected during:
+            instantiation of "void GPUPlasma<Cell, dims>::ComputeField_FirstHalfStep(double *, double *, double *, int, double *, double *, double *, double *, double *, double *, double *, double *, double *) [with Cell=GPUCell, dims=2]" 
+(2638): here
+            instantiation of "void GPUPlasma<Cell, dims>::Step(int) [with Cell=GPUCell, dims=2]" 
+main.cu(97): here
+
+gpu_plasma.h(3841): warning: conversion from a string literal to "char *" is deprecated
+          detected during:
+            instantiation of "void GPUPlasma<Cell, dims>::emh1(double *, double *, double *, double *, double *, double *, int, double *, double *, double *) [with Cell=GPUCell, dims=2]" 
+(2403): here
+            instantiation of "void GPUPlasma<Cell, dims>::ComputeField_FirstHalfStep(double *, double *, double *, int, double *, double *, double *, double *, double *, double *, double *, double *, double *) [with Cell=GPUCell, dims=2]" 
+(2638): here
+            instantiation of "void GPUPlasma<Cell, dims>::Step(int) [with Cell=GPUCell, dims=2]" 
+main.cu(97): here
+
+gpu_plasma.h(3815): warning: variable "err" was set but never used
+          detected during:
+            instantiation of "void GPUPlasma<Cell, dims>::emh1(double *, double *, double *, double *, double *, double *, int, double *, double *, double *) [with Cell=GPUCell, dims=2]" 
+(2403): here
+            instantiation of "void GPUPlasma<Cell, dims>::ComputeField_FirstHalfStep(double *, double *, double *, int, double *, double *, double *, double *, double *, double *, double *, double *, double *) [with Cell=GPUCell, dims=2]" 
+(2638): here
+            instantiation of "void GPUPlasma<Cell, dims>::Step(int) [with Cell=GPUCell, dims=2]" 
+main.cu(97): here
+
+gpu_plasma.h(4819): warning: conversion from a string literal to "char *" is deprecated
+          detected during instantiation of "void GPUPlasma<Cell, dims>::Step(int) [with Cell=GPUCell, dims=2]" 
+main.cu(97): here
+
+gpu_plasma.h(4801): warning: variable "err" was set but never used
+          detected during instantiation of "void GPUPlasma<Cell, dims>::Step(int) [with Cell=GPUCell, dims=2]" 
+main.cu(97): here
+
+gpu_plasma.h(6054): warning: conversion from a string literal to "char *" is deprecated
+          detected during instantiation of "void GPUPlasma<Cell, dims>::Step(int) [with Cell=GPUCell, dims=2]" 
+main.cu(97): here
+
+gpu_plasma.h(6079): warning: conversion from a string literal to "char *" is deprecated
+          detected during instantiation of "void GPUPlasma<Cell, dims>::Step(int) [with Cell=GPUCell, dims=2]" 
+main.cu(97): here
+
+gpu_plasma.h(6084): warning: conversion from a string literal to "char *" is deprecated
+          detected during instantiation of "void GPUPlasma<Cell, dims>::Step(int) [with Cell=GPUCell, dims=2]" 
+main.cu(97): here
+
+gpu_plasma.h(6101): warning: conversion from a string literal to "char *" is deprecated
+          detected during instantiation of "void GPUPlasma<Cell, dims>::Step(int) [with Cell=GPUCell, dims=2]" 
+main.cu(97): here
+
+gpu_plasma.h(6118): warning: conversion from a string literal to "char *" is deprecated
+          detected during instantiation of "void GPUPlasma<Cell, dims>::Step(int) [with Cell=GPUCell, dims=2]" 
+main.cu(97): here
+
+gpu_plasma.h(6148): warning: conversion from a string literal to "char *" is deprecated
+          detected during instantiation of "void GPUPlasma<Cell, dims>::Step(int) [with Cell=GPUCell, dims=2]" 
+main.cu(97): here
+
+gpu_plasma.h(6157): warning: conversion from a string literal to "char *" is deprecated
+          detected during instantiation of "void GPUPlasma<Cell, dims>::Step(int) [with Cell=GPUCell, dims=2]" 
+main.cu(97): here
+
+gpu_plasma.h(6175): warning: conversion from a string literal to "char *" is deprecated
+          detected during instantiation of "void GPUPlasma<Cell, dims>::Step(int) [with Cell=GPUCell, dims=2]" 
+main.cu(97): here
+
+gpu_plasma.h(6175): warning: conversion from a string literal to "char *" is deprecated
+          detected during instantiation of "void GPUPlasma<Cell, dims>::Step(int) [with Cell=GPUCell, dims=2]" 
+main.cu(97): here
+
+gpu_plasma.h(6176): warning: conversion from a string literal to "char *" is deprecated
+          detected during instantiation of "void GPUPlasma<Cell, dims>::Step(int) [with Cell=GPUCell, dims=2]" 
+main.cu(97): here
+
+gpu_plasma.h(6176): warning: conversion from a string literal to "char *" is deprecated
+          detected during instantiation of "void GPUPlasma<Cell, dims>::Step(int) [with Cell=GPUCell, dims=2]" 
+main.cu(97): here
+
+gpu_plasma.h(6179): warning: conversion from a string literal to "char *" is deprecated
+          detected during instantiation of "void GPUPlasma<Cell, dims>::Step(int) [with Cell=GPUCell, dims=2]" 
+main.cu(97): here
+
+gpu_plasma.h(6205): warning: conversion from a string literal to "char *" is deprecated
+          detected during instantiation of "void GPUPlasma<Cell, dims>::Step(int) [with Cell=GPUCell, dims=2]" 
+main.cu(97): here
+
+gpu_plasma.h(6245): warning: conversion from a string literal to "char *" is deprecated
+          detected during instantiation of "void GPUPlasma<Cell, dims>::Step(int) [with Cell=GPUCell, dims=2]" 
+main.cu(97): here
+
+gpu_plasma.h(6266): warning: conversion from a string literal to "char *" is deprecated
+          detected during instantiation of "void GPUPlasma<Cell, dims>::Step(int) [with Cell=GPUCell, dims=2]" 
+main.cu(97): here
+
+gpu_plasma.h(6181): warning: variable "before_MakeDepartureLists" was declared but never referenced
+          detected during instantiation of "void GPUPlasma<Cell, dims>::Step(int) [with Cell=GPUCell, dims=2]" 
+main.cu(97): here
+
+gpu_plasma.h(6181): warning: variable "after_MakeDepartureLists" was set but never used
+          detected during instantiation of "void GPUPlasma<Cell, dims>::Step(int) [with Cell=GPUCell, dims=2]" 
+main.cu(97): here
+
+gpu_plasma.h(6182): warning: variable "before_ArrangeFlights" was declared but never referenced
+          detected during instantiation of "void GPUPlasma<Cell, dims>::Step(int) [with Cell=GPUCell, dims=2]" 
+main.cu(97): here
+
+gpu_plasma.h(6182): warning: variable "after_ArrangeFlights" was set but never used
+          detected during instantiation of "void GPUPlasma<Cell, dims>::Step(int) [with Cell=GPUCell, dims=2]" 
+main.cu(97): here
+
+gpu_plasma.h(4925): warning: statement is unreachable
+          detected during:
+            instantiation of "void GPUPlasma<Cell, dims>::CellOrder_StepAllCells(int, double, double, int) [with Cell=GPUCell, dims=2]" 
+(2660): here
+            instantiation of "void GPUPlasma<Cell, dims>::Step(int) [with Cell=GPUCell, dims=2]" 
+main.cu(97): here
+
+gpu_plasma.h(1765): warning: conversion from a string literal to "char *" is deprecated
+          detected during:
+            instantiation of "void GPUPlasma<Cell, dims>::CellOrder_StepAllCells(int, double, double, int) [with Cell=GPUCell, dims=2]" 
+(2660): here
+            instantiation of "void GPUPlasma<Cell, dims>::Step(int) [with Cell=GPUCell, dims=2]" 
+main.cu(97): here
+
+gpu_plasma.h(2064): warning: conversion from a string literal to "char *" is deprecated
+          detected during:
+            instantiation of "void GPUPlasma<Cell, dims>::ListAllParticles(int, char *) [with Cell=GPUCell, dims=2]" 
+(6084): here
+            instantiation of "void GPUPlasma<Cell, dims>::CellOrder_StepAllCells(int, double, double, int) [with Cell=GPUCell, dims=2]" 
+(2660): here
+            instantiation of "void GPUPlasma<Cell, dims>::Step(int) [with Cell=GPUCell, dims=2]" 
+main.cu(97): here
+
+gpu_plasma.h(2094): warning: conversion from a string literal to "char *" is deprecated
+          detected during:
+            instantiation of "void GPUPlasma<Cell, dims>::ListAllParticles(int, char *) [with Cell=GPUCell, dims=2]" 
+(6084): here
+            instantiation of "void GPUPlasma<Cell, dims>::CellOrder_StepAllCells(int, double, double, int) [with Cell=GPUCell, dims=2]" 
+(2660): here
+            instantiation of "void GPUPlasma<Cell, dims>::Step(int) [with Cell=GPUCell, dims=2]" 
+main.cu(97): here
+
+gpu_plasma.h(2056): warning: variable "c1" was declared but never referenced
+          detected during:
+            instantiation of "void GPUPlasma<Cell, dims>::ListAllParticles(int, char *) [with Cell=GPUCell, dims=2]" 
+(6084): here
+            instantiation of "void GPUPlasma<Cell, dims>::CellOrder_StepAllCells(int, double, double, int) [with Cell=GPUCell, dims=2]" 
+(2660): here
+            instantiation of "void GPUPlasma<Cell, dims>::Step(int) [with Cell=GPUCell, dims=2]" 
+main.cu(97): here
+
+gpu_plasma.h(2056): warning: variable "c2" was declared but never referenced
+          detected during:
+            instantiation of "void GPUPlasma<Cell, dims>::ListAllParticles(int, char *) [with Cell=GPUCell, dims=2]" 
+(6084): here
+            instantiation of "void GPUPlasma<Cell, dims>::CellOrder_StepAllCells(int, double, double, int) [with Cell=GPUCell, dims=2]" 
+(2660): here
+            instantiation of "void GPUPlasma<Cell, dims>::Step(int) [with Cell=GPUCell, dims=2]" 
+main.cu(97): here
+
+gpucell.h(318): warning: variable "qq" was declared but never referenced
+          detected during:
+            instantiation of "void GPUPlasma<Cell, dims>::copyCells(char *, int) [with Cell=GPUCell, dims=2]" 
+gpu_plasma.h(5841): here
+            instantiation of "void GPUPlasma<Cell, dims>::ListAllParticles(int, char *) [with Cell=GPUCell, dims=2]" 
+gpu_plasma.h(6084): here
+            instantiation of "void GPUPlasma<Cell, dims>::CellOrder_StepAllCells(int, double, double, int) [with Cell=GPUCell, dims=2]" 
+gpu_plasma.h(2660): here
+            instantiation of "void GPUPlasma<Cell, dims>::Step(int) [with Cell=GPUCell, dims=2]" 
+main.cu(97): here
+
+gpu_plasma.h(6008): warning: statement is unreachable
+          detected during:
+            instantiation of "void GPUPlasma<Cell, dims>::CellOrder_StepAllCells(int, double, double, int) [with Cell=GPUCell, dims=2]" 
+(2660): here
+            instantiation of "void GPUPlasma<Cell, dims>::Step(int) [with Cell=GPUCell, dims=2]" 
+main.cu(97): here
+
+gpu_plasma.h(4259): warning: conversion from a string literal to "char *" is deprecated
+          detected during:
+            instantiation of "void GPUPlasma<Cell, dims>::ComputeField_SecondHalfStep(double *, double *, double *, int, double *, double *, double *, double *, double *, double *, double *, double *, double *) [with Cell=GPUCell, dims=2]" 
+(2678): here
+            instantiation of "void GPUPlasma<Cell, dims>::Step(int) [with Cell=GPUCell, dims=2]" 
+main.cu(97): here
+
+gpu_plasma.h(4279): warning: conversion from a string literal to "char *" is deprecated
+          detected during:
+            instantiation of "void GPUPlasma<Cell, dims>::ComputeField_SecondHalfStep(double *, double *, double *, int, double *, double *, double *, double *, double *, double *, double *, double *, double *) [with Cell=GPUCell, dims=2]" 
+(2678): here
+            instantiation of "void GPUPlasma<Cell, dims>::Step(int) [with Cell=GPUCell, dims=2]" 
+main.cu(97): here
+
+gpu_plasma.h(4298): warning: conversion from a string literal to "char *" is deprecated
+          detected during:
+            instantiation of "void GPUPlasma<Cell, dims>::ComputeField_SecondHalfStep(double *, double *, double *, int, double *, double *, double *, double *, double *, double *, double *, double *, double *) [with Cell=GPUCell, dims=2]" 
+(2678): here
+            instantiation of "void GPUPlasma<Cell, dims>::Step(int) [with Cell=GPUCell, dims=2]" 
+main.cu(97): here
+
+gpu_plasma.h(4319): warning: conversion from a string literal to "char *" is deprecated
+          detected during:
+            instantiation of "void GPUPlasma<Cell, dims>::ComputeField_SecondHalfStep(double *, double *, double *, int, double *, double *, double *, double *, double *, double *, double *, double *, double *) [with Cell=GPUCell, dims=2]" 
+(2678): here
+            instantiation of "void GPUPlasma<Cell, dims>::Step(int) [with Cell=GPUCell, dims=2]" 
+main.cu(97): here
+
+gpu_plasma.h(4338): warning: conversion from a string literal to "char *" is deprecated
+          detected during:
+            instantiation of "void GPUPlasma<Cell, dims>::ComputeField_SecondHalfStep(double *, double *, double *, int, double *, double *, double *, double *, double *, double *, double *, double *, double *) [with Cell=GPUCell, dims=2]" 
+(2678): here
+            instantiation of "void GPUPlasma<Cell, dims>::Step(int) [with Cell=GPUCell, dims=2]" 
+main.cu(97): here
+
+gpu_plasma.h(4356): warning: conversion from a string literal to "char *" is deprecated
+          detected during:
+            instantiation of "void GPUPlasma<Cell, dims>::ComputeField_SecondHalfStep(double *, double *, double *, int, double *, double *, double *, double *, double *, double *, double *, double *, double *) [with Cell=GPUCell, dims=2]" 
+(2678): here
+            instantiation of "void GPUPlasma<Cell, dims>::Step(int) [with Cell=GPUCell, dims=2]" 
+main.cu(97): here
+
+gpu_plasma.h(4375): warning: conversion from a string literal to "char *" is deprecated
+          detected during:
+            instantiation of "void GPUPlasma<Cell, dims>::ComputeField_SecondHalfStep(double *, double *, double *, int, double *, double *, double *, double *, double *, double *, double *, double *, double *) [with Cell=GPUCell, dims=2]" 
+(2678): here
+            instantiation of "void GPUPlasma<Cell, dims>::Step(int) [with Cell=GPUCell, dims=2]" 
+main.cu(97): here
+
+gpu_plasma.h(4393): warning: conversion from a string literal to "char *" is deprecated
+          detected during:
+            instantiation of "void GPUPlasma<Cell, dims>::ComputeField_SecondHalfStep(double *, double *, double *, int, double *, double *, double *, double *, double *, double *, double *, double *, double *) [with Cell=GPUCell, dims=2]" 
+(2678): here
+            instantiation of "void GPUPlasma<Cell, dims>::Step(int) [with Cell=GPUCell, dims=2]" 
+main.cu(97): here
+
+gpu_plasma.h(4412): warning: conversion from a string literal to "char *" is deprecated
+          detected during:
+            instantiation of "void GPUPlasma<Cell, dims>::ComputeField_SecondHalfStep(double *, double *, double *, int, double *, double *, double *, double *, double *, double *, double *, double *, double *) [with Cell=GPUCell, dims=2]" 
+(2678): here
+            instantiation of "void GPUPlasma<Cell, dims>::Step(int) [with Cell=GPUCell, dims=2]" 
+main.cu(97): here
+
+gpu_plasma.h(4236): warning: variable "err" was set but never used
+          detected during:
+            instantiation of "void GPUPlasma<Cell, dims>::ComputeField_SecondHalfStep(double *, double *, double *, int, double *, double *, double *, double *, double *, double *, double *, double *, double *) [with Cell=GPUCell, dims=2]" 
+(2678): here
+            instantiation of "void GPUPlasma<Cell, dims>::Step(int) [with Cell=GPUCell, dims=2]" 
+main.cu(97): here
+
+gpu_plasma.h(3943): warning: conversion from a string literal to "char *" is deprecated
+          detected during:
+            instantiation of "void GPUPlasma<Cell, dims>::emh2(double *, double *, double *, int, double *, double *, double *) [with Cell=GPUCell, dims=2]" 
+(2441): here
+            instantiation of "void GPUPlasma<Cell, dims>::ComputeField_SecondHalfStep(double *, double *, double *, int, double *, double *, double *, double *, double *, double *, double *, double *, double *) [with Cell=GPUCell, dims=2]" 
+(2678): here
+            instantiation of "void GPUPlasma<Cell, dims>::Step(int) [with Cell=GPUCell, dims=2]" 
+main.cu(97): here
+
+gpu_plasma.h(3925): warning: variable "err" was set but never used
+          detected during:
+            instantiation of "void GPUPlasma<Cell, dims>::emh2(double *, double *, double *, int, double *, double *, double *) [with Cell=GPUCell, dims=2]" 
+(2441): here
+            instantiation of "void GPUPlasma<Cell, dims>::ComputeField_SecondHalfStep(double *, double *, double *, int, double *, double *, double *, double *, double *, double *, double *, double *, double *) [with Cell=GPUCell, dims=2]" 
+(2678): here
+            instantiation of "void GPUPlasma<Cell, dims>::Step(int) [with Cell=GPUCell, dims=2]" 
+main.cu(97): here
+
+gpu_plasma.h(4173): warning: variable "dbg" was set but never used
+          detected during:
+            instantiation of "void GPUPlasma<Cell, dims>::ComputeField_SecondHalfStep(double *, double *, double *, int, double *, double *, double *, double *, double *, double *, double *, double *, double *) [with Cell=GPUCell, dims=2]" 
+(2678): here
+            instantiation of "void GPUPlasma<Cell, dims>::Step(int) [with Cell=GPUCell, dims=2]" 
+main.cu(97): here
+
+gpu_plasma.h(4173): warning: variable "t_hx" was declared but never referenced
+          detected during:
+            instantiation of "void GPUPlasma<Cell, dims>::ComputeField_SecondHalfStep(double *, double *, double *, int, double *, double *, double *, double *, double *, double *, double *, double *, double *) [with Cell=GPUCell, dims=2]" 
+(2678): here
+            instantiation of "void GPUPlasma<Cell, dims>::Step(int) [with Cell=GPUCell, dims=2]" 
+main.cu(97): here
+
+gpu_plasma.h(4173): warning: variable "t_hy" was declared but never referenced
+          detected during:
+            instantiation of "void GPUPlasma<Cell, dims>::ComputeField_SecondHalfStep(double *, double *, double *, int, double *, double *, double *, double *, double *, double *, double *, double *, double *) [with Cell=GPUCell, dims=2]" 
+(2678): here
+            instantiation of "void GPUPlasma<Cell, dims>::Step(int) [with Cell=GPUCell, dims=2]" 
+main.cu(97): here
+
+gpu_plasma.h(4173): warning: variable "t_hz" was declared but never referenced
+          detected during:
+            instantiation of "void GPUPlasma<Cell, dims>::ComputeField_SecondHalfStep(double *, double *, double *, int, double *, double *, double *, double *, double *, double *, double *, double *, double *) [with Cell=GPUCell, dims=2]" 
+(2678): here
+            instantiation of "void GPUPlasma<Cell, dims>::Step(int) [with Cell=GPUCell, dims=2]" 
+main.cu(97): here
+
+gpu_plasma.h(2485): warning: conversion from a string literal to "char *" is deprecated
+          detected during:
+            instantiation of "void GPUPlasma<Cell, dims>::ComputeField_SecondHalfStep(double *, double *, double *, int, double *, double *, double *, double *, double *, double *, double *, double *, double *) [with Cell=GPUCell, dims=2]" 
+(2678): here
+            instantiation of "void GPUPlasma<Cell, dims>::Step(int) [with Cell=GPUCell, dims=2]" 
+main.cu(97): here
+
+gpu_plasma.h(2490): warning: conversion from a string literal to "char *" is deprecated
+          detected during:
+            instantiation of "void GPUPlasma<Cell, dims>::ComputeField_SecondHalfStep(double *, double *, double *, int, double *, double *, double *, double *, double *, double *, double *, double *, double *) [with Cell=GPUCell, dims=2]" 
+(2678): here
+            instantiation of "void GPUPlasma<Cell, dims>::Step(int) [with Cell=GPUCell, dims=2]" 
+main.cu(97): here
+
+gpu_plasma.h(2498): warning: conversion from a string literal to "char *" is deprecated
+          detected during:
+            instantiation of "void GPUPlasma<Cell, dims>::ComputeField_SecondHalfStep(double *, double *, double *, int, double *, double *, double *, double *, double *, double *, double *, double *, double *) [with Cell=GPUCell, dims=2]" 
+(2678): here
+            instantiation of "void GPUPlasma<Cell, dims>::Step(int) [with Cell=GPUCell, dims=2]" 
+main.cu(97): here
+
+gpu_plasma.h(2289): warning: variable "dbg_E_aper" was declared but never referenced
+          detected during:
+            instantiation of "void GPUPlasma<Cell, dims>::eme(double *, double *, double *, int, double *, double *, double *, double *, double *, double *) [with Cell=GPUCell, dims=2]" 
+(2460): here
+            instantiation of "void GPUPlasma<Cell, dims>::ComputeField_SecondHalfStep(double *, double *, double *, int, double *, double *, double *, double *, double *, double *, double *, double *, double *) [with Cell=GPUCell, dims=2]" 
+(2678): here
+            instantiation of "void GPUPlasma<Cell, dims>::Step(int) [with Cell=GPUCell, dims=2]" 
+main.cu(97): here
+
+gpu_plasma.h(2273): warning: conversion from a string literal to "char *" is deprecated
+          detected during:
+            instantiation of "int GPUPlasma<Cell, dims>::ElectricFieldTrace(char *, int, double *, double *, double *, double *, double *, double *, double *, double *, double *, int, double, double, double) [with Cell=GPUCell, dims=2]" 
+(2485): here
+            instantiation of "void GPUPlasma<Cell, dims>::eme(double *, double *, double *, int, double *, double *, double *, double *, double *, double *) [with Cell=GPUCell, dims=2]" 
+(2460): here
+            instantiation of "void GPUPlasma<Cell, dims>::ComputeField_SecondHalfStep(double *, double *, double *, int, double *, double *, double *, double *, double *, double *, double *, double *, double *) [with Cell=GPUCell, dims=2]" 
+(2678): here
+            instantiation of "void GPUPlasma<Cell, dims>::Step(int) [with Cell=GPUCell, dims=2]" 
+main.cu(97): here
+
+gpu_plasma.h(2239): warning: variable "err" was set but never used
+          detected during:
+            instantiation of "int GPUPlasma<Cell, dims>::ElectricFieldTrace(char *, int, double *, double *, double *, double *, double *, double *, double *, double *, double *, int, double, double, double) [with Cell=GPUCell, dims=2]" 
+(2485): here
+            instantiation of "void GPUPlasma<Cell, dims>::eme(double *, double *, double *, int, double *, double *, double *, double *, double *, double *) [with Cell=GPUCell, dims=2]" 
+(2460): here
+            instantiation of "void GPUPlasma<Cell, dims>::ComputeField_SecondHalfStep(double *, double *, double *, int, double *, double *, double *, double *, double *, double *, double *, double *, double *) [with Cell=GPUCell, dims=2]" 
+(2678): here
+            instantiation of "void GPUPlasma<Cell, dims>::Step(int) [with Cell=GPUCell, dims=2]" 
+main.cu(97): here
+
+gpu_plasma.h(3990): warning: conversion from a string literal to "char *" is deprecated
+          detected during:
+            instantiation of "void GPUPlasma<Cell, dims>::eme(double *, double *, double *, int, double *, double *, double *, double *, double *, double *) [with Cell=GPUCell, dims=2]" 
+(2460): here
+            instantiation of "void GPUPlasma<Cell, dims>::ComputeField_SecondHalfStep(double *, double *, double *, int, double *, double *, double *, double *, double *, double *, double *, double *, double *) [with Cell=GPUCell, dims=2]" 
+(2678): here
+            instantiation of "void GPUPlasma<Cell, dims>::Step(int) [with Cell=GPUCell, dims=2]" 
+main.cu(97): here
+
+gpu_plasma.h(4007): warning: conversion from a string literal to "char *" is deprecated
+          detected during:
+            instantiation of "void GPUPlasma<Cell, dims>::eme(double *, double *, double *, int, double *, double *, double *, double *, double *, double *) [with Cell=GPUCell, dims=2]" 
+(2460): here
+            instantiation of "void GPUPlasma<Cell, dims>::ComputeField_SecondHalfStep(double *, double *, double *, int, double *, double *, double *, double *, double *, double *, double *, double *, double *) [with Cell=GPUCell, dims=2]" 
+(2678): here
+            instantiation of "void GPUPlasma<Cell, dims>::Step(int) [with Cell=GPUCell, dims=2]" 
+main.cu(97): here
+
+gpu_plasma.h(3970): warning: variable "err" was set but never used
+          detected during:
+            instantiation of "void GPUPlasma<Cell, dims>::eme(double *, double *, double *, int, double *, double *, double *, double *, double *, double *) [with Cell=GPUCell, dims=2]" 
+(2460): here
+            instantiation of "void GPUPlasma<Cell, dims>::ComputeField_SecondHalfStep(double *, double *, double *, int, double *, double *, double *, double *, double *, double *, double *, double *, double *) [with Cell=GPUCell, dims=2]" 
+(2678): here
+            instantiation of "void GPUPlasma<Cell, dims>::Step(int) [with Cell=GPUCell, dims=2]" 
+main.cu(97): here
+
+gpu_plasma.h(4061): warning: conversion from a string literal to "char *" is deprecated
+          detected during:
+            instantiation of "void GPUPlasma<Cell, dims>::eme(double *, double *, double *, int, double *, double *, double *, double *, double *, double *) [with Cell=GPUCell, dims=2]" 
+(2460): here
+            instantiation of "void GPUPlasma<Cell, dims>::ComputeField_SecondHalfStep(double *, double *, double *, int, double *, double *, double *, double *, double *, double *, double *, double *, double *) [with Cell=GPUCell, dims=2]" 
+(2678): here
+            instantiation of "void GPUPlasma<Cell, dims>::Step(int) [with Cell=GPUCell, dims=2]" 
+main.cu(97): here
+
+gpu_plasma.h(4044): warning: variable "err" was set but never used
+          detected during:
+            instantiation of "void GPUPlasma<Cell, dims>::eme(double *, double *, double *, int, double *, double *, double *, double *, double *, double *) [with Cell=GPUCell, dims=2]" 
+(2460): here
+            instantiation of "void GPUPlasma<Cell, dims>::ComputeField_SecondHalfStep(double *, double *, double *, int, double *, double *, double *, double *, double *, double *, double *, double *, double *) [with Cell=GPUCell, dims=2]" 
+(2678): here
+            instantiation of "void GPUPlasma<Cell, dims>::Step(int) [with Cell=GPUCell, dims=2]" 
+main.cu(97): here
+
+gpu_plasma.h(2721): warning: conversion from a string literal to "char *" is deprecated
+          detected during:
+            instantiation of "GPUPlasma<Cell, dims>::GPUPlasma(int, int, int, double, double, double, int, double, double, int, double, int, double, double, double, double, double, double, double, double, double, double, int, int) [with Cell=GPUCell, dims=2]" 
+xeon_plasma.h(25): here
+            instantiation of "XeonPlasma<Cell, dims>::XeonPlasma(int, int, int, double, double, double, int, double, double, int, double, int, double, double, double, double, double, double, double, double, double, double, int, int) [with Cell=GPUCell, dims=2]" 
+main.cu(54): here
+
+gpu_plasma.h(2699): warning: variable "err" was set but never used
+          detected during:
+            instantiation of "GPUPlasma<Cell, dims>::GPUPlasma(int, int, int, double, double, double, int, double, double, int, double, int, double, double, double, double, double, double, double, double, double, double, int, int) [with Cell=GPUCell, dims=2]" 
+xeon_plasma.h(25): here
+            instantiation of "XeonPlasma<Cell, dims>::XeonPlasma(int, int, int, double, double, double, int, double, double, int, double, int, double, double, double, double, double, double, double, double, double, double, int, int) [with Cell=GPUCell, dims=2]" 
+main.cu(54): here
+
+gpu_plasma.h(2702): warning: variable "first" was declared but never referenced
+          detected during:
+            instantiation of "GPUPlasma<Cell, dims>::GPUPlasma(int, int, int, double, double, double, int, double, double, int, double, int, double, double, double, double, double, double, double, double, double, double, int, int) [with Cell=GPUCell, dims=2]" 
+xeon_plasma.h(25): here
+            instantiation of "XeonPlasma<Cell, dims>::XeonPlasma(int, int, int, double, double, double, int, double, double, int, double, int, double, double, double, double, double, double, double, double, double, double, int, int) [with Cell=GPUCell, dims=2]" 
+main.cu(54): here
+
+gpu_plasma.h(2703): warning: variable "d_ee" was declared but never referenced
+          detected during:
+            instantiation of "GPUPlasma<Cell, dims>::GPUPlasma(int, int, int, double, double, double, int, double, double, int, double, int, double, double, double, double, double, double, double, double, double, double, int, int) [with Cell=GPUCell, dims=2]" 
+xeon_plasma.h(25): here
+            instantiation of "XeonPlasma<Cell, dims>::XeonPlasma(int, int, int, double, double, double, int, double, double, int, double, int, double, double, double, double, double, double, double, double, double, double, int, int) [with Cell=GPUCell, dims=2]" 
+main.cu(54): here
+
+gpu_plasma.h(2704): warning: variable "ee" was declared but never referenced
+          detected during:
+            instantiation of "GPUPlasma<Cell, dims>::GPUPlasma(int, int, int, double, double, double, int, double, double, int, double, int, double, double, double, double, double, double, double, double, double, double, int, int) [with Cell=GPUCell, dims=2]" 
+xeon_plasma.h(25): here
+            instantiation of "XeonPlasma<Cell, dims>::XeonPlasma(int, int, int, double, double, double, int, double, double, int, double, int, double, double, double, double, double, double, double, double, double, double, int, int) [with Cell=GPUCell, dims=2]" 
+main.cu(54): here
+
+gpu_plasma.h(3202): warning: conversion from a string literal to "char *" is deprecated
+          detected during:
+            instantiation of "GPUPlasma<Cell, dims>::GPUPlasma(int, int, int, double, double, double, int, double, double, int, double, int, double, double, double, double, double, double, double, double, double, double, int, int) [with Cell=GPUCell, dims=2]" 
+xeon_plasma.h(25): here
+            instantiation of "XeonPlasma<Cell, dims>::XeonPlasma(int, int, int, double, double, double, int, double, double, int, double, int, double, double, double, double, double, double, double, double, double, double, int, int) [with Cell=GPUCell, dims=2]" 
+main.cu(54): here
+
+gpu_plasma.h(3205): warning: conversion from a string literal to "char *" is deprecated
+          detected during:
+            instantiation of "GPUPlasma<Cell, dims>::GPUPlasma(int, int, int, double, double, double, int, double, double, int, double, int, double, double, double, double, double, double, double, double, double, double, int, int) [with Cell=GPUCell, dims=2]" 
+xeon_plasma.h(25): here
+            instantiation of "XeonPlasma<Cell, dims>::XeonPlasma(int, int, int, double, double, double, int, double, double, int, double, int, double, double, double, double, double, double, double, double, double, double, int, int) [with Cell=GPUCell, dims=2]" 
+main.cu(54): here
+
+gpu_plasma.h(3208): warning: conversion from a string literal to "char *" is deprecated
+          detected during:
+            instantiation of "GPUPlasma<Cell, dims>::GPUPlasma(int, int, int, double, double, double, int, double, double, int, double, int, double, double, double, double, double, double, double, double, double, double, int, int) [with Cell=GPUCell, dims=2]" 
+xeon_plasma.h(25): here
+            instantiation of "XeonPlasma<Cell, dims>::XeonPlasma(int, int, int, double, double, double, int, double, double, int, double, int, double, double, double, double, double, double, double, double, double, double, int, int) [with Cell=GPUCell, dims=2]" 
+main.cu(54): here
+
+gpu_plasma.h(3211): warning: conversion from a string literal to "char *" is deprecated
+          detected during:
+            instantiation of "GPUPlasma<Cell, dims>::GPUPlasma(int, int, int, double, double, double, int, double, double, int, double, int, double, double, double, double, double, double, double, double, double, double, int, int) [with Cell=GPUCell, dims=2]" 
+xeon_plasma.h(25): here
+            instantiation of "XeonPlasma<Cell, dims>::XeonPlasma(int, int, int, double, double, double, int, double, double, int, double, int, double, double, double, double, double, double, double, double, double, double, int, int) [with Cell=GPUCell, dims=2]" 
+main.cu(54): here
+
+gpu_plasma.h(3214): warning: conversion from a string literal to "char *" is deprecated
+          detected during:
+            instantiation of "GPUPlasma<Cell, dims>::GPUPlasma(int, int, int, double, double, double, int, double, double, int, double, int, double, double, double, double, double, double, double, double, double, double, int, int) [with Cell=GPUCell, dims=2]" 
+xeon_plasma.h(25): here
+            instantiation of "XeonPlasma<Cell, dims>::XeonPlasma(int, int, int, double, double, double, int, double, double, int, double, int, double, double, double, double, double, double, double, double, double, double, int, int) [with Cell=GPUCell, dims=2]" 
+main.cu(54): here
+
+gpu_plasma.h(3217): warning: conversion from a string literal to "char *" is deprecated
+          detected during:
+            instantiation of "GPUPlasma<Cell, dims>::GPUPlasma(int, int, int, double, double, double, int, double, double, int, double, int, double, double, double, double, double, double, double, double, double, double, int, int) [with Cell=GPUCell, dims=2]" 
+xeon_plasma.h(25): here
+            instantiation of "XeonPlasma<Cell, dims>::XeonPlasma(int, int, int, double, double, double, int, double, double, int, double, int, double, double, double, double, double, double, double, double, double, double, int, int) [with Cell=GPUCell, dims=2]" 
+main.cu(54): here
+
+gpu_plasma.h(3127): warning: variable "fname" was declared but never referenced
+          detected during:
+            instantiation of "int GPUPlasma<Cell, dims>::readBinaryParticleArraysOneSort(FILE *, double **, double **, double **, double **, double **, double **, double *, double *, int, int) [with Cell=GPUCell, dims=2]" 
+(5680): here
+            instantiation of "GPUPlasma<Cell, dims>::GPUPlasma(int, int, int, double, double, double, int, double, double, int, double, int, double, double, double, double, double, double, double, double, double, double, int, int) [with Cell=GPUCell, dims=2]" 
+xeon_plasma.h(25): here
+            instantiation of "XeonPlasma<Cell, dims>::XeonPlasma(int, int, int, double, double, double, int, double, double, int, double, int, double, double, double, double, double, double, double, double, double, double, int, int) [with Cell=GPUCell, dims=2]" 
+main.cu(54): here
+
+gpu_plasma.h(3128): warning: variable "f" was declared but never referenced
+          detected during:
+            instantiation of "int GPUPlasma<Cell, dims>::readBinaryParticleArraysOneSort(FILE *, double **, double **, double **, double **, double **, double **, double *, double *, int, int) [with Cell=GPUCell, dims=2]" 
+(5680): here
+            instantiation of "GPUPlasma<Cell, dims>::GPUPlasma(int, int, int, double, double, double, int, double, double, int, double, int, double, double, double, double, double, double, double, double, double, double, int, int) [with Cell=GPUCell, dims=2]" 
+xeon_plasma.h(25): here
+            instantiation of "XeonPlasma<Cell, dims>::XeonPlasma(int, int, int, double, double, double, int, double, double, int, double, int, double, double, double, double, double, double, double, double, double, double, int, int) [with Cell=GPUCell, dims=2]" 
+main.cu(54): here
+
+gpu_plasma.h(3290): warning: variable "qq" was declared but never referenced
+          detected during:
+            instantiation of "GPUPlasma<Cell, dims>::GPUPlasma(int, int, int, double, double, double, int, double, double, int, double, int, double, double, double, double, double, double, double, double, double, double, int, int) [with Cell=GPUCell, dims=2]" 
+xeon_plasma.h(25): here
+            instantiation of "XeonPlasma<Cell, dims>::XeonPlasma(int, int, int, double, double, double, int, double, double, int, double, int, double, double, double, double, double, double, double, double, double, double, int, int) [with Cell=GPUCell, dims=2]" 
+main.cu(54): here
+
+gpu_plasma.h(3295): warning: variable "qq" was declared but never referenced
+          detected during:
+            instantiation of "GPUPlasma<Cell, dims>::GPUPlasma(int, int, int, double, double, double, int, double, double, int, double, int, double, double, double, double, double, double, double, double, double, double, int, int) [with Cell=GPUCell, dims=2]" 
+xeon_plasma.h(25): here
+            instantiation of "XeonPlasma<Cell, dims>::XeonPlasma(int, int, int, double, double, double, int, double, double, int, double, int, double, double, double, double, double, double, double, double, double, double, int, int) [with Cell=GPUCell, dims=2]" 
+main.cu(54): here
+
+gpu_plasma.h(3244): warning: variable "err" was set but never used
+          detected during:
+            instantiation of "GPUPlasma<Cell, dims>::GPUPlasma(int, int, int, double, double, double, int, double, double, int, double, int, double, double, double, double, double, double, double, double, double, double, int, int) [with Cell=GPUCell, dims=2]" 
+xeon_plasma.h(25): here
+            instantiation of "XeonPlasma<Cell, dims>::XeonPlasma(int, int, int, double, double, double, int, double, double, int, double, int, double, double, double, double, double, double, double, double, double, double, int, int) [with Cell=GPUCell, dims=2]" 
+main.cu(54): here
+
+archAPI.h(206): warning: statement is unreachable
+
+archAPI.h(216): warning: missing return statement at end of non-void function "MemoryAllocate"
+
+archAPI.h(237): warning: missing return statement at end of non-void function "MemorySet"
+
+archAPI.h(260): warning: statement is unreachable
+
+particle.h(139): warning: variable "d" is used before its value is set
+
+particle_target.h(63): warning: variable "qq" was declared but never referenced
+
+cell.h(268): warning: variable "size_p" was declared but never referenced
+
+cell.h(269): warning: variable "pos" was declared but never referenced
+
+cell.h(293): warning: variable "i" was declared but never referenced
+
+cell.h(339): warning: variable "i" was declared but never referenced
+
+cell.h(2232): warning: variable "flag" was declared but never referenced
+
+cell.h(2745): warning: conversion from a string literal to "char *" is deprecated
+
+cell.h(2746): warning: conversion from a string literal to "char *" is deprecated
+
+cell.h(2747): warning: conversion from a string literal to "char *" is deprecated
+
+cell.h(2749): warning: conversion from a string literal to "char *" is deprecated
+
+cell.h(2750): warning: conversion from a string literal to "char *" is deprecated
+
+cell.h(2751): warning: conversion from a string literal to "char *" is deprecated
+
+cell.h(2753): warning: conversion from a string literal to "char *" is deprecated
+
+cell.h(2758): warning: conversion from a string literal to "char *" is deprecated
+
+cell.h(2759): warning: conversion from a string literal to "char *" is deprecated
+
+cell.h(2760): warning: conversion from a string literal to "char *" is deprecated
+
+cell.h(2762): warning: conversion from a string literal to "char *" is deprecated
+
+cell.h(2763): warning: conversion from a string literal to "char *" is deprecated
+
+cell.h(2764): warning: conversion from a string literal to "char *" is deprecated
+
+cell.h(2766): warning: conversion from a string literal to "char *" is deprecated
+
+cell.h(2780): warning: variable "qq" was declared but never referenced
+
+cell.h(2884): warning: expression has no effect
+
+gpucell.h(318): warning: variable "qq" was declared but never referenced
+
+gpucell.h(402): warning: variable "h_copy_of_d_src" was declared but never referenced
+
+gpucell.h(404): warning: variable "code" was declared but never referenced
+
+gpucell.h(430): warning: variable "code" was declared but never referenced
+
+gpucell.h(522): warning: variable "qq" was declared but never referenced
+
+read_particles.c(235): warning: variable "pos" was set but never used
+
+read_particles.c(287): warning: variable "err" was set but never used
+
+gpu_plasma.h(116): warning: conversion from a string literal to "char *" is deprecated
+
+gpu_plasma.h(371): warning: variable "new_c" was declared but never referenced
+
+gpu_plasma.h(440): warning: variable "pos" was declared but never referenced
+
+gpu_plasma.h(522): warning: variable "qq" was declared but never referenced
+
+gpu_plasma.h(599): warning: variable "n_global" was declared but never referenced
+
+gpu_plasma.h(628): warning: variable "dbg_t" was declared but never referenced
+
+gpu_plasma.h(677): warning: variable "qq" was declared but never referenced
+
+gpu_plasma.h(684): warning: variable "qq" was declared but never referenced
+
+gpu_plasma.h(854): warning: variable "d" was declared but never referenced
+
+gpu_plasma.h(855): warning: variable "cnp" was declared but never referenced
+
+gpu_plasma.h(855): warning: variable "sts" was declared but never referenced
+
+gpu_plasma.h(856): warning: variable "index" was declared but never referenced
+
+gpu_plasma.h(1166): warning: variable "busy" was declared but never referenced
+
+gpu_plasma.h(1294): warning: variable "qq" was declared but never referenced
+
+gpu_plasma.h(1765): warning: conversion from a string literal to "char *" is deprecated
+
+gpu_plasma.h(1962): warning: variable "q" was declared but never referenced
+
+gpu_plasma.h(1978): warning: variable "q" was declared but never referenced
+
+gpu_plasma.h(1985): warning: variable "mfree" was set but never used
+
+gpu_plasma.h(1985): warning: variable "mtot" was set but never used
+
+gpu_plasma.h(1936): warning: variable "h_copy" was declared but never referenced
+
+gpu_plasma.h(1936): warning: variable "h_c" was declared but never referenced
+
+gpu_plasma.h(1937): warning: variable "t" was declared but never referenced
+
+gpu_plasma.h(2064): warning: conversion from a string literal to "char *" is deprecated
+
+gpu_plasma.h(2094): warning: conversion from a string literal to "char *" is deprecated
+
+gpu_plasma.h(2056): warning: variable "c1" was declared but never referenced
+
+gpu_plasma.h(2056): warning: variable "c2" was declared but never referenced
+
+gpu_plasma.h(2122): warning: conversion from a string literal to "char *" is deprecated
+
+gpu_plasma.h(2145): warning: conversion from a string literal to "char *" is deprecated
+
+gpu_plasma.h(2118): warning: variable "info" was declared but never referenced
+
+gpu_plasma.h(2161): warning: statement is unreachable
+
+gpu_plasma.h(2183): warning: variable "res" is used before its value is set
+
+gpu_plasma.h(2273): warning: conversion from a string literal to "char *" is deprecated
+
+gpu_plasma.h(2239): warning: variable "err" was set but never used
+
+gpu_plasma.h(2289): warning: variable "dbg_E_aper" was declared but never referenced
+
+gpu_plasma.h(2391): warning: conversion from a string literal to "char *" is deprecated
+
+gpu_plasma.h(2391): warning: conversion from a string literal to "char *" is deprecated
+
+gpu_plasma.h(2392): warning: conversion from a string literal to "char *" is deprecated
+
+gpu_plasma.h(2392): warning: conversion from a string literal to "char *" is deprecated
+
+gpu_plasma.h(2393): warning: conversion from a string literal to "char *" is deprecated
+
+gpu_plasma.h(2393): warning: conversion from a string literal to "char *" is deprecated
+
+gpu_plasma.h(2395): warning: conversion from a string literal to "char *" is deprecated
+
+gpu_plasma.h(2395): warning: conversion from a string literal to "char *" is deprecated
+
+gpu_plasma.h(2396): warning: conversion from a string literal to "char *" is deprecated
+
+gpu_plasma.h(2396): warning: conversion from a string literal to "char *" is deprecated
+
+gpu_plasma.h(2397): warning: conversion from a string literal to "char *" is deprecated
+
+gpu_plasma.h(2397): warning: conversion from a string literal to "char *" is deprecated
+
+gpu_plasma.h(2399): warning: conversion from a string literal to "char *" is deprecated
+
+gpu_plasma.h(2399): warning: conversion from a string literal to "char *" is deprecated
+
+gpu_plasma.h(2400): warning: conversion from a string literal to "char *" is deprecated
+
+gpu_plasma.h(2400): warning: conversion from a string literal to "char *" is deprecated
+
+gpu_plasma.h(2401): warning: conversion from a string literal to "char *" is deprecated
+
+gpu_plasma.h(2401): warning: conversion from a string literal to "char *" is deprecated
+
+gpu_plasma.h(2405): warning: conversion from a string literal to "char *" is deprecated
+
+gpu_plasma.h(2405): warning: conversion from a string literal to "char *" is deprecated
+
+gpu_plasma.h(2406): warning: conversion from a string literal to "char *" is deprecated
+
+gpu_plasma.h(2406): warning: conversion from a string literal to "char *" is deprecated
+
+gpu_plasma.h(2407): warning: conversion from a string literal to "char *" is deprecated
+
+gpu_plasma.h(2407): warning: conversion from a string literal to "char *" is deprecated
+
+gpu_plasma.h(2409): warning: conversion from a string literal to "char *" is deprecated
+
+gpu_plasma.h(2409): warning: conversion from a string literal to "char *" is deprecated
+
+gpu_plasma.h(2410): warning: conversion from a string literal to "char *" is deprecated
+
+gpu_plasma.h(2410): warning: conversion from a string literal to "char *" is deprecated
+
+gpu_plasma.h(2411): warning: conversion from a string literal to "char *" is deprecated
+
+gpu_plasma.h(2411): warning: conversion from a string literal to "char *" is deprecated
+
+gpu_plasma.h(2386): warning: variable "t_check" was set but never used
+
+gpu_plasma.h(2485): warning: conversion from a string literal to "char *" is deprecated
+
+gpu_plasma.h(2490): warning: conversion from a string literal to "char *" is deprecated
+
+gpu_plasma.h(2498): warning: conversion from a string literal to "char *" is deprecated
+
+gpu_plasma.h(2554): warning: conversion from a string literal to "char *" is deprecated
+
+gpu_plasma.h(2560): warning: conversion from a string literal to "char *" is deprecated
+
+gpu_plasma.h(2566): warning: conversion from a string literal to "char *" is deprecated
+
+gpu_plasma.h(2635): warning: conversion from a string literal to "char *" is deprecated
+
+gpu_plasma.h(2649): warning: conversion from a string literal to "char *" is deprecated
+
+gpu_plasma.h(2653): warning: conversion from a string literal to "char *" is deprecated
+
+gpu_plasma.h(2665): warning: conversion from a string literal to "char *" is deprecated
+
+gpu_plasma.h(2675): warning: conversion from a string literal to "char *" is deprecated
+
+gpu_plasma.h(2686): warning: conversion from a string literal to "char *" is deprecated
+
+gpu_plasma.h(2721): warning: conversion from a string literal to "char *" is deprecated
+
+gpu_plasma.h(2699): warning: variable "err" was set but never used
+
+gpu_plasma.h(2702): warning: variable "first" was declared but never referenced
+
+gpu_plasma.h(2703): warning: variable "d_ee" was declared but never referenced
+
+gpu_plasma.h(2704): warning: variable "ee" was declared but never referenced
+
+gpu_plasma.h(3127): warning: variable "fname" was declared but never referenced
+
+gpu_plasma.h(3128): warning: variable "f" was declared but never referenced
+
+gpu_plasma.h(3202): warning: conversion from a string literal to "char *" is deprecated
+
+gpu_plasma.h(3205): warning: conversion from a string literal to "char *" is deprecated
+
+gpu_plasma.h(3208): warning: conversion from a string literal to "char *" is deprecated
+
+gpu_plasma.h(3211): warning: conversion from a string literal to "char *" is deprecated
+
+gpu_plasma.h(3214): warning: conversion from a string literal to "char *" is deprecated
+
+gpu_plasma.h(3217): warning: conversion from a string literal to "char *" is deprecated
+
+gpu_plasma.h(3290): warning: variable "qq" was declared but never referenced
+
+gpu_plasma.h(3295): warning: variable "qq" was declared but never referenced
+
+gpu_plasma.h(3244): warning: variable "err" was set but never used
+
+gpu_plasma.h(3438): warning: variable "qq" was declared but never referenced
+
+gpu_plasma.h(3375): warning: variable "err" was declared but never referenced
+
+gpu_plasma.h(3612): warning: variable "f" is used before its value is set
+
+gpu_plasma.h(3615): warning: variable "masses" is used before its value is set
+
+gpu_plasma.h(3662): warning: variable "f" is used before its value is set
+
+gpu_plasma.h(3664): warning: variable "m" is used before its value is set
+
+gpu_plasma.h(3841): warning: conversion from a string literal to "char *" is deprecated
+
+gpu_plasma.h(3815): warning: variable "err" was set but never used
+
+gpu_plasma.h(3912): warning: conversion from a string literal to "char *" is deprecated
+
+gpu_plasma.h(3921): warning: missing return statement at end of non-void function "GPUPlasma<Cell, dims>::AddConstantMagneticField"
+
+gpu_plasma.h(3892): warning: variable "err" was set but never used
+
+gpu_plasma.h(3943): warning: conversion from a string literal to "char *" is deprecated
+
+gpu_plasma.h(3925): warning: variable "err" was set but never used
+
+gpu_plasma.h(3990): warning: conversion from a string literal to "char *" is deprecated
+
+gpu_plasma.h(4007): warning: conversion from a string literal to "char *" is deprecated
+
+gpu_plasma.h(3970): warning: variable "err" was set but never used
+
+gpu_plasma.h(4061): warning: conversion from a string literal to "char *" is deprecated
+
+gpu_plasma.h(4044): warning: variable "err" was set but never used
+
+gpu_plasma.h(4125): warning: variable "diff" was declared but never referenced
+
+gpu_plasma.h(4173): warning: variable "dbg" was set but never used
+
+gpu_plasma.h(4173): warning: variable "t_hx" was declared but never referenced
+
+gpu_plasma.h(4173): warning: variable "t_hy" was declared but never referenced
+
+gpu_plasma.h(4173): warning: variable "t_hz" was declared but never referenced
+
+gpu_plasma.h(4183): warning: variable "dbg" was declared but never referenced
+
+gpu_plasma.h(4183): warning: variable "t_ex" was declared but never referenced
+
+gpu_plasma.h(4183): warning: variable "t_ey" was declared but never referenced
+
+gpu_plasma.h(4183): warning: variable "t_ez" was declared but never referenced
+
+gpu_plasma.h(4183): warning: variable "t_hx" was declared but never referenced
+
+gpu_plasma.h(4183): warning: variable "t_hy" was declared but never referenced
+
+gpu_plasma.h(4183): warning: variable "t_hz" was declared but never referenced
+
+gpu_plasma.h(4191): warning: variable "dbg" was declared but never referenced
+
+gpu_plasma.h(4191): warning: variable "t_ex" was declared but never referenced
+
+gpu_plasma.h(4191): warning: variable "t_ey" was declared but never referenced
+
+gpu_plasma.h(4191): warning: variable "t_ez" was declared but never referenced
+
+gpu_plasma.h(4191): warning: variable "t_hx" was declared but never referenced
+
+gpu_plasma.h(4191): warning: variable "t_hy" was declared but never referenced
+
+gpu_plasma.h(4191): warning: variable "t_hz" was declared but never referenced
+
+gpu_plasma.h(4199): warning: variable "dbg" was declared but never referenced
+
+gpu_plasma.h(4199): warning: variable "t_ex" was declared but never referenced
+
+gpu_plasma.h(4199): warning: variable "t_ey" was declared but never referenced
+
+gpu_plasma.h(4199): warning: variable "t_ez" was declared but never referenced
+
+gpu_plasma.h(4221): warning: variable "dbg" was set but never used
+
+gpu_plasma.h(4221): warning: variable "t_hx" was declared but never referenced
+
+gpu_plasma.h(4221): warning: variable "t_hy" was declared but never referenced
+
+gpu_plasma.h(4221): warning: variable "t_hz" was declared but never referenced
+
+gpu_plasma.h(4259): warning: conversion from a string literal to "char *" is deprecated
+
+gpu_plasma.h(4279): warning: conversion from a string literal to "char *" is deprecated
+
+gpu_plasma.h(4298): warning: conversion from a string literal to "char *" is deprecated
+
+gpu_plasma.h(4319): warning: conversion from a string literal to "char *" is deprecated
+
+gpu_plasma.h(4338): warning: conversion from a string literal to "char *" is deprecated
+
+gpu_plasma.h(4356): warning: conversion from a string literal to "char *" is deprecated
+
+gpu_plasma.h(4375): warning: conversion from a string literal to "char *" is deprecated
+
+gpu_plasma.h(4393): warning: conversion from a string literal to "char *" is deprecated
+
+gpu_plasma.h(4412): warning: conversion from a string literal to "char *" is deprecated
+
+gpu_plasma.h(4236): warning: variable "err" was set but never used
+
+gpu_plasma.h(4535): warning: conversion from a string literal to "char *" is deprecated
+
+gpu_plasma.h(4536): warning: conversion from a string literal to "char *" is deprecated
+
+gpu_plasma.h(4537): warning: conversion from a string literal to "char *" is deprecated
+
+gpu_plasma.h(4583): warning: variable "dbg_ion_x" was declared but never referenced
+
+gpu_plasma.h(4583): warning: variable "dbg_ion_y" was declared but never referenced
+
+gpu_plasma.h(4583): warning: variable "dbg_ion_z" was declared but never referenced
+
+gpu_plasma.h(4584): warning: variable "dbg_ion_px" was declared but never referenced
+
+gpu_plasma.h(4584): warning: variable "dbg_ion_py" was declared but never referenced
+
+gpu_plasma.h(4584): warning: variable "dbg_ion_pz" was declared but never referenced
+
+gpu_plasma.h(4584): warning: variable "ion_q_m" was declared but never referenced
+
+gpu_plasma.h(4584): warning: variable "ion_m" was declared but never referenced
+
+gpu_plasma.h(4585): warning: variable "total_ions" was declared but never referenced
+
+gpu_plasma.h(4586): warning: variable "dbg_el_x" was declared but never referenced
+
+gpu_plasma.h(4586): warning: variable "dbg_el_y" was declared but never referenced
+
+gpu_plasma.h(4586): warning: variable "dbg_el_z" was declared but never referenced
+
+gpu_plasma.h(4587): warning: variable "dbg_el_px" was declared but never referenced
+
+gpu_plasma.h(4587): warning: variable "dbg_el_py" was declared but never referenced
+
+gpu_plasma.h(4587): warning: variable "dbg_el_pz" was declared but never referenced
+
+gpu_plasma.h(4587): warning: variable "el_q_m" was declared but never referenced
+
+gpu_plasma.h(4587): warning: variable "el_m" was declared but never referenced
+
+gpu_plasma.h(4588): warning: variable "total_electrons" was declared but never referenced
+
+gpu_plasma.h(4589): warning: variable "dbg_beam_x" was declared but never referenced
+
+gpu_plasma.h(4589): warning: variable "dbg_beam_y" was declared but never referenced
+
+gpu_plasma.h(4589): warning: variable "dbg_beam_z" was declared but never referenced
+
+gpu_plasma.h(4590): warning: variable "dbg_beam_px" was declared but never referenced
+
+gpu_plasma.h(4590): warning: variable "dbg_beam_py" was declared but never referenced
+
+gpu_plasma.h(4590): warning: variable "dbg_beam_pz" was declared but never referenced
+
+gpu_plasma.h(4590): warning: variable "beam_q_m" was declared but never referenced
+
+gpu_plasma.h(4590): warning: variable "beam_m" was declared but never referenced
+
+gpu_plasma.h(4591): warning: variable "total_beam_electrons" was declared but never referenced
+
+gpu_plasma.h(4819): warning: conversion from a string literal to "char *" is deprecated
+
+gpu_plasma.h(4801): warning: variable "err" was set but never used
+
+gpu_plasma.h(4925): warning: statement is unreachable
+
+gpu_plasma.h(4973): warning: variable "t_jy" was declared but never referenced
+
+gpu_plasma.h(4973): warning: variable "t_jz" was declared but never referenced
+
+gpu_plasma.h(5026): warning: conversion from a string literal to "char *" is deprecated
+
+gpu_plasma.h(5031): warning: conversion from a string literal to "char *" is deprecated
+
+gpu_plasma.h(5036): warning: conversion from a string literal to "char *" is deprecated
+
+gpu_plasma.h(5049): warning: conversion from a string literal to "char *" is deprecated
+
+gpu_plasma.h(5070): warning: conversion from a string literal to "char *" is deprecated
+
+gpu_plasma.h(5072): warning: conversion from a string literal to "char *" is deprecated
+
+gpu_plasma.h(5072): warning: conversion from a string literal to "char *" is deprecated
+
+gpu_plasma.h(5073): warning: conversion from a string literal to "char *" is deprecated
+
+gpu_plasma.h(5073): warning: conversion from a string literal to "char *" is deprecated
+
+gpu_plasma.h(5074): warning: conversion from a string literal to "char *" is deprecated
+
+gpu_plasma.h(5074): warning: conversion from a string literal to "char *" is deprecated
+
+gpu_plasma.h(5083): warning: conversion from a string literal to "char *" is deprecated
+
+gpu_plasma.h(5098): warning: conversion from a string literal to "char *" is deprecated
+
+gpu_plasma.h(5015): warning: variable "t_njx" was set but never used
+
+gpu_plasma.h(5015): warning: variable "t_njy" was set but never used
+
+gpu_plasma.h(5015): warning: variable "t_njz" was set but never used
+
+gpu_plasma.h(5018): warning: variable "info" was declared but never referenced
+
+gpu_plasma.h(5229): warning: statement is unreachable
+
+check_field.h(66): warning: variable "wrong" was declared but never referenced
+
+check_field.h(67): warning: variable "diff" was declared but never referenced
+
+check_field.h(279): warning: missing return statement at end of non-void function "GPUPlasma<Cell, dims>::saveVectorField"
+
+check_field.h(337): warning: conversion from a string literal to "char *" is deprecated
+
+check_field.h(338): warning: conversion from a string literal to "char *" is deprecated
+
+check_field.h(339): warning: conversion from a string literal to "char *" is deprecated
+
+check_field.h(340): warning: conversion from a string literal to "char *" is deprecated
+
+check_field.h(341): warning: missing return statement at end of non-void function "GPUPlasma<Cell, dims>::saveFields"
+
+check_field.h(355): warning: statement is unreachable
+
+check_field.h(355): warning: conversion from a string literal to "char *" is deprecated
+
+check_field.h(356): warning: conversion from a string literal to "char *" is deprecated
+
+check_field.h(357): warning: conversion from a string literal to "char *" is deprecated
+
+check_field.h(358): warning: conversion from a string literal to "char *" is deprecated
+
+gpu_plasma.h(5913): warning: variable "dbg" was set but never used
+
+gpu_plasma.h(5913): warning: variable "t_hx" was declared but never referenced
+
+gpu_plasma.h(5941): warning: variable "dbg" was set but never used
+
+gpu_plasma.h(5941): warning: variable "t_hx" was declared but never referenced
+
+gpu_plasma.h(5941): warning: variable "t_hy" was declared but never referenced
+
+gpu_plasma.h(5941): warning: variable "t_hz" was declared but never referenced
+
+gpu_plasma.h(6008): warning: statement is unreachable
+
+gpu_plasma.h(6054): warning: conversion from a string literal to "char *" is deprecated
+
+gpu_plasma.h(6079): warning: conversion from a string literal to "char *" is deprecated
+
+gpu_plasma.h(6084): warning: conversion from a string literal to "char *" is deprecated
+
+gpu_plasma.h(6101): warning: conversion from a string literal to "char *" is deprecated
+
+gpu_plasma.h(6118): warning: conversion from a string literal to "char *" is deprecated
+
+gpu_plasma.h(6148): warning: conversion from a string literal to "char *" is deprecated
+
+gpu_plasma.h(6157): warning: conversion from a string literal to "char *" is deprecated
+
+gpu_plasma.h(6175): warning: conversion from a string literal to "char *" is deprecated
+
+gpu_plasma.h(6175): warning: conversion from a string literal to "char *" is deprecated
+
+gpu_plasma.h(6176): warning: conversion from a string literal to "char *" is deprecated
+
+gpu_plasma.h(6176): warning: conversion from a string literal to "char *" is deprecated
+
+gpu_plasma.h(6179): warning: conversion from a string literal to "char *" is deprecated
+
+gpu_plasma.h(6205): warning: conversion from a string literal to "char *" is deprecated
+
+gpu_plasma.h(6245): warning: conversion from a string literal to "char *" is deprecated
+
+gpu_plasma.h(6266): warning: conversion from a string literal to "char *" is deprecated
+
+gpu_plasma.h(6181): warning: variable "before_MakeDepartureLists" was declared but never referenced
+
+gpu_plasma.h(6181): warning: variable "after_MakeDepartureLists" was set but never used
+
+gpu_plasma.h(6182): warning: variable "before_ArrangeFlights" was declared but never referenced
+
+gpu_plasma.h(6182): warning: variable "after_ArrangeFlights" was set but never used
+
+gpu_plasma.h(6357): warning: conversion from a string literal to "char *" is deprecated
+
+gpu_plasma.h(6366): warning: variable "qq" was declared but never referenced
+
+gpu_plasma.h(6370): warning: conversion from a string literal to "char *" is deprecated
+
+gpu_plasma.h(6384): warning: conversion from a string literal to "char *" is deprecated
+
+gpu_plasma.h(6393): warning: conversion from a string literal to "char *" is deprecated
+
+gpu_plasma.h(6355): warning: variable "info" was declared but never referenced
+
+gpu_plasma.h(6457): warning: conversion from a string literal to "char *" is deprecated
+
+gpu_plasma.h(6667): warning: variable "err" was set but never used
+
+gpu_plasma.h(6699): warning: conversion from a string literal to "char *" is deprecated
+
+gpu_plasma.h(6685): warning: variable "err" was set but never used
+
+gpu_plasma.h(6813): warning: missing return statement at end of non-void function "GPUPlasma<Cell, dims>::memory_monitor"
+
+gpu_plasma.h(6956): warning: conversion from a string literal to "char *" is deprecated
+
+gpu_plasma.h(6845): warning: variable "f" was declared but never referenced
+
+gpu_plasma.h(6857): warning: variable "beam_hx" was declared but never referenced
+
+main.cu(74): warning: variable "start_nt" was set but never used
+
+cell.h(274): warning: variable "data" was set but never used
+          detected during:
+            instantiation of "void Cell<Particle, dims>::writeParticleToSurface(int, Particle *) [with Particle=Particle, dims=2]" 
+(305): here
+            instantiation of "void Cell<Particle, dims>::addParticleToSurface(Particle *, int *) [with Particle=Particle, dims=2]" 
+(1970): here
+            instantiation of "bool Cell<Particle, dims>::Insert(Particle &) [with Particle=Particle, dims=2]" 
+gpu_plasma.h(3443): here
+            instantiation of "void GPUPlasma<Cell, dims>::readBinaryParticlesOneSort(FILE *, std::vector<Particle, std::allocator<Particle>> &, particle_sorts, int, double *, double *, double *, double *, double *, double *, double, double, double *, int, int) [with Cell=GPUCell, dims=2]" 
+gpu_plasma.h(3612): here
+            instantiation of "void GPUPlasma<Cell, dims>::InitBinaryParticles(std::vector<Particle, std::allocator<Particle>> &, int, double *, double *, double *, double *, double *, double *, double, double, int, double *, double *, double *, double *, double *, double *, double, double, int, double *, double *, double *, double *, double *, double *, double, double, int) [with Cell=GPUCell, dims=2]" 
+gpu_plasma.h(4743): here
+            instantiation of "void GPUPlasma<Cell, dims>::LoadTestData(int, int) [with Cell=GPUCell, dims=2]" 
+gpu_plasma.h(5704): here
+            instantiation of "void GPUPlasma<Cell, dims>::InitializeCPU() [with Cell=GPUCell, dims=2]" 
+gpu_plasma.h(1610): here
+            instantiation of "void GPUPlasma<Cell, dims>::Initialize() [with Cell=GPUCell, dims=2]" 
+main.cu(63): here
+

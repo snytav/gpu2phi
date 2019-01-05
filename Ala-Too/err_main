@@ -1,0 +1,9 @@
+gpu_plasma.h(1664): warning #3180: unrecognized OpenMP #pragma
+  #pragma omp parallel for
+          ^
+          detected during:
+            instantiation of "int GPUPlasma<Cell, dims>::MagneticFieldTrace(Cell<Particle, dims> &, char *, int, double *, double *, double *, double *, int, int, int, double, double, int) [with Cell=GPUCell, dims=2]" at line 2549
+            instantiation of "void GPUPlasma<Cell, dims>::emh1(double *, double *, double *, double *, double *, double *, int, double *, double *, double *) [with Cell=GPUCell, dims=2]" at line 2398
+            instantiation of "void GPUPlasma<Cell, dims>::ComputeField_FirstHalfStep(double *, double *, double *, int, double *, double *, double *, double *, double *, double *, double *, double *, double *) [with Cell=GPUCell, dims=2]" at line 2633
+            instantiation of "void GPUPlasma<Cell, dims>::Step(int) [with Cell=GPUCell, dims=2]" at line 97 of "main.cpp"
+
