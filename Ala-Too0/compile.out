@@ -1,0 +1,66 @@
+icc: command line warning #10006: ignoring unknown option '-fmaxrregcount=128'
+icc: command line warning #10006: ignoring unknown option '-arch=sm_35'
+In file included from cell.h(14),
+                 from plasma.h(6),
+                 from gpu_plasma.h(53),
+                 from xeon_plasma.h(11),
+                 from main.cpp(1):
+/opt/intel/compilers_and_libraries_2018.1.148/linux/compiler/include/math.h(1336): error: identifier "_LIB_VERSION_TYPE" is undefined
+  _LIBIMF_EXT _LIB_VERSIONIMF_TYPE _LIBIMF_PUBVAR _LIB_VERSIONIMF;
+              ^
+
+In file included from /usr/include/c++/8/bits/move.h(55),
+                 from /usr/include/c++/8/bits/stl_pair.h(59),
+                 from /usr/include/c++/8/bits/stl_algobase.h(64),
+                 from /usr/include/c++/8/bits/char_traits.h(39),
+                 from /usr/include/c++/8/string(40),
+                 from particle.h(7),
+                 from cell.h(16),
+                 from plasma.h(6),
+                 from gpu_plasma.h(53),
+                 from xeon_plasma.h(11),
+                 from main.cpp(1):
+/usr/include/c++/8/type_traits(1049): error: type name is not allowed
+        : public __bool_constant<__is_assignable(_Tp, _Up)>
+                                                 ^
+
+In file included from /usr/include/c++/8/bits/move.h(55),
+                 from /usr/include/c++/8/bits/stl_pair.h(59),
+                 from /usr/include/c++/8/bits/stl_algobase.h(64),
+                 from /usr/include/c++/8/bits/char_traits.h(39),
+                 from /usr/include/c++/8/string(40),
+                 from particle.h(7),
+                 from cell.h(16),
+                 from plasma.h(6),
+                 from gpu_plasma.h(53),
+                 from xeon_plasma.h(11),
+                 from main.cpp(1):
+/usr/include/c++/8/type_traits(1049): error: type name is not allowed
+        : public __bool_constant<__is_assignable(_Tp, _Up)>
+                                                      ^
+
+In file included from /usr/include/c++/8/bits/move.h(55),
+                 from /usr/include/c++/8/bits/stl_pair.h(59),
+                 from /usr/include/c++/8/bits/stl_algobase.h(64),
+                 from /usr/include/c++/8/bits/char_traits.h(39),
+                 from /usr/include/c++/8/string(40),
+                 from particle.h(7),
+                 from cell.h(16),
+                 from plasma.h(6),
+                 from gpu_plasma.h(53),
+                 from xeon_plasma.h(11),
+                 from main.cpp(1):
+/usr/include/c++/8/type_traits(1049): error: identifier "__is_assignable" is undefined
+        : public __bool_constant<__is_assignable(_Tp, _Up)>
+                                 ^
+
+gpu_plasma.h(1664): warning #3180: unrecognized OpenMP #pragma
+  #pragma omp parallel for
+          ^
+          detected during:
+            instantiation of "int GPUPlasma<Cell, dims>::MagneticFieldTrace(Cell<Particle, dims> &, char *, int, double *, double *, double *, double *, int, int, int, double, double, int) [with Cell=GPUCell, dims=2]" at line 2549
+            instantiation of "void GPUPlasma<Cell, dims>::emh1(double *, double *, double *, double *, double *, double *, int, double *, double *, double *) [with Cell=GPUCell, dims=2]" at line 2398
+            instantiation of "void GPUPlasma<Cell, dims>::ComputeField_FirstHalfStep(double *, double *, double *, int, double *, double *, double *, double *, double *, double *, double *, double *, double *) [with Cell=GPUCell, dims=2]" at line 2633
+            instantiation of "void GPUPlasma<Cell, dims>::Step(int) [with Cell=GPUCell, dims=2]" at line 97 of "main.cpp"
+
+compilation aborted for main.cpp (code 2)

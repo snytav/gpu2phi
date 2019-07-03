@@ -1,0 +1,9 @@
+fname_base="./2016-08-18-58091-on-sl032/electricX_2016-08-18-58091-on-sl03200000015.dat.electric"
+t=1.500000e-02
+Lx=1.142400e+00
+Ly=5.000000e-01
+nx=100
+ny=40
+name="beam electric"
+shot_name="2016-08-18-58091-on-sl032"
+units=    "non-dimensional (field)"

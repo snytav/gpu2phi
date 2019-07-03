@@ -1,0 +1,271 @@
+#include "cuPrintf.cu"
+#ifndef GPU_PLASMA_H_
+#define GPU_PLASMA_H_
+#include<stdlib.h>
+#include<stdio.h>
+#include <string.h>
+#include <sys/time.h>
+#include <cuda.h>
+#include "rnd.h"
+#include "plasma.h"
+#include "gpucell.h"
+#include "mpi_shortcut.h"
+#include <sys/resource.h>
+#include <stdint.h>
+#include <sys/sysinfo.h>
+#define FORTRAN_ORDER
+//#ifdef PARTICLE_CELL_DEBUG_PRINTS
+//#endif
+#ifdef CHECK_ARRAY_SIZE_DEBUG_PRINTS
+#endif
+#ifdef CHECK_ARRAY_SIZE_DEBUG_PRINTS
+#endif
+#ifdef CHECK_ARRAY_SIZE_DEBUG_PRINTS
+#endif
+#ifdef FLY_PRINTS
+#endif
+#ifdef FLY_PRINTS
+#endif
+#ifdef FLY_PRINTS
+#endif
+#ifdef FLY_PRINTS
+#endif
+#ifdef FLY_PRINTS
+#endif
+#ifdef FLY_PRINTS
+#endif
+#ifdef FLY_PRINTS
+#endif
+#ifdef FLY_PRINTS
+#endif
+#ifdef FLY_PRINTS
+#endif
+#ifdef FLY_PRINTS
+#endif
+#ifdef FLY_PRINTS
+#endif
+//#ifdef FLY_PRINTS
+//#endif
+//#ifdef FLY_PRINTS
+//#endif
+//#ifdef FLY_PRINTS
+//#endif
+//#ifdef FLY_PRINTS
+//#endif
+//#ifdef FLY_PRINTS
+//#endif
+#ifdef STRAY_DEBUG_PRINTS
+#endif
+#ifdef STRAY_DEBUG_PRINTS
+#endif
+#ifdef STRAY_DEBUG_PRINTS
+#endif
+#ifdef STRAY_DEBUG_PRINTS
+#endif
+#ifdef GPU_CONTROL_ALL_CELLS_CURRENTS_PRINT
+#endif
+#ifdef PERIODIC_CURRENT_PRINTS
+#endif
+//#ifdef ATTRIBUTES_CHECK
+//#endif
+#ifdef ATTRIBUTES_CHECK
+#endif
+#ifdef COPY_CELL_PRINTS
+#endif
+#ifdef PARTICLE_PRINTS
+#endif
+#ifdef InitGPUParticles_PRINTS
+#endif
+#ifdef ATTRIBUTES_CHECK
+#endif
+#ifdef DEBUG_PLASMA_EFIELDS
+#endif
+//#ifdef DEBUG_PLASMA
+//#endif
+//#ifdef DEBUG_PLASMA
+//#endif
+#ifdef DEBUG_PLASMA
+#ifdef DEBUG_PLASMA_EFIELDS
+#endif
+#endif
+#ifdef CPU_DEBUG_RUN
+#endif
+#ifdef CONTROL_POINT_CHECK
+#endif
+#ifdef CPU_DEBUG_RUN
+#endif
+#ifdef CPU_DEBUG_RUN
+#ifdef CONTROL_POINT_CHECK
+#endif
+#ifdef CONTROL_POINT_CHECK
+#endif
+#endif
+#ifdef CPU_DEBUG_RUN
+#endif
+#ifdef CPU_DEBUG_RUN
+#ifdef CONTROL_POINT_CHECK
+#endif
+#endif
+#ifdef CPU_DEBUG_RUN
+#ifdef CONTROL_POINT_CHECK
+#endif
+#endif
+#ifdef DEBUG_PLASMA_STEP_FIELDS
+#endif
+#ifdef DEBUG_PLASMA_STEP_FIELDS
+#endif
+#ifdef DEBUG_PLASMA_STEP_FIELDS
+#endif
+#ifdef DEBUG_PLASMA_STEP_FIELDS
+#endif
+#ifdef DEBUG_PLASMA_STEP_FIELDS
+#endif
+#ifdef DEBUG_PLASMA_STEP_FIELDS_EMH2
+#endif
+#ifdef CONTROL_POINT_CHECK
+#endif
+#ifdef CONTROL_POINT_CHECK
+#endif
+#ifdef ATTRIBUTES_CHECK
+#endif
+#ifdef CONTROL_POINT_CHECK
+#endif
+#ifdef CPU_DEBUG_RUN
+#endif
+	#ifdef DEBUG_PLASMA
+	#endif
+#ifdef INIT_CELLS_DEBUG_PRINT
+#endif
+	#ifdef DEBUG_PLASMA
+	#endif
+	#ifdef DEBUG_PLASMA
+	#endif
+	#undef GPU_PARTICLE
+	#define GPU_PARTICLE
+#ifndef PRINT_PARTICLE_INITIALS
+#else
+#endif
+#ifdef PARTICLE_PRINTS1000
+#endif
+//		#define GPU_PARTICLE ///////////////////////
+	#ifdef DEBUG_PLASMA
+	#endif
+	#ifdef PARTICLE_PRINTS1000
+	#endif
+	//#ifdef DEBUG_PLASMA_EFIELDS
+	//#endif
+	////#ifdef DEBUG_PLASMA
+	////#endif
+	////#ifdef DEBUG_PLASMA
+	////#endif
+	//#ifdef DEBUG_PLASMA
+	//#ifdef DEBUG_PLASMA_EFIELDS
+	//#endif
+	//#endif
+	#ifdef DEBUG_PLASMA_FIELDS
+	#endif
+	#ifdef FIELDS_DEBUG_OUTPUT
+	#endif
+#ifdef FIELDS_DEBUG_OUTPUT
+#endif
+//#ifdef WRONG_CURRENTS_CHECK
+//#endif
+	//#ifdef DEBUG_PLASMA
+	//#endif
+#ifdef DEBUG_PLASMA
+#endif
+	#ifndef DEBUG_PLASMA
+	#endif
+	#ifdef GPU_PARTICLE
+	#else
+	#endif
+#ifndef CHECK_CONTROL_MATRIX
+#endif
+//#ifndef FINAL_CONTROL_POINT_CHECK
+//#endif
+//#ifndef CONTROL_POINT_CHECK
+//#endif
+#ifdef CONTROL_DIFF_GPU_PRINTS
+#endif
+#ifdef READ_DEBUG_PRINTS
+#endif
+//#ifdef CHECK_ARRAY_DETAIL_PRINTS
+//#endif
+#ifdef CHECK_ARRAY_DETAIL_PRINTS
+#endif
+#ifdef CHECK_ARRAY_DETAIL_PRINTS
+#endif
+#ifdef CHECK_ARRAY_DETAIL_PRINTS
+#endif
+#ifdef CHECK_ARRAY_DETAIL_PRINTS
+#endif
+#ifdef CHECK_ARRAY_DETAIL_PRINTS
+#endif
+#ifdef CHECK_VALUE_DEBUG_PRINTS
+#endif
+#ifdef READ_ARRAY_LOG_PRINTS
+#endif
+	#ifdef DEBUG_PLASMA
+	#endif
+#ifdef PERIODIC_DEBUG_PRINTS
+#endif
+	#ifdef DEBUG_PLASMA
+	#endif
+	#ifdef DEBUG_PLASMA
+	#endif
+#ifdef PERIODIC_DEBUG_PRINTS
+#endif
+	#ifdef DEBUG_PLASMA
+	#endif
+	#ifdef DEBUG_PLASMA
+	#endif
+	//#ifdef UNITY_ELECTRIC_FIELD
+	//#else
+	//#endif
+#ifdef PRINT_CELL_CURRENTS
+#endif
+#ifdef BALANCING_PRINTS
+#endif
+#ifdef BALANCING_PRINTS
+#endif
+#ifdef BALANCING_PRINTS
+#endif
+#ifdef BALANCING_PRINTS
+#endif
+	#ifdef DEBUG_PLASMA
+	#endif
+#ifdef CPU_DEBUG_RUN
+#ifdef checkControlPointParticles_PRINT
+#endif
+#ifdef CPU_DEBUG_RUN
+#ifdef FREE_RAM_MONITOR
+#ifdef checkControlPointParticles_PRINTS
+#endif
+#endif
+#ifdef checkControlPointParticles_PRINTS
+#endif
+#ifdef FREE_RAM_MONITOR
+#endif
+#ifdef FREE_RAM_MONITOR
+#endif
+#ifdef FREE_RAM_MONITOR
+#endif
+#ifdef FREE_RAM_MONITOR
+#endif
+//#endif
+#ifndef ATTRIBUTES_CHECK
+#else
+#ifdef ATTRIBUTES_CHECK
+#endif
+#endif
+#ifndef ATTRIBUTES_CHECK
+#else
+#endif
+#ifndef ATTRIBUTES_CHECK
+#else
+#ifdef ATTRIBUTES_CHECK
+#endif
+#endif
+#ifndef FREE_RAM_MONITOR
+#endif
+#endif /* GPU_PLASMA_H_ */

@@ -1,0 +1,183 @@
+========= CUDA-MEMCHECK
+printf default limit 1 
+printf limit set to 2048 
+dnhy000009.datSORT m     2.00400e-02 q_m     5.44662e-04      80000 (sum      80000) particles in     3672 cells: MIN          0 MAX         80 average         21 
+SORT m    -1.00000e-02 q_m    -1.00000e+00     160000 (sum     240000) particles in     3672 cells: MIN          0 MAX        240 average         65 
+SORT m    -4.00000e-05 q_m    -1.00000e+00      80000 (sum     320000) particles in     3672 cells: MIN          0 MAX        322 average         87 
+----------------------------------------------------------- plasma check before move 1.00000
+GPU_StepAllCells 3.922732e+00 
+========= Invalid __global__ read of size 8
+=========     at 0x00005fc0 in /ifs/home/icmmg/snytav/Atomics_Are_back_Again/shared/OPT-MANAS/gpu_plasma.h:622:_Z16GPU_StepAllCellsI7GPUCellEvPPT_I8ParticleEiPdddS6_i
+=========     by thread (125,0,0) in block (2,0,0)
+=========     Address 0x1b038fd7e8 is out of bounds
+=========     Saved host backtrace up to driver entry point at kernel launch time
+=========     Host Frame:/usr/lib64/libcuda.so.1 [0x2feae3]
+=========     Host Frame:[0x1cd06f30]
+=========
+========= Program hit cudaErrorLaunchFailure (error 4) due to "unspecified launch failure" on CUDA API call to cudaDeviceSynchronize. 
+=========     Saved host backtrace up to driver entry point at error
+=========     Host Frame:/usr/lib64/libcuda.so.1 [0x2feae3]
+=========     Host Frame:[0x1ccfa470]
+=========
+========= Program hit cudaErrorLaunchFailure (error 4) due to "unspecified launch failure" on CUDA API call to cudaGetLastError. 
+=========     Saved host backtrace up to driver entry point at error
+=========     Host Frame:/usr/lib64/libcuda.so.1 [0x2feae3]
+=========     Host Frame:[0x1ccfa470]
+=========
+========= Program hit cudaErrorLaunchFailure (error 4) due to "unspecified launch failure" on CUDA API call to cudaMalloc. 
+=========     Saved host backtrace up to driver entry point at error
+=========     Host Frame:/usr/lib64/libcuda.so.1 [0x2feae3]
+=========     Host Frame:[0x1ccfa470]
+=========
+========= Program hit cudaErrorLaunchFailure (error 4) due to "unspecified launch failure" on CUDA API call to cudaLaunch. 
+=========     Saved host backtrace up to driver entry point at error
+=========     Host Frame:/usr/lib64/libcuda.so.1 [0x2feae3]
+=========     Host Frame:[0x1ccfa470]
+=========
+========= Program hit cudaErrorLaunchFailure (error 4) due to "unspecified launch failure" on CUDA API call to cudaMemcpy. 
+=========     Saved host backtrace up to driver entry point at error
+=========     Host Frame:/usr/lib64/libcuda.so.1 [0x2feae3]
+=========     Host Frame:[0x1ccfa470]
+=========
+========= Program hit cudaErrorLaunchFailure (error 4) due to "unspecified launch failure" on CUDA API call to cudaMemcpy. 
+=========     Saved host backtrace up to driver entry point at error
+=========     Host Frame:/usr/lib64/libcuda.so.1 [0x2feae3]
+=========     Host Frame:[0x1ccfa470]
+=========
+========= Program hit cudaErrorLaunchFailure (error 4) due to "unspecified launch failure" on CUDA API call to cudaMemcpy. 
+=========     Saved host backtrace up to driver entry point at error
+=========     Host Frame:/usr/lib64/libcuda.so.1 [0x2feae3]
+=========     Host Frame:[0x1ccfa470]
+=========
+========= Program hit cudaErrorLaunchFailure (error 4) due to "unspecified launch failure" on CUDA API call to cudaMemcpy. 
+=========     Saved host backtrace up to driver entry point at error
+=========     Host Frame:/usr/lib64/libcuda.so.1 [0x2feae3]
+=========     Host Frame:[0x1ccfa470]
+=========
+========= Program hit cudaErrorLaunchFailure (error 4) due to "unspecified launch failure" on CUDA API call to cudaMemcpy. 
+=========     Saved host backtrace up to driver entry point at error
+=========     Host Frame:/usr/lib64/libcuda.so.1 [0x2feae3]
+=========     Host Frame:[0x1ccfa470]
+=========
+========= Program hit cudaErrorLaunchFailure (error 4) due to "unspecified launch failure" on CUDA API call to cudaMemcpy. 
+=========     Saved host backtrace up to driver entry point at error
+=========     Host Frame:/usr/lib64/libcuda.so.1 [0x2feae3]
+=========     Host Frame:[0x1ccfa470]
+=========
+========= Program hit cudaErrorLaunchFailure (error 4) due to "unspecified launch failure" on CUDA API call to cudaLaunch. 
+=========     Saved host backtrace up to driver entry point at error
+=========     Host Frame:/usr/lib64/libcuda.so.1 [0x2feae3]
+=========     Host Frame:[0x1ccfa470]
+=========
+STRAY END==============================================================
+========= Program hit cudaErrorLaunchFailure (error 4) due to "unspecified launch failure" on CUDA API call to cudaMemcpy. 
+=========     Saved host backtrace up to driver entry point at error
+=========     Host Frame:/usr/lib64/libcuda.so.1 [0x2feae3]
+=========     Host Frame:[0x1ccfa470]
+=========
+========= Program hit cudaErrorLaunchFailure (error 4) due to "unspecified launch failure" on CUDA API call to cudaGetLastError. 
+=========     Saved host backtrace up to driver entry point at error
+=========     Host Frame:/usr/lib64/libcuda.so.1 [0x2feae3]
+=========     Host Frame:[0x1ccfa470]
+CheckArraySilent err 4 unspecified launch failure 
+=========
+========= ERROR SUMMARY: 14 errors
+[snytav@sl032 OPT-MANAS]$ ./all
+printf default limit 1 
+printf limit set to 2048 
+dnhy000009.datSORT m     2.00400e-02 q_m     5.44662e-04      80000 (sum      80000) particles in     3672 cells: MIN          0 MAX         80 average         21 
+SORT m    -1.00000e-02 q_m    -1.00000e+00     160000 (sum     240000) particles in     3672 cells: MIN          0 MAX        240 average         65 
+SORT m    -4.00000e-05 q_m    -1.00000e+00      80000 (sum     320000) particles in     3672 cells: MIN          0 MAX        322 average         87 
+----------------------------------------------------------- plasma check before move 1.00000
+GPU_StepAllCells 7.226880e-01 
+attribute 1:    3.7495560304635224e-02 num 14536 sort 2 
+STRAY END==============================================================
+cell 654 sort 2 particle 174 FORTRAN  2498 X:     2.26188e-01 <   2.38670653646059022e-01 <     2.38754e-01 
+GPU-Plasma
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ plasma check after move 0.78936
+Press any key to continue...
+[snytav@sl032 OPT-MANAS]$ cuda-memcheck ./all
+========= CUDA-MEMCHECK
+printf default limit 1 
+printf limit set to 2048 
+dnhy000009.datSORT m     2.00400e-02 q_m     5.44662e-04      80000 (sum      80000) particles in     3672 cells: MIN          0 MAX         80 average         21 
+SORT m    -1.00000e-02 q_m    -1.00000e+00     160000 (sum     240000) particles in     3672 cells: MIN          0 MAX        240 average         65 
+SORT m    -4.00000e-05 q_m    -1.00000e+00      80000 (sum     320000) particles in     3672 cells: MIN          0 MAX        322 average         87 
+----------------------------------------------------------- plasma check before move 1.00000
+GPU_StepAllCells 3.957452e+00 
+========= Invalid __global__ read of size 8
+=========     at 0x00006078 in /ifs/home/icmmg/snytav/Atomics_Are_back_Again/shared/OPT-MANAS/gpu_plasma.h:623:_Z16GPU_StepAllCellsI7GPUCellEvPPT_I8ParticleEiPdddS6_i
+=========     by thread (125,0,0) in block (2,0,0)
+=========     Address 0x1b038fd7e8 is out of bounds
+=========     Saved host backtrace up to driver entry point at kernel launch time
+=========     Host Frame:/usr/lib64/libcuda.so.1 [0x2feae3]
+=========     Host Frame:[0xb205f30]
+=========
+========= Program hit cudaErrorLaunchFailure (error 4) due to "unspecified launch failure" on CUDA API call to cudaDeviceSynchronize. 
+=========     Saved host backtrace up to driver entry point at error
+=========     Host Frame:/usr/lib64/libcuda.so.1 [0x2feae3]
+=========     Host Frame:[0xb1f9470]
+=========
+========= Program hit cudaErrorLaunchFailure (error 4) due to "unspecified launch failure" on CUDA API call to cudaGetLastError. 
+=========     Saved host backtrace up to driver entry point at error
+=========     Host Frame:/usr/lib64/libcuda.so.1 [0x2feae3]
+=========     Host Frame:[0xb1f9470]
+=========
+========= Program hit cudaErrorLaunchFailure (error 4) due to "unspecified launch failure" on CUDA API call to cudaMalloc. 
+=========     Saved host backtrace up to driver entry point at error
+=========     Host Frame:/usr/lib64/libcuda.so.1 [0x2feae3]
+=========     Host Frame:[0xb1f9470]
+=========
+========= Program hit cudaErrorLaunchFailure (error 4) due to "unspecified launch failure" on CUDA API call to cudaLaunch. 
+=========     Saved host backtrace up to driver entry point at error
+=========     Host Frame:/usr/lib64/libcuda.so.1 [0x2feae3]
+=========     Host Frame:[0xb1f9470]
+=========
+========= Program hit cudaErrorLaunchFailure (error 4) due to "unspecified launch failure" on CUDA API call to cudaMemcpy. 
+=========     Saved host backtrace up to driver entry point at error
+=========     Host Frame:/usr/lib64/libcuda.so.1 [0x2feae3]
+=========     Host Frame:[0xb1f9470]
+=========
+========= Program hit cudaErrorLaunchFailure (error 4) due to "unspecified launch failure" on CUDA API call to cudaMemcpy. 
+=========     Saved host backtrace up to driver entry point at error
+=========     Host Frame:/usr/lib64/libcuda.so.1 [0x2feae3]
+=========     Host Frame:[0xb1f9470]
+=========
+========= Program hit cudaErrorLaunchFailure (error 4) due to "unspecified launch failure" on CUDA API call to cudaMemcpy. 
+=========     Saved host backtrace up to driver entry point at error
+=========     Host Frame:/usr/lib64/libcuda.so.1 [0x2feae3]
+=========     Host Frame:[0xb1f9470]
+=========
+========= Program hit cudaErrorLaunchFailure (error 4) due to "unspecified launch failure" on CUDA API call to cudaMemcpy. 
+=========     Saved host backtrace up to driver entry point at error
+=========     Host Frame:/usr/lib64/libcuda.so.1 [0x2feae3]
+=========     Host Frame:[0xb1f9470]
+=========
+========= Program hit cudaErrorLaunchFailure (error 4) due to "unspecified launch failure" on CUDA API call to cudaMemcpy. 
+=========     Saved host backtrace up to driver entry point at error
+=========     Host Frame:/usr/lib64/libcuda.so.1 [0x2feae3]
+=========     Host Frame:[0xb1f9470]
+=========
+========= Program hit cudaErrorLaunchFailure (error 4) due to "unspecified launch failure" on CUDA API call to cudaMemcpy. 
+=========     Saved host backtrace up to driver entry point at error
+=========     Host Frame:/usr/lib64/libcuda.so.1 [0x2feae3]
+=========     Host Frame:[0xb1f9470]
+=========
+========= Program hit cudaErrorLaunchFailure (error 4) due to "unspecified launch failure" on CUDA API call to cudaLaunch. 
+=========     Saved host backtrace up to driver entry point at error
+STRAY END==============================================================
+=========     Host Frame:/usr/lib64/libcuda.so.1 [0x2feae3]
+=========     Host Frame:[0xb1f9470]
+=========
+========= Program hit cudaErrorLaunchFailure (error 4) due to "unspecified launch failure" on CUDA API call to cudaMemcpy. 
+=========     Saved host backtrace up to driver entry point at error
+=========     Host Frame:/usr/lib64/libcuda.so.1 [0x2feae3]
+=========     Host Frame:[0xb1f9470]
+=========
+========= Program hit cudaErrorLaunchFailure (error 4) due to "unspecified launch failure" on CUDA API call to cudaGetLastError. 
+=========     Saved host backtrace up to driver entry point at error
+=========     Host Frame:/usr/lib64/libcuda.so.1 [0x2feae3]
+=========     Host Frame:[0xb1f9470]
+CheckArraySilent err 4 unspecified launch failure 
+=========
+========= ERROR SUMMARY: 14 errors

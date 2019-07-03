@@ -1,9 +1,664 @@
-gpu_plasma.h(1664): warning #3180: unrecognized OpenMP #pragma
-  #pragma omp parallel for
-          ^
-          detected during:
-            instantiation of "int GPUPlasma<Cell, dims>::MagneticFieldTrace(Cell<Particle, dims> &, char *, int, double *, double *, double *, double *, int, int, int, double, double, int) [with Cell=GPUCell, dims=2]" at line 2549
-            instantiation of "void GPUPlasma<Cell, dims>::emh1(double *, double *, double *, double *, double *, double *, int, double *, double *, double *) [with Cell=GPUCell, dims=2]" at line 2398
-            instantiation of "void GPUPlasma<Cell, dims>::ComputeField_FirstHalfStep(double *, double *, double *, int, double *, double *, double *, double *, double *, double *, double *, double *, double *) [with Cell=GPUCell, dims=2]" at line 2633
-            instantiation of "void GPUPlasma<Cell, dims>::Step(int) [with Cell=GPUCell, dims=2]" at line 97 of "main.cpp"
-
+In file included from gpu_plasma.h:51,
+                 from xeon_plasma.h:11,
+                 from main.cpp:1:
+archAPI.h: In function ‘int SetDevice(int)’:
+archAPI.h:168:1: warning: no return statement in function returning non-void [-Wreturn-type]
+ }
+ ^
+archAPI.h: In function ‘int MemoryAllocate(void**, size_t)’:
+archAPI.h:216:1: warning: no return statement in function returning non-void [-Wreturn-type]
+ }
+ ^
+archAPI.h: In function ‘int MemorySet(void*, int, size_t)’:
+archAPI.h:237:1: warning: no return statement in function returning non-void [-Wreturn-type]
+ }
+ ^
+archAPI.h: In function ‘int DeviceSynchronize()’:
+archAPI.h:246:1: warning: no return statement in function returning non-void [-Wreturn-type]
+ }
+ ^
+archAPI.h: In function ‘int ThreadSynchronize()’:
+archAPI.h:253:1: warning: no return statement in function returning non-void [-Wreturn-type]
+ }
+ ^
+In file included from plasma.h:6,
+                 from gpu_plasma.h:53,
+                 from xeon_plasma.h:11,
+                 from main.cpp:1:
+cell.h: In member function ‘void Cell<Particle, dims>::copyCellFromHostToDevice(Cell<Particle, dims>*, Cell<Particle, dims>*)’:
+cell.h:1984:6: error: ‘cudaError_t’ was not declared in this scope
+      cudaError_t err;
+      ^~~~~~~~~~~
+cell.h:1984:6: note: suggested alternative: ‘error_t’
+      cudaError_t err;
+      ^~~~~~~~~~~
+      error_t
+cell.h:1985:3: error: there are no arguments to ‘cudaMalloc’ that depend on a template parameter, so a declaration of ‘cudaMalloc’ must be available [-fpermissive]
+   cudaMalloc((void **)&d_p,sizeof(Cell<Particle,dims>));
+   ^~~~~~~~~~
+cell.h:1985:3: note: (if you use ‘-fpermissive’, G++ will accept your code, but allowing the use of an undeclared name is deprecated)
+cell.h:1986:6: error: ‘err’ was not declared in this scope
+      err = cudaMemcpy(d_p,h_p,sizeof(Cell<Particle,dims>),cudaMemcpyHostToDevice);
+      ^~~
+cell.h:1986:6: note: suggested alternative: ‘erf’
+      err = cudaMemcpy(d_p,h_p,sizeof(Cell<Particle,dims>),cudaMemcpyHostToDevice);
+      ^~~
+      erf
+cell.h:1986:59: error: ‘cudaMemcpyHostToDevice’ was not declared in this scope
+      err = cudaMemcpy(d_p,h_p,sizeof(Cell<Particle,dims>),cudaMemcpyHostToDevice);
+                                                           ^~~~~~~~~~~~~~~~~~~~~~
+cell.h:1986:59: note: suggested alternative: ‘copyCellFromHostToDevice’
+      err = cudaMemcpy(d_p,h_p,sizeof(Cell<Particle,dims>),cudaMemcpyHostToDevice);
+                                                           ^~~~~~~~~~~~~~~~~~~~~~
+                                                           copyCellFromHostToDevice
+cell.h:1987:16: error: ‘cudaSuccess’ was not declared in this scope
+      if(err != cudaSuccess)
+                ^~~~~~~~~~~
+cell.h:1987:16: note: suggested alternative: ‘euidaccess’
+      if(err != cudaSuccess)
+                ^~~~~~~~~~~
+                euidaccess
+cell.h:1989:54: error: there are no arguments to ‘cudaGetErrorString’ that depend on a template parameter, so a declaration of ‘cudaGetErrorString’ must be available [-fpermissive]
+   printf("copyCellFromHostToDevice err %d %s \n",err,cudaGetErrorString(err));
+                                                      ^~~~~~~~~~~~~~~~~~
+In file included from gpu_plasma.h:63,
+                 from xeon_plasma.h:11,
+                 from main.cpp:1:
+read_particles.c: In function ‘void InitBinaryParticlesArrays(char*, int, ParticleArrays*, ParticleArrays*, ParticleArrays*, int, int, int, int)’:
+read_particles.c:245:14: warning: format ‘%u’ expects argument of type ‘unsigned int’, but argument 3 has type ‘__kernel_ulong_t’ {aka ‘long unsigned int’} [-Wformat=]
+       printf("before1  %d free %u \n",nt,info.freeram/1024/1024);
+              ^~~~~~~~~~~~~~~~~~~~~~~~    ~~~~~~~~~~~~~~~~~~~~~~
+read_particles.c:249:14: warning: format ‘%u’ expects argument of type ‘unsigned int’, but argument 3 has type ‘__kernel_ulong_t’ {aka ‘long unsigned int’} [-Wformat=]
+       printf("before1  %d free %u \n",nt,info.freeram/1024/1024);
+              ^~~~~~~~~~~~~~~~~~~~~~~~    ~~~~~~~~~~~~~~~~~~~~~~
+read_particles.c:253:14: warning: format ‘%u’ expects argument of type ‘unsigned int’, but argument 3 has type ‘__kernel_ulong_t’ {aka ‘long unsigned int’} [-Wformat=]
+       printf("before1  %d free %u \n",nt,info.freeram/1024/1024);
+              ^~~~~~~~~~~~~~~~~~~~~~~~    ~~~~~~~~~~~~~~~~~~~~~~
+read_particles.c:259:14: warning: format ‘%u’ expects argument of type ‘unsigned int’, but argument 3 has type ‘__kernel_ulong_t’ {aka ‘long unsigned int’} [-Wformat=]
+       printf("before1  %d free %u \n",nt,info.freeram/1024/1024);
+              ^~~~~~~~~~~~~~~~~~~~~~~~    ~~~~~~~~~~~~~~~~~~~~~~
+read_particles.c:265:14: warning: format ‘%u’ expects argument of type ‘unsigned int’, but argument 3 has type ‘__kernel_ulong_t’ {aka ‘long unsigned int’} [-Wformat=]
+       printf("before1  %d free %u \n",nt,info.freeram/1024/1024);
+              ^~~~~~~~~~~~~~~~~~~~~~~~    ~~~~~~~~~~~~~~~~~~~~~~
+read_particles.c:299:14: warning: format ‘%u’ expects argument of type ‘unsigned int’, but argument 3 has type ‘__kernel_ulong_t’ {aka ‘long unsigned int’} [-Wformat=]
+       printf("before1  %d free %u \n",nt,info.freeram/1024/1024);
+              ^~~~~~~~~~~~~~~~~~~~~~~~    ~~~~~~~~~~~~~~~~~~~~~~
+read_particles.c:310:17: warning: format ‘%u’ expects argument of type ‘unsigned int’, but argument 3 has type ‘__kernel_ulong_t’ {aka ‘long unsigned int’} [-Wformat=]
+          printf("before1  %d free %u \n",nt,info.freeram/1024/1024);
+                 ^~~~~~~~~~~~~~~~~~~~~~~~    ~~~~~~~~~~~~~~~~~~~~~~
+In file included from xeon_plasma.h:11,
+                 from main.cpp:1:
+gpu_plasma.h: In function ‘double get_meminfo1()’:
+gpu_plasma.h:114:20: warning: ISO C++ forbids converting a string constant to ‘char*’ [-Wwrite-strings]
+    char *delimiter=" ";
+                    ^~~
+In file included from xeon_plasma.h:11,
+                 from main.cpp:1:
+gpu_plasma.h: In function ‘void GPU_Universal_Kernel(Cell<Particle, dims>**, KernelParams*, SingleNodeFunctionType)’:
+gpu_plasma.h:1034:21: error: ‘blockIdx’ was not declared in this scope
+   unsigned int nx = blockIdx.x;
+                     ^~~~~~~~
+gpu_plasma.h:1034:21: note: suggested alternative: ‘clock’
+   unsigned int nx = blockIdx.x;
+                     ^~~~~~~~
+                     clock
+gpu_plasma.h:1037:24: error: ‘threadIdx’ was not declared in this scope
+   unsigned int th_nx = threadIdx.x;
+                        ^~~~~~~~~
+gpu_plasma.h:1037:24: note: suggested alternative: ‘pthread_t’
+   unsigned int th_nx = threadIdx.x;
+                        ^~~~~~~~~
+                        pthread_t
+gpu_plasma.h: In function ‘void GPU_SetFieldsToCells(Cell<Particle, dims>**, double*, double*, double*, double*, double*, double*)’:
+gpu_plasma.h:1062:20: error: ‘blockIdx’ was not declared in this scope
+  unsigned int nx = blockIdx.x;
+                    ^~~~~~~~
+gpu_plasma.h:1062:20: note: suggested alternative: ‘clock’
+  unsigned int nx = blockIdx.x;
+                    ^~~~~~~~
+                    clock
+gpu_plasma.h:1071:44: error: ‘threadIdx’ was not declared in this scope
+  nc.readFieldsFromArrays(Ex,Ey,Ez,Hx,Hy,Hz,threadIdx);
+                                            ^~~~~~~~~
+gpu_plasma.h:1071:44: note: suggested alternative: ‘pthread_t’
+  nc.readFieldsFromArrays(Ex,Ey,Ez,Hx,Hy,Hz,threadIdx);
+                                            ^~~~~~~~~
+                                            pthread_t
+gpu_plasma.h: In function ‘void GPU_WriteAllCurrents(Cell<Particle, dims>**, int, double*, double*, double*, double*)’:
+gpu_plasma.h:1104:20: error: ‘blockIdx’ was not declared in this scope
+  unsigned int nx = blockIdx.x;
+                    ^~~~~~~~
+gpu_plasma.h:1104:20: note: suggested alternative: ‘clock’
+  unsigned int nx = blockIdx.x;
+                    ^~~~~~~~
+                    clock
+gpu_plasma.h:1116:17: error: ‘threadIdx’ was not declared in this scope
+            i1 = threadIdx.x;
+                 ^~~~~~~~~
+gpu_plasma.h:1116:17: note: suggested alternative: ‘pthread_t’
+            i1 = threadIdx.x;
+                 ^~~~~~~~~
+                 pthread_t
+gpu_plasma.h: In function ‘void GPU_WriteControlSystem(Cell<Particle, dims>**)’:
+gpu_plasma.h:1139:20: error: ‘blockIdx’ was not declared in this scope
+  unsigned int nx = blockIdx.x;
+                    ^~~~~~~~
+gpu_plasma.h:1139:20: note: suggested alternative: ‘clock’
+  unsigned int nx = blockIdx.x;
+                    ^~~~~~~~
+                    clock
+gpu_plasma.h: In function ‘void GPU_CollectStrayParticles(Cell<Particle, dims>**, int)’:
+gpu_plasma.h:1160:20: error: ‘blockIdx’ was not declared in this scope
+  unsigned int nx = blockIdx.x;
+                    ^~~~~~~~
+gpu_plasma.h:1160:20: note: suggested alternative: ‘clock’
+  unsigned int nx = blockIdx.x;
+                    ^~~~~~~~
+                    clock
+gpu_plasma.h: In function ‘void GPU_GetCellNumbers(Cell<Particle, dims>**, int*)’:
+gpu_plasma.h:1251:13: error: ‘blockIdx’ was not declared in this scope
+   c = cells[blockIdx.x];
+             ^~~~~~~~
+gpu_plasma.h:1251:13: note: suggested alternative: ‘clock’
+   c = cells[blockIdx.x];
+             ^~~~~~~~
+             clock
+gpu_plasma.h: In function ‘void GPU_emh2(Cell<Particle, dims>**, int, int, int, double*, double*)’:
+gpu_plasma.h:1310:20: error: ‘blockIdx’ was not declared in this scope
+  unsigned int nx = blockIdx.x;
+                    ^~~~~~~~
+gpu_plasma.h:1310:20: note: suggested alternative: ‘clock’
+  unsigned int nx = blockIdx.x;
+                    ^~~~~~~~
+                    clock
+gpu_plasma.h: In function ‘void GPU_emh1(Cell<Particle, dims>**, int, int, int, double*, double*, double*, double*, double, double, int, int, int, int, int, int)’:
+gpu_plasma.h:1355:20: error: ‘blockIdx’ was not declared in this scope
+  unsigned int nx = blockIdx.x;
+                    ^~~~~~~~
+gpu_plasma.h:1355:20: note: suggested alternative: ‘clock’
+  unsigned int nx = blockIdx.x;
+                    ^~~~~~~~
+                    clock
+gpu_plasma.h: In function ‘void GPU_periodic(Cell<Particle, dims>**, int, int, double*, int, int, int)’:
+gpu_plasma.h:1395:20: error: ‘blockIdx’ was not declared in this scope
+  unsigned int nx = blockIdx.x;
+                    ^~~~~~~~
+gpu_plasma.h:1395:20: note: suggested alternative: ‘clock’
+  unsigned int nx = blockIdx.x;
+                    ^~~~~~~~
+                    clock
+gpu_plasma.h: In function ‘void GPU_CurrentPeriodic(Cell<Particle, dims>**, double*, int, int, int, int, int)’:
+gpu_plasma.h:1433:20: error: ‘blockIdx’ was not declared in this scope
+  unsigned int nx = blockIdx.x;
+                    ^~~~~~~~
+gpu_plasma.h:1433:20: note: suggested alternative: ‘clock’
+  unsigned int nx = blockIdx.x;
+                    ^~~~~~~~
+                    clock
+gpu_plasma.h: In function ‘void GPU_eme(Cell<Particle, dims>**, int, int, int, double*, double*, double*, double*, double, double, double, int, int, int, int, int, int)’:
+gpu_plasma.h:1450:20: error: ‘blockIdx’ was not declared in this scope
+  unsigned int nx = blockIdx.x*blockDim.x + threadIdx.x;
+                    ^~~~~~~~
+gpu_plasma.h:1450:20: note: suggested alternative: ‘clock’
+  unsigned int nx = blockIdx.x*blockDim.x + threadIdx.x;
+                    ^~~~~~~~
+                    clock
+gpu_plasma.h:1450:31: error: ‘blockDim’ was not declared in this scope
+  unsigned int nx = blockIdx.x*blockDim.x + threadIdx.x;
+                               ^~~~~~~~
+gpu_plasma.h:1450:31: note: suggested alternative: ‘clock’
+  unsigned int nx = blockIdx.x*blockDim.x + threadIdx.x;
+                               ^~~~~~~~
+                               clock
+gpu_plasma.h:1450:44: error: ‘threadIdx’ was not declared in this scope
+  unsigned int nx = blockIdx.x*blockDim.x + threadIdx.x;
+                                            ^~~~~~~~~
+gpu_plasma.h:1450:44: note: suggested alternative: ‘pthread_t’
+  unsigned int nx = blockIdx.x*blockDim.x + threadIdx.x;
+                                            ^~~~~~~~~
+                                            pthread_t
+gpu_plasma.h: In function ‘void copy_pointers(Cell<Particle, dims>**, int*, double**)’:
+gpu_plasma.h:1466:34: error: ‘blockIdx’ was not declared in this scope
+  Cell<Particle,dims>  *c = cells[blockIdx.x];
+                                  ^~~~~~~~
+gpu_plasma.h:1466:34: note: suggested alternative: ‘clock’
+  Cell<Particle,dims>  *c = cells[blockIdx.x];
+                                  ^~~~~~~~
+                                  clock
+gpu_plasma.h: In member function ‘int GPUPlasma<Cell, dims>::AddConstantMagneticField(Cell<Particle, dims>&, double*, int, int, int, double, int)’:
+gpu_plasma.h:3916:2: warning: no return statement in function returning non-void [-Wreturn-type]
+  }
+  ^
+In file included from gpu_plasma.h:5283,
+                 from xeon_plasma.h:11,
+                 from main.cpp:1:
+check_field.h: In member function ‘double GPUPlasma<Cell, dims>::saveVectorField(double*, double*, double*, int, int, char*, int, int)’:
+check_field.h:270:40: error: ‘cudaMemcpyDeviceToHost’ was not declared in this scope
+   cudaMemcpy(h_x,x,size*sizeof(double),cudaMemcpyDeviceToHost);
+                                        ^~~~~~~~~~~~~~~~~~~~~~
+check_field.h:270:3: error: there are no arguments to ‘cudaMemcpy’ that depend on a template parameter, so a declaration of ‘cudaMemcpy’ must be available [-fpermissive]
+   cudaMemcpy(h_x,x,size*sizeof(double),cudaMemcpyDeviceToHost);
+   ^~~~~~~~~~
+check_field.h:271:3: error: there are no arguments to ‘cudaMemcpy’ that depend on a template parameter, so a declaration of ‘cudaMemcpy’ must be available [-fpermissive]
+   cudaMemcpy(h_y,y,size*sizeof(double),cudaMemcpyDeviceToHost);
+   ^~~~~~~~~~
+check_field.h:272:3: error: there are no arguments to ‘cudaMemcpy’ that depend on a template parameter, so a declaration of ‘cudaMemcpy’ must be available [-fpermissive]
+   cudaMemcpy(h_z,z,size*sizeof(double),cudaMemcpyDeviceToHost);
+   ^~~~~~~~~~
+check_field.h: In member function ‘double GPUPlasma<Cell, dims>::saveFields(double*, double*, double*, double*, double*, double*, double*, double*, double*, double*, double*, double*, int, int, int, int)’:
+check_field.h:341:1: warning: no return statement in function returning non-void [-Wreturn-type]
+ }
+ ^
+In file included from xeon_plasma.h:11,
+                 from main.cpp:1:
+gpu_plasma.h: In member function ‘int GPUPlasma<Cell, dims>::memory_monitor(char*, int)’:
+gpu_plasma.h:6808:1: warning: no return statement in function returning non-void [-Wreturn-type]
+ }
+ ^
+main.cpp: In function ‘int main(int, char**)’:
+main.cpp:93:15: warning: format ‘%u’ expects argument of type ‘unsigned int’, but argument 3 has type ‘__kernel_ulong_t’ {aka ‘long unsigned int’} [-Wformat=]
+        printf("before Step  %10d CPU memory free %10u GPU memory total %10d free %10d\n",
+               ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+          nt,info.freeram/1024/1024,m_total/1024/1024,m_free/1024/1024);
+             ~~~~~~~~~~~~~~~~~~~~~~
+main.cpp:93:15: warning: format ‘%d’ expects argument of type ‘int’, but argument 4 has type ‘size_t’ {aka ‘long unsigned int’} [-Wformat=]
+main.cpp:93:15: warning: format ‘%d’ expects argument of type ‘int’, but argument 5 has type ‘size_t’ {aka ‘long unsigned int’} [-Wformat=]
+main.cpp:106:15: warning: format ‘%u’ expects argument of type ‘unsigned int’, but argument 3 has type ‘__kernel_ulong_t’ {aka ‘long unsigned int’} [-Wformat=]
+        printf("after  Step  %10d CPU memory free %10u GPU memory total %10d free %10d\n",
+               ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+          nt,info.freeram/1024/1024,m_total/1024/1024,m_free/1024/1024);
+             ~~~~~~~~~~~~~~~~~~~~~~
+main.cpp:106:15: warning: format ‘%d’ expects argument of type ‘int’, but argument 4 has type ‘size_t’ {aka ‘long unsigned int’} [-Wformat=]
+main.cpp:106:15: warning: format ‘%d’ expects argument of type ‘int’, but argument 5 has type ‘size_t’ {aka ‘long unsigned int’} [-Wformat=]
+In file included from xeon_plasma.h:11,
+                 from main.cpp:1:
+gpu_plasma.h: In instantiation of ‘void GPU_GetFlownBeamNumber_SingleNode(Cell<Particle, dims>**, KernelParams*, unsigned int, unsigned int, unsigned int, unsigned int, unsigned int, unsigned int) [with Cell = GPUCell; int dims = 2]’:
+gpu_plasma.h:1009:73:   required from here
+gpu_plasma.h:678:10: warning: format ‘%d’ expects argument of type ‘int’, but argument 5 has type ‘double’ [-Wformat=]
+   printf("(%d,%d,%d) FLOwN BEAM %d\n",c->cnum.x,c->cnum.y,c->cnum.z(),(*c).beam_boundary_counter);
+          ^~~~~~~~~~~~~~~~~~~~~~~~~~~~                                 ~~~~~~~~~~~~~~~~~~~~~~~~~~
+gpu_plasma.h: In instantiation of ‘void GPUPlasma<Cell, dims>::Step(int) [with Cell = GPUCell; int dims = 2]’:
+main.cpp:97:23:   required from here
+gpu_plasma.h:2630:11: warning: ISO C++ forbids converting a string constant to ‘char*’ [-Wwrite-strings]
+           memory_monitor("beforeComputeField_FirstHalfStep",nt);
+           ^~~~~~~~~~~~~~
+gpu_plasma.h:2644:3: warning: ISO C++ forbids converting a string constant to ‘char*’ [-Wwrite-strings]
+   memory_monitor("afterComputeField_FirstHalfStep",nt);
+   ^~~~~~~~~~~~~~
+gpu_plasma.h:2648:6: warning: ISO C++ forbids converting a string constant to ‘char*’ [-Wwrite-strings]
+      memory_monitor("before_CellOrder_StepAllCells",nt);
+      ^~~~~~~~~~~~~~
+gpu_plasma.h:2660:9: warning: ISO C++ forbids converting a string constant to ‘char*’ [-Wwrite-strings]
+         memory_monitor("after_CellOrder_StepAllCells",nt);
+         ^~~~~~~~~~~~~~
+gpu_plasma.h:2670:5: warning: ISO C++ forbids converting a string constant to ‘char*’ [-Wwrite-strings]
+     memory_monitor("before270",nt);
+     ^~~~~~~~~~~~~~
+gpu_plasma.h:2681:5: warning: ISO C++ forbids converting a string constant to ‘char*’ [-Wwrite-strings]
+     memory_monitor("after_ComputeField_SecondHalfStep",nt);
+     ^~~~~~~~~~~~~~
+In file included from xeon_plasma.h:11,
+                 from main.cpp:1:
+gpu_plasma.h: In instantiation of ‘void GPUPlasma<Cell, dims>::BeamInput(int) [with Cell = GPUCell; int dims = 2]’:
+main.cpp:98:28:   required from here
+gpu_plasma.h:6949:6: warning: ISO C++ forbids converting a string constant to ‘char*’ [-Wwrite-strings]
+      Kernel_Launcher(d_CellArray,d_params,mesh.x+2,mesh.y+2,mesh.dimz2(),
+      ^~~~~~~~~~~~~~~
+In file included from gpu_plasma.h:5283,
+                 from xeon_plasma.h:11,
+                 from main.cpp:1:
+check_field.h: In instantiation of ‘double GPUPlasma<Cell, dims>::checkFields(double*, double*, double*, double*, double*, double*, double*, double*, double*, double*, double*, double*, int, int, int, int) [with Cell = GPUCell; int dims = 2]’:
+gpu_plasma.h:1610:17:   required from ‘void GPUPlasma<Cell, dims>::Initialize() [with Cell = GPUCell; int dims = 2]’
+main.cpp:63:23:   required from here
+check_field.h:355:6: warning: ISO C++ forbids converting a string constant to ‘char*’ [-Wwrite-strings]
+  t_e = checkVectorField(Ex,Ey,Ez,device_flag,size,"EE",num,nt);
+check_field.h:356:6: warning: ISO C++ forbids converting a string constant to ‘char*’ [-Wwrite-strings]
+  t_h = checkVectorField(Hx,Hy,Hz,device_flag,size,"HH",num,nt);
+check_field.h:357:6: warning: ISO C++ forbids converting a string constant to ‘char*’ [-Wwrite-strings]
+  t_j = checkVectorField(Jx,Jy,Jz,device_flag,size,"JJ",num,nt);
+check_field.h:358:6: warning: ISO C++ forbids converting a string constant to ‘char*’ [-Wwrite-strings]
+  t_q = checkVectorField(Qx,Qy,Qz,device_flag,size,"QQ",num,nt);
+In file included from xeon_plasma.h:11,
+                 from main.cpp:1:
+gpu_plasma.h: In instantiation of ‘double GPUPlasma<Cell, dims>::getElectricEnergy() [with Cell = GPUCell; int dims = 2]’:
+gpu_plasma.h:2860:14:   required from ‘void GPUPlasma<Cell, dims>::Diagnose(int) [with Cell = GPUCell; int dims = 2]’
+main.cpp:84:40:   required from here
+gpu_plasma.h:2714:6: warning: ISO C++ forbids converting a string constant to ‘char*’ [-Wwrite-strings]
+      Kernel_Launcher(d_CellArray,d_params,mesh.x+2,mesh.y+2,mesh.dimz2(),1,1,1,
+      ^~~~~~~~~~~~~~~
+In file included from xeon_plasma.h:11,
+                 from main.cpp:1:
+gpu_plasma.h: In instantiation of ‘int GPUPlasma<Cell, dims>::memory_monitor(char*, int) [with Cell = GPUCell; int dims = 2]’:
+gpu_plasma.h:2630:11:   required from ‘void GPUPlasma<Cell, dims>::Step(int) [with Cell = GPUCell; int dims = 2]’
+main.cpp:97:23:   required from here
+gpu_plasma.h:6806:12: warning: format ‘%d’ expects argument of type ‘int’, but argument 5 has type ‘size_t’ {aka ‘long unsigned int’} [-Wformat=]
+  fprintf(f,"step %10d %50s GPU memory total %10d free %10d free CPU memory %10u \n",nt,legend,m_total/1024/1024,m_free/1024/1024,info.freeram/1024/1024);
+            ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~           ~~~~~~~~~~~~~~~~~
+gpu_plasma.h:6806:12: warning: format ‘%d’ expects argument of type ‘int’, but argument 6 has type ‘size_t’ {aka ‘long unsigned int’} [-Wformat=]
+gpu_plasma.h:6806:12: warning: format ‘%u’ expects argument of type ‘unsigned int’, but argument 7 has type ‘__kernel_ulong_t’ {aka ‘long unsigned int’} [-Wformat=]
+In file included from xeon_plasma.h:11,
+                 from main.cpp:1:
+gpu_plasma.h: In instantiation of ‘void GPUPlasma<Cell, dims>::ComputeField_FirstHalfStep(double*, double*, double*, int, double*, double*, double*, double*, double*, double*, double*, double*, double*) [with Cell = GPUCell; int dims = 2]’:
+gpu_plasma.h:2633:5:   required from ‘void GPUPlasma<Cell, dims>::Step(int) [with Cell = GPUCell; int dims = 2]’
+main.cpp:97:23:   required from here
+gpu_plasma.h:2386:15: warning: ISO C++ forbids converting a string constant to ‘char*’ [-Wwrite-strings]
+    t_check[0] = checkControlMatrix("emh1",nt,"qx",d_Qx);
+gpu_plasma.h:2386:15: warning: ISO C++ forbids converting a string constant to ‘char*’ [-Wwrite-strings]
+gpu_plasma.h:2387:15: warning: ISO C++ forbids converting a string constant to ‘char*’ [-Wwrite-strings]
+    t_check[1] = checkControlMatrix("emh1",nt,"qy",d_Qy);
+gpu_plasma.h:2387:15: warning: ISO C++ forbids converting a string constant to ‘char*’ [-Wwrite-strings]
+gpu_plasma.h:2388:15: warning: ISO C++ forbids converting a string constant to ‘char*’ [-Wwrite-strings]
+    t_check[2] = checkControlMatrix("emh1",nt,"qz",d_Qz);
+gpu_plasma.h:2388:15: warning: ISO C++ forbids converting a string constant to ‘char*’ [-Wwrite-strings]
+gpu_plasma.h:2390:15: warning: ISO C++ forbids converting a string constant to ‘char*’ [-Wwrite-strings]
+    t_check[3] = checkControlMatrix("emh1",nt,"ex",d_Ex);
+gpu_plasma.h:2390:15: warning: ISO C++ forbids converting a string constant to ‘char*’ [-Wwrite-strings]
+gpu_plasma.h:2391:15: warning: ISO C++ forbids converting a string constant to ‘char*’ [-Wwrite-strings]
+    t_check[4] = checkControlMatrix("emh1",nt,"ey",d_Ey);
+gpu_plasma.h:2391:15: warning: ISO C++ forbids converting a string constant to ‘char*’ [-Wwrite-strings]
+gpu_plasma.h:2392:15: warning: ISO C++ forbids converting a string constant to ‘char*’ [-Wwrite-strings]
+    t_check[5] = checkControlMatrix("emh1",nt,"ez",d_Ez);
+gpu_plasma.h:2392:15: warning: ISO C++ forbids converting a string constant to ‘char*’ [-Wwrite-strings]
+gpu_plasma.h:2394:15: warning: ISO C++ forbids converting a string constant to ‘char*’ [-Wwrite-strings]
+    t_check[6] = checkControlMatrix("emh1",nt,"hx",d_Hx);
+gpu_plasma.h:2394:15: warning: ISO C++ forbids converting a string constant to ‘char*’ [-Wwrite-strings]
+gpu_plasma.h:2395:15: warning: ISO C++ forbids converting a string constant to ‘char*’ [-Wwrite-strings]
+    t_check[7] = checkControlMatrix("emh1",nt,"hy",d_Hy);
+gpu_plasma.h:2395:15: warning: ISO C++ forbids converting a string constant to ‘char*’ [-Wwrite-strings]
+gpu_plasma.h:2396:15: warning: ISO C++ forbids converting a string constant to ‘char*’ [-Wwrite-strings]
+    t_check[8] = checkControlMatrix("emh1",nt,"hz",d_Hz);
+gpu_plasma.h:2396:15: warning: ISO C++ forbids converting a string constant to ‘char*’ [-Wwrite-strings]
+gpu_plasma.h:2400:15: warning: ISO C++ forbids converting a string constant to ‘char*’ [-Wwrite-strings]
+    t_check[9] = checkControlMatrix("emj1",nt,"qx",d_Qx);
+gpu_plasma.h:2400:15: warning: ISO C++ forbids converting a string constant to ‘char*’ [-Wwrite-strings]
+gpu_plasma.h:2401:16: warning: ISO C++ forbids converting a string constant to ‘char*’ [-Wwrite-strings]
+    t_check[10] = checkControlMatrix("emj1",nt,"qy",d_Qy);
+gpu_plasma.h:2401:16: warning: ISO C++ forbids converting a string constant to ‘char*’ [-Wwrite-strings]
+gpu_plasma.h:2402:16: warning: ISO C++ forbids converting a string constant to ‘char*’ [-Wwrite-strings]
+    t_check[11] = checkControlMatrix("emj1",nt,"qz",d_Qz);
+gpu_plasma.h:2402:16: warning: ISO C++ forbids converting a string constant to ‘char*’ [-Wwrite-strings]
+gpu_plasma.h:2404:16: warning: ISO C++ forbids converting a string constant to ‘char*’ [-Wwrite-strings]
+    t_check[12] = checkControlMatrix("emj1",nt,"hx",d_Hx);
+gpu_plasma.h:2404:16: warning: ISO C++ forbids converting a string constant to ‘char*’ [-Wwrite-strings]
+gpu_plasma.h:2405:16: warning: ISO C++ forbids converting a string constant to ‘char*’ [-Wwrite-strings]
+    t_check[13] = checkControlMatrix("emj1",nt,"hy",d_Hy);
+gpu_plasma.h:2405:16: warning: ISO C++ forbids converting a string constant to ‘char*’ [-Wwrite-strings]
+gpu_plasma.h:2406:16: warning: ISO C++ forbids converting a string constant to ‘char*’ [-Wwrite-strings]
+    t_check[14] = checkControlMatrix("emj1",nt,"hz",d_Hz);
+gpu_plasma.h:2406:16: warning: ISO C++ forbids converting a string constant to ‘char*’ [-Wwrite-strings]
+gpu_plasma.h: In instantiation of ‘void GPUPlasma<Cell, dims>::AssignCellsToArraysGPU() [with Cell = GPUCell; int dims = 2]’:
+gpu_plasma.h:2647:6:   required from ‘void GPUPlasma<Cell, dims>::Step(int) [with Cell = GPUCell; int dims = 2]’
+main.cpp:97:23:   required from here
+gpu_plasma.h:4812:2: warning: ISO C++ forbids converting a string constant to ‘char*’ [-Wwrite-strings]
+  Kernel_Launcher(d_CellArray,d_params,mesh.x,mesh.y,mesh.z(),
+  ^~~~~~~~~~~~~~~
+In file included from xeon_plasma.h:11,
+                 from main.cpp:1:
+gpu_plasma.h: In instantiation of ‘void GPUPlasma<Cell, dims>::CellOrder_StepAllCells(int, double, double, int) [with Cell = GPUCell; int dims = 2]’:
+gpu_plasma.h:2655:9:   required from ‘void GPUPlasma<Cell, dims>::Step(int) [with Cell = GPUCell; int dims = 2]’
+main.cpp:97:23:   required from here
+gpu_plasma.h:6049:3: warning: ISO C++ forbids converting a string constant to ‘char*’ [-Wwrite-strings]
+   memory_monitor("CellOrder_StepAllCells1",nt);
+   ^~~~~~~~~~~~~~
+gpu_plasma.h:6074:7: warning: ISO C++ forbids converting a string constant to ‘char*’ [-Wwrite-strings]
+       memory_monitor("CellOrder_StepAllCells3",nt);
+       ^~~~~~~~~~~~~~
+gpu_plasma.h:6079:4: warning: ISO C++ forbids converting a string constant to ‘char*’ [-Wwrite-strings]
+    ListAllParticles(nt,"bStepAllCells");
+    ^~~~~~~~~~~~~~~~
+gpu_plasma.h:6092:7: warning: ISO C++ forbids converting a string constant to ‘char*’ [-Wwrite-strings]
+       Kernel_Launcher(d_CellArray,d_params,mesh.x+2,mesh.y+2,mesh.dimz2(),
+       ^~~~~~~~~~~~~~~
+gpu_plasma.h:6113:13: warning: ISO C++ forbids converting a string constant to ‘char*’ [-Wwrite-strings]
+             memory_monitor("CellOrder_StepAllCells4",nt);
+             ^~~~~~~~~~~~~~
+gpu_plasma.h:6140:6: warning: ISO C++ forbids converting a string constant to ‘char*’ [-Wwrite-strings]
+      Kernel_Launcher(d_CellArray,d_params,mesh.x+2,mesh.y+2,mesh.dimz2(),
+      ^~~~~~~~~~~~~~~
+gpu_plasma.h:6152:7: warning: ISO C++ forbids converting a string constant to ‘char*’ [-Wwrite-strings]
+       memory_monitor("CellOrder_StepAllCells5",nt);
+       ^~~~~~~~~~~~~~
+gpu_plasma.h:6170:8: warning: ISO C++ forbids converting a string constant to ‘char*’ [-Wwrite-strings]
+        write_field_component(nt,d_Jx,"aSUM","Jx",mesh.size2());
+        ^~~~~~~~~~~~~~~~~~~~~
+gpu_plasma.h:6170:8: warning: ISO C++ forbids converting a string constant to ‘char*’ [-Wwrite-strings]
+gpu_plasma.h:6171:8: warning: ISO C++ forbids converting a string constant to ‘char*’ [-Wwrite-strings]
+        write_field_component(nt,d_Ex,"aSUM","Ex",mesh.size2());
+        ^~~~~~~~~~~~~~~~~~~~~
+gpu_plasma.h:6171:8: warning: ISO C++ forbids converting a string constant to ‘char*’ [-Wwrite-strings]
+gpu_plasma.h:6174:8: warning: ISO C++ forbids converting a string constant to ‘char*’ [-Wwrite-strings]
+        memory_monitor("CellOrder_StepAllCells6",nt);
+        ^~~~~~~~~~~~~~
+gpu_plasma.h:6198:14: warning: ISO C++ forbids converting a string constant to ‘char*’ [-Wwrite-strings]
+              Kernel_Launcher(d_CellArray,d_params,mesh.x+2,mesh.y+2,mesh.dimz2(),
+              ^~~~~~~~~~~~~~~
+gpu_plasma.h:6238:14: warning: ISO C++ forbids converting a string constant to ‘char*’ [-Wwrite-strings]
+              Kernel_Launcher(d_CellArray,d_params,mesh.x+2,mesh.y+2,mesh.dimz2(),
+              ^~~~~~~~~~~~~~~
+gpu_plasma.h:6261:15: warning: ISO C++ forbids converting a string constant to ‘char*’ [-Wwrite-strings]
+               memory_monitor("CellOrder_StepAllCells7",nt);
+               ^~~~~~~~~~~~~~
+In file included from xeon_plasma.h:11,
+                 from main.cpp:1:
+gpu_plasma.h: In instantiation of ‘void GPUPlasma<Cell, dims>::LoadTestData(int, int) [with Cell = GPUCell; int dims = 2]’:
+gpu_plasma.h:5699:8:   required from ‘void GPUPlasma<Cell, dims>::InitializeCPU() [with Cell = GPUCell; int dims = 2]’
+gpu_plasma.h:1608:2:   required from ‘void GPUPlasma<Cell, dims>::Initialize() [with Cell = GPUCell; int dims = 2]’
+main.cpp:63:23:   required from here
+gpu_plasma.h:4530:7: warning: ISO C++ forbids converting a string constant to ‘char*’ [-Wwrite-strings]
+       readDebugArray("hxlg",Hx,nt,5);
+       ^~~~~~~~~~~~~~
+gpu_plasma.h:4531:7: warning: ISO C++ forbids converting a string constant to ‘char*’ [-Wwrite-strings]
+       readDebugArray("hylg",Hy,nt,5);
+       ^~~~~~~~~~~~~~
+gpu_plasma.h:4532:7: warning: ISO C++ forbids converting a string constant to ‘char*’ [-Wwrite-strings]
+       readDebugArray("hzlg",Hz,nt,5);
+       ^~~~~~~~~~~~~~
+gpu_plasma.h:4544:14: warning: format not a string literal and no format arguments [-Wformat-security]
+       printf(d_hyfile);
+              ^~~~~~~~
+gpu_plasma.h: In instantiation of ‘void GPUPlasma<Cell, dims>::emh1(double*, double*, double*, double*, double*, double*, int, double*, double*, double*) [with Cell = GPUCell; int dims = 2]’:
+gpu_plasma.h:2398:4:   required from ‘void GPUPlasma<Cell, dims>::ComputeField_FirstHalfStep(double*, double*, double*, int, double*, double*, double*, double*, double*, double*, double*, double*, double*) [with Cell = GPUCell; int dims = 2]’
+gpu_plasma.h:2633:5:   required from ‘void GPUPlasma<Cell, dims>::Step(int) [with Cell = GPUCell; int dims = 2]’
+main.cpp:97:23:   required from here
+gpu_plasma.h:2549:6: warning: ISO C++ forbids converting a string constant to ‘char*’ [-Wwrite-strings]
+      MagneticFieldTrace(c,"hxlg",nt,locQx,locHx,locEy,locEz,mesh.x+1,mesh.y,mesh.z(),c31,c21,0);
+      ^~~~~~~~~~~~~~~~~~
+gpu_plasma.h:2555:5: warning: ISO C++ forbids converting a string constant to ‘char*’ [-Wwrite-strings]
+     MagneticFieldTrace(c,"hylg",nt,locQy,locHy,locEz,locEx,mesh.x,mesh.y+1,mesh.z(),c11,c31,1);
+     ^~~~~~~~~~~~~~~~~~
+gpu_plasma.h:2561:5: warning: ISO C++ forbids converting a string constant to ‘char*’ [-Wwrite-strings]
+     MagneticFieldTrace(c,"hzlg",nt,locQz,locHz,locEx,locEy,mesh.x,mesh.y,mesh.z()+1,c21,c11,2);
+     ^~~~~~~~~~~~~~~~~~
+gpu_plasma.h: In instantiation of ‘void GPUPlasma<Cell, dims>::SetAllCurrentsToZero(Cell<Particle, dims>**, unsigned int, unsigned int, unsigned int, unsigned int, unsigned int, unsigned int) [with Cell = GPUCell; int dims = 2]’:
+gpu_plasma.h:6067:10:   required from ‘void GPUPlasma<Cell, dims>::CellOrder_StepAllCells(int, double, double, int) [with Cell = GPUCell; int dims = 2]’
+gpu_plasma.h:2655:9:   required from ‘void GPUPlasma<Cell, dims>::Step(int) [with Cell = GPUCell; int dims = 2]’
+main.cpp:97:23:   required from here
+gpu_plasma.h:1758:5: warning: ISO C++ forbids converting a string constant to ‘char*’ [-Wwrite-strings]
+     Kernel_Launcher(cells,&params,grid_size_x,grid_size_y,grid_size_z,
+     ^~~~~~~~~~~~~~~
+In file included from xeon_plasma.h:11,
+                 from main.cpp:1:
+gpu_plasma.h: In instantiation of ‘void GPUPlasma<Cell, dims>::ListAllParticles(int, char*) [with Cell = GPUCell; int dims = 2]’:
+gpu_plasma.h:6079:4:   required from ‘void GPUPlasma<Cell, dims>::CellOrder_StepAllCells(int, double, double, int) [with Cell = GPUCell; int dims = 2]’
+gpu_plasma.h:2655:9:   required from ‘void GPUPlasma<Cell, dims>::Step(int) [with Cell = GPUCell; int dims = 2]’
+main.cpp:97:23:   required from here
+gpu_plasma.h:5826:19: warning: embedded ‘\0’ in format [-Wformat-contains-nul]
+       sprintf(str,"List%05d_rank%05d_%s.dat\0",nt,getRank(),where);
+                   ^~~~~~~~~~~~~~~~~~~~~~~~~~~~
+In file included from xeon_plasma.h:11,
+                 from main.cpp:1:
+gpu_plasma.h: In instantiation of ‘void GPUPlasma<Cell, dims>::SetPeriodicCurrents(int) [with Cell = GPUCell; int dims = 2]’:
+gpu_plasma.h:2431:6:   required from ‘void GPUPlasma<Cell, dims>::ComputeField_SecondHalfStep(double*, double*, double*, int, double*, double*, double*, double*, double*, double*, double*, double*, double*) [with Cell = GPUCell; int dims = 2]’
+gpu_plasma.h:2673:9:   required from ‘void GPUPlasma<Cell, dims>::Step(int) [with Cell = GPUCell; int dims = 2]’
+main.cpp:97:23:   required from here
+gpu_plasma.h:4252:7: warning: ISO C++ forbids converting a string constant to ‘char*’ [-Wwrite-strings]
+       Kernel_Launcher(d_CellArray,d_params,dimGridX.x,dimGridX.y,dimGridX.z,
+       ^~~~~~~~~~~~~~~
+gpu_plasma.h:4272:7: warning: ISO C++ forbids converting a string constant to ‘char*’ [-Wwrite-strings]
+       Kernel_Launcher(d_CellArray,d_params,dimGridY.x,dimGridY.y,dimGridY.z,
+       ^~~~~~~~~~~~~~~
+gpu_plasma.h:4291:7: warning: ISO C++ forbids converting a string constant to ‘char*’ [-Wwrite-strings]
+       Kernel_Launcher(d_CellArray,d_params,dimGridZ.x,dimGridZ.y,dimGridZ.z,
+       ^~~~~~~~~~~~~~~
+gpu_plasma.h:4312:7: warning: ISO C++ forbids converting a string constant to ‘char*’ [-Wwrite-strings]
+       Kernel_Launcher(d_CellArray,d_params,dimGridX.x,dimGridX.y,dimGridX.z,
+       ^~~~~~~~~~~~~~~
+gpu_plasma.h:4331:7: warning: ISO C++ forbids converting a string constant to ‘char*’ [-Wwrite-strings]
+       Kernel_Launcher(d_CellArray,d_params,dimGridY.x,dimGridY.y,dimGridY.z,
+       ^~~~~~~~~~~~~~~
+gpu_plasma.h:4349:10: warning: ISO C++ forbids converting a string constant to ‘char*’ [-Wwrite-strings]
+          Kernel_Launcher(d_CellArray,d_params,dimGridZ.x,dimGridZ.y,dimGridZ.z,
+          ^~~~~~~~~~~~~~~
+gpu_plasma.h:4368:9: warning: ISO C++ forbids converting a string constant to ‘char*’ [-Wwrite-strings]
+         Kernel_Launcher(d_CellArray,d_params,dimGridX.x,dimGridX.y,dimGridX.z,
+         ^~~~~~~~~~~~~~~
+gpu_plasma.h:4386:9: warning: ISO C++ forbids converting a string constant to ‘char*’ [-Wwrite-strings]
+         Kernel_Launcher(d_CellArray,d_params,dimGridY.x,dimGridY.y,dimGridY.z,
+         ^~~~~~~~~~~~~~~
+gpu_plasma.h:4405:9: warning: ISO C++ forbids converting a string constant to ‘char*’ [-Wwrite-strings]
+         Kernel_Launcher(d_CellArray,d_params,dimGridZ.x,dimGridZ.y,dimGridZ.z,
+         ^~~~~~~~~~~~~~~
+gpu_plasma.h: In instantiation of ‘void GPUPlasma<Cell, dims>::eme(double*, double*, double*, int, double*, double*, double*, double*, double*, double*) [with Cell = GPUCell; int dims = 2]’:
+gpu_plasma.h:2455:5:   required from ‘void GPUPlasma<Cell, dims>::ComputeField_SecondHalfStep(double*, double*, double*, int, double*, double*, double*, double*, double*, double*, double*, double*, double*) [with Cell = GPUCell; int dims = 2]’
+gpu_plasma.h:2673:9:   required from ‘void GPUPlasma<Cell, dims>::Step(int) [with Cell = GPUCell; int dims = 2]’
+main.cpp:97:23:   required from here
+gpu_plasma.h:2480:7: warning: ISO C++ forbids converting a string constant to ‘char*’ [-Wwrite-strings]
+       ElectricFieldTrace("exlg",nt,locEx,locHz,locHy,loc_npJx,
+       ^~~~~~~~~~~~~~~~~~
+gpu_plasma.h:2485:7: warning: ISO C++ forbids converting a string constant to ‘char*’ [-Wwrite-strings]
+       ElectricFieldTrace("eylg",nt,locEy,locHx,locHz,loc_npJy,
+       ^~~~~~~~~~~~~~~~~~
+gpu_plasma.h:2493:7: warning: ISO C++ forbids converting a string constant to ‘char*’ [-Wwrite-strings]
+       ElectricFieldTrace("ezlg",nt,locEz,locHy,locHx,loc_npJz,
+       ^~~~~~~~~~~~~~~~~~
+gpu_plasma.h: In instantiation of ‘int GPUPlasma<Cell, dims>::MagneticFieldTrace(Cell<Particle, dims>&, char*, int, double*, double*, double*, double*, int, int, int, double, double, int) [with Cell = GPUCell; int dims = 2]’:
+gpu_plasma.h:2549:6:   required from ‘void GPUPlasma<Cell, dims>::emh1(double*, double*, double*, double*, double*, double*, int, double*, double*, double*) [with Cell = GPUCell; int dims = 2]’
+gpu_plasma.h:2398:4:   required from ‘void GPUPlasma<Cell, dims>::ComputeField_FirstHalfStep(double*, double*, double*, int, double*, double*, double*, double*, double*, double*, double*, double*, double*) [with Cell = GPUCell; int dims = 2]’
+gpu_plasma.h:2633:5:   required from ‘void GPUPlasma<Cell, dims>::Step(int) [with Cell = GPUCell; int dims = 2]’
+main.cpp:97:23:   required from here
+gpu_plasma.h:3831:6: warning: ISO C++ forbids converting a string constant to ‘char*’ [-Wwrite-strings]
+      Kernel_Launcher(d_CellArray,d_params,
+      ^~~~~~~~~~~~~~~
+gpu_plasma.h: In instantiation of ‘void GPUPlasma<Cell, dims>::copyCells(char*, int) [with Cell = GPUCell; int dims = 2]’:
+gpu_plasma.h:5836:7:   required from ‘void GPUPlasma<Cell, dims>::ListAllParticles(int, char*) [with Cell = GPUCell; int dims = 2]’
+gpu_plasma.h:6079:4:   required from ‘void GPUPlasma<Cell, dims>::CellOrder_StepAllCells(int, double, double, int) [with Cell = GPUCell; int dims = 2]’
+gpu_plasma.h:2655:9:   required from ‘void GPUPlasma<Cell, dims>::Step(int) [with Cell = GPUCell; int dims = 2]’
+main.cpp:97:23:   required from here
+gpu_plasma.h:2059:2: warning: ISO C++ forbids converting a string constant to ‘char*’ [-Wwrite-strings]
+  memory_monitor("beforeCopyCells",nt);
+  ^~~~~~~~~~~~~~
+gpu_plasma.h:2089:2: warning: ISO C++ forbids converting a string constant to ‘char*’ [-Wwrite-strings]
+  memory_monitor("afterCopyCells",nt);
+  ^~~~~~~~~~~~~~
+In file included from gpu_plasma.h:54,
+                 from xeon_plasma.h:11,
+                 from main.cpp:1:
+gpucell.h: In instantiation of ‘void GPUCell<Particle, dims>::printFileCellParticles(FILE*, GPUCell<Particle, dims>*) [with Particle = Particle; int dims = 2; FILE = _IO_FILE]’:
+gpu_plasma.h:5849:14:   required from ‘void GPUPlasma<Cell, dims>::ListAllParticles(int, char*) [with Cell = GPUCell; int dims = 2]’
+gpu_plasma.h:6079:4:   required from ‘void GPUPlasma<Cell, dims>::CellOrder_StepAllCells(int, double, double, int) [with Cell = GPUCell; int dims = 2]’
+gpu_plasma.h:2655:9:   required from ‘void GPUPlasma<Cell, dims>::Step(int) [with Cell = GPUCell; int dims = 2]’
+main.cpp:97:23:   required from here
+gpucell.h:475:49: error: ‘isPointInCell’ was not declared in this scope, and no declarations were found by argument-dependent lookup at the point of instantiation [-fpermissive]
+     i,(int)p.sort,p.fortran_number,isPointInCell(p.GetX()),
+                                    ~~~~~~~~~~~~~^~~~~~~~~~
+gpucell.h:475:49: note: declarations in dependent base ‘Cell<Particle, 2>’ are not found by unqualified lookup
+gpucell.h:475:49: note: use ‘this->isPointInCell’ instead
+In file included from xeon_plasma.h:11,
+                 from main.cpp:1:
+gpu_plasma.h: In instantiation of ‘int GPUPlasma<Cell, dims>::SimpleMagneticFieldTrace(Cell<Particle, dims>&, double*, double*, int, int, int) [with Cell = GPUCell; int dims = 2]’:
+gpu_plasma.h:2593:5:   required from ‘void GPUPlasma<Cell, dims>::emh2(double*, double*, double*, int, double*, double*, double*) [with Cell = GPUCell; int dims = 2]’
+gpu_plasma.h:2436:3:   required from ‘void GPUPlasma<Cell, dims>::ComputeField_SecondHalfStep(double*, double*, double*, int, double*, double*, double*, double*, double*, double*, double*, double*, double*) [with Cell = GPUCell; int dims = 2]’
+gpu_plasma.h:2673:9:   required from ‘void GPUPlasma<Cell, dims>::Step(int) [with Cell = GPUCell; int dims = 2]’
+main.cpp:97:23:   required from here
+gpu_plasma.h:3933:11: warning: ISO C++ forbids converting a string constant to ‘char*’ [-Wwrite-strings]
+           Kernel_Launcher(d_CellArray,d_params,
+           ^~~~~~~~~~~~~~~
+gpu_plasma.h: In instantiation of ‘int GPUPlasma<Cell, dims>::AddConstantMagneticField(Cell<Particle, dims>&, double*, int, int, int, double, int) [with Cell = GPUCell; int dims = 2]’:
+gpu_plasma.h:2600:6:   required from ‘void GPUPlasma<Cell, dims>::emh2(double*, double*, double*, int, double*, double*, double*) [with Cell = GPUCell; int dims = 2]’
+gpu_plasma.h:2436:3:   required from ‘void GPUPlasma<Cell, dims>::ComputeField_SecondHalfStep(double*, double*, double*, int, double*, double*, double*, double*, double*, double*, double*, double*, double*) [with Cell = GPUCell; int dims = 2]’
+gpu_plasma.h:2673:9:   required from ‘void GPUPlasma<Cell, dims>::Step(int) [with Cell = GPUCell; int dims = 2]’
+main.cpp:97:23:   required from here
+gpu_plasma.h:3902:11: warning: ISO C++ forbids converting a string constant to ‘char*’ [-Wwrite-strings]
+           Kernel_Launcher(d_CellArray,d_params,
+           ^~~~~~~~~~~~~~~
+gpu_plasma.h: In instantiation of ‘int GPUPlasma<Cell, dims>::PeriodicBoundaries(double*, int, int, int, int, int, int) [with Cell = GPUCell; int dims = 2]’:
+gpu_plasma.h:2483:8:   required from ‘void GPUPlasma<Cell, dims>::eme(double*, double*, double*, int, double*, double*, double*, double*, double*, double*) [with Cell = GPUCell; int dims = 2]’
+gpu_plasma.h:2455:5:   required from ‘void GPUPlasma<Cell, dims>::ComputeField_SecondHalfStep(double*, double*, double*, int, double*, double*, double*, double*, double*, double*, double*, double*, double*) [with Cell = GPUCell; int dims = 2]’
+gpu_plasma.h:2673:9:   required from ‘void GPUPlasma<Cell, dims>::Step(int) [with Cell = GPUCell; int dims = 2]’
+main.cpp:97:23:   required from here
+gpu_plasma.h:3980:8: warning: ISO C++ forbids converting a string constant to ‘char*’ [-Wwrite-strings]
+        Kernel_Launcher(d_CellArray,d_params,
+        ^~~~~~~~~~~~~~~
+gpu_plasma.h:3997:8: warning: ISO C++ forbids converting a string constant to ‘char*’ [-Wwrite-strings]
+        Kernel_Launcher(d_CellArray,d_params,
+        ^~~~~~~~~~~~~~~
+gpu_plasma.h: In instantiation of ‘int GPUPlasma<Cell, dims>::SinglePeriodicBoundary(double*, int, int, int, int, int, int) [with Cell = GPUCell; int dims = 2]’:
+gpu_plasma.h:2491:8:   required from ‘void GPUPlasma<Cell, dims>::eme(double*, double*, double*, int, double*, double*, double*, double*, double*, double*) [with Cell = GPUCell; int dims = 2]’
+gpu_plasma.h:2455:5:   required from ‘void GPUPlasma<Cell, dims>::ComputeField_SecondHalfStep(double*, double*, double*, int, double*, double*, double*, double*, double*, double*, double*, double*, double*) [with Cell = GPUCell; int dims = 2]’
+gpu_plasma.h:2673:9:   required from ‘void GPUPlasma<Cell, dims>::Step(int) [with Cell = GPUCell; int dims = 2]’
+main.cpp:97:23:   required from here
+gpu_plasma.h:4051:3: warning: ISO C++ forbids converting a string constant to ‘char*’ [-Wwrite-strings]
+   Kernel_Launcher(d_CellArray,d_params,
+   ^~~~~~~~~~~~~~~
+gpu_plasma.h: In instantiation of ‘void GPUPlasma<Cell, dims>::readBinaryParticlesOneSort(FILE*, std::vector<Particle>&, particle_sorts, int, double*, double*, double*, double*, double*, double*, double, double, double*, int, int) [with Cell = GPUCell; int dims = 2; FILE = _IO_FILE]’:
+gpu_plasma.h:3607:7:   required from ‘void GPUPlasma<Cell, dims>::InitBinaryParticles(std::vector<Particle>&, int, double*, double*, double*, double*, double*, double*, double, double, int, double*, double*, double*, double*, double*, double*, double, double, int, double*, double*, double*, double*, double*, double*, double, double, int) [with Cell = GPUCell; int dims = 2]’
+gpu_plasma.h:4738:10:   required from ‘void GPUPlasma<Cell, dims>::LoadTestData(int, int) [with Cell = GPUCell; int dims = 2]’
+gpu_plasma.h:5699:8:   required from ‘void GPUPlasma<Cell, dims>::InitializeCPU() [with Cell = GPUCell; int dims = 2]’
+gpu_plasma.h:1608:2:   required from ‘void GPUPlasma<Cell, dims>::Initialize() [with Cell = GPUCell; int dims = 2]’
+main.cpp:63:23:   required from here
+gpu_plasma.h:3486:15: warning: format ‘%d’ expects argument of type ‘int’, but argument 6 has type ‘std::vector<GPUCell<Particle, 2>, std::allocator<GPUCell<Particle, 2> > >::size_type’ {aka ‘long unsigned int’} [-Wformat=]
+        printf("SORT m %15.5e q_m %15.5e %10d (sum %10d) particles in %8d cells: MIN %10d MAX %10d average %10d \n",
+        ~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+          m,            q_m,       total_particles,pn_sum,
+          ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+          (*AllCells).size(),
+          ~~~~~~~~~~~~~~~~~~~
+          pn_min,pn_max,pn_ave);
+          ~~~~~~~~~~~~~~~~~~~~~
+gpu_plasma.h: In instantiation of ‘void GPUPlasma<Cell, dims>::emeGPUIterate(int, int, int, int, int, int, double*, double*, double*, double*, double, double, double, int, int, int, int, int, int) [with Cell = GPUCell; int dims = 2]’:
+gpu_plasma.h:2364:10:   required from ‘int GPUPlasma<Cell, dims>::ElectricFieldTrace(char*, int, double*, double*, double*, double*, double*, double*, double*, double*, double*, int, double, double, double) [with Cell = GPUCell; int dims = 2]’
+gpu_plasma.h:2480:7:   required from ‘void GPUPlasma<Cell, dims>::eme(double*, double*, double*, int, double*, double*, double*, double*, double*, double*) [with Cell = GPUCell; int dims = 2]’
+gpu_plasma.h:2455:5:   required from ‘void GPUPlasma<Cell, dims>::ComputeField_SecondHalfStep(double*, double*, double*, int, double*, double*, double*, double*, double*, double*, double*, double*, double*) [with Cell = GPUCell; int dims = 2]’
+gpu_plasma.h:2673:9:   required from ‘void GPUPlasma<Cell, dims>::Step(int) [with Cell = GPUCell; int dims = 2]’
+main.cpp:97:23:   required from here
+gpu_plasma.h:2263:5: warning: ISO C++ forbids converting a string constant to ‘char*’ [-Wwrite-strings]
+     Kernel_Launcher(d_CellArray,d_params,
+     ^~~~~~~~~~~~~~~
+gpu_plasma.h: In instantiation of ‘int GPUPlasma<Cell, dims>::readBinaryParticleArraysOneSort(FILE*, double**, double**, double**, double**, double**, double**, double*, double*, int, int) [with Cell = GPUCell; int dims = 2; FILE = _IO_FILE]’:
+gpu_plasma.h:3141:19:   required from here
+gpu_plasma.h:3197:11: warning: ISO C++ forbids converting a string constant to ‘char*’ [-Wwrite-strings]
+           debugPrintParticleCharacteristicArray(*dbg_x,total_particles,nt,"x",sort);
+           ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+gpu_plasma.h:3200:11: warning: ISO C++ forbids converting a string constant to ‘char*’ [-Wwrite-strings]
+           debugPrintParticleCharacteristicArray(*dbg_y,total_particles,nt,"y",sort);
+           ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+gpu_plasma.h:3203:11: warning: ISO C++ forbids converting a string constant to ‘char*’ [-Wwrite-strings]
+           debugPrintParticleCharacteristicArray(*dbg_z,total_particles,nt,"z",sort);
+           ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+gpu_plasma.h:3206:11: warning: ISO C++ forbids converting a string constant to ‘char*’ [-Wwrite-strings]
+           debugPrintParticleCharacteristicArray(*dbg_px,total_particles,nt,"px",sort);
+           ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+gpu_plasma.h:3209:11: warning: ISO C++ forbids converting a string constant to ‘char*’ [-Wwrite-strings]
+           debugPrintParticleCharacteristicArray(*dbg_py,total_particles,nt,"py",sort);
+           ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+gpu_plasma.h:3212:11: warning: ISO C++ forbids converting a string constant to ‘char*’ [-Wwrite-strings]
+           debugPrintParticleCharacteristicArray(*dbg_pz,total_particles,nt,"pz",sort);
+           ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+gpu_plasma.h: In instantiation of ‘void GPUPlasma<Cell, dims>::readBinaryParticlesOneSort1(FILE*, std::vector<Particle>&, particle_sorts, int) [with Cell = GPUCell; int dims = 2; FILE = _IO_FILE]’:
+gpu_plasma.h:3232:17:   required from here
+gpu_plasma.h:3338:15: warning: format ‘%d’ expects argument of type ‘int’, but argument 6 has type ‘std::vector<GPUCell<Particle, 2>, std::allocator<GPUCell<Particle, 2> > >::size_type’ {aka ‘long unsigned int’} [-Wformat=]
+        printf("SORT m %15.5e q_m %15.5e %10d (sum %10d) particles in %8d cells: MIN %10d MAX %10d average %10d \n",
+        ~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+          m,            q_m,       total_particles,pn_sum,
+          ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+          (*AllCells).size(),
+          ~~~~~~~~~~~~~~~~~~~
+          pn_min,pn_max,pn_ave);
+          ~~~~~~~~~~~~~~~~~~~~~
+gpu_plasma.h: In member function ‘int GPUPlasma<Cell, dims>::write_fields(int) [with Cell = GPUCell; int dims = 2]’:
+gpu_plasma.h:2772:18: warning: ‘%s’ directive writing up to 199 bytes into a region of size 93 [-Wformat-overflow=]
+    sprintf(fname,"fields_%s_nt%08d.dat",unique_variant_name,nt);
+                  ^~~~~~~~~~~~~~~~~~~~~~
+gpu_plasma.h:2772:11: note: ‘sprintf’ output between 23 and 225 bytes into a destination of size 100
+    sprintf(fname,"fields_%s_nt%08d.dat",unique_variant_name,nt);
+    ~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~

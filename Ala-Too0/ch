@@ -1,0 +1,9 @@
+if [  -s cmp_cur ]
+then
+   echo CURRENTS DIFFER
+   cat 1cur
+   cat 2cur
+else
+   echo CURRENTS MATCH !!!!!!!!!!!!!!!!!!!!
+fi
+

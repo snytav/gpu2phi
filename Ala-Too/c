@@ -6,13 +6,13 @@
 
 rm *.o all
 #icc -m64 -c rnd.cpp
-icc -c -g main.cpp >&err_main
-mpiicc -c -g mpi_shortcut.cxx >&mpi_err.txt
-icc -c -g init.cpp
-icc -c -g params.cxx
-icc -c -g diagnose.cxx 2>&1 > err_diagnose
-icc -c -g read_particles.c
-mpiicc -o all *.o -L/opt/intel/impi/5.0.1.035/intel64/lib/ -fopenmp -L/Compiler/11.1/038/lib/intel64/
+g++ -c -g main.cpp >&err_main
+mpicxx -c -g mpi_shortcut.cxx >&mpi_err.txt
+g++ -c -g init.cpp
+g++ -c -g params.cxx
+g++ -c -g diagnose.cxx 2>&1 > err_diagnose
+g++ -c -g read_particles.c
+mpicxx -o all *.o -L/opt/intel/impi/5.0.1.035/intel64/lib/ -fopenmp -L/Compiler/11.1/038/lib/intel64/
 #nvcc -O2 -lineinfo -c main.cu --ptxas-options=-v --keep -arch=sm_35 -I/usr/local/cuda-7.0/include >&c_out
 
 ls -l all
