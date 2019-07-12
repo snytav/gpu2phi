@@ -12,7 +12,8 @@ icc -c -g init.cpp
 icc -c -g params.cxx
 icc -c -g diagnose.cxx 2>&1 > err_diagnose
 icc -c -g read_particles.c
-mpiicc -o all *.o -L/opt/intel/impi/5.0.1.035/intel64/lib/ -fopenmp -L/Compiler/11.1/038/lib/intel64/
+mpiicc -o all *.o -fopenmp -L/opt/intel/impi/2019.4.243/intel64/lib 
+#-L/opt/intel/impi/5.0.1.035/intel64/lib/ -fopenmp -L/Compiler/11.1/038/lib/intel64/
 #nvcc -O2 -lineinfo -c main.cu --ptxas-options=-v --keep -arch=sm_35 -I/usr/local/cuda-7.0/include >&c_out
 
 ls -l all
