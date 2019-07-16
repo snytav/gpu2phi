@@ -34,7 +34,7 @@
 //#include <unistd.h>
 //#include <stdio.h>
 #include <errno.h>
-
+#include <netcdf.h>
 #include <nvToolsExtCuda.h>
 #include <nvToolsExtCudaRt.h>
 
@@ -2774,10 +2774,12 @@ virtual void emh2(double *locHx,double *locHy,double *locHz,
 
 
 
-		 sprintf(fname,"fields_%s_nt%08d.dat",unique_variant_name,nt);
+		 
 
 	 if(getRank() == 0)
 	 {
+         
+        
 		 if((f = fopen(fname,"wt")) == NULL) return 1;
 
 		 for(int i = 0;i < c.mesh.x;i++)
@@ -2849,7 +2851,8 @@ virtual void emh2(double *locHx,double *locHy,double *locHz,
 //		        diagnostics);
 //		 write_particles(&diagnostics,&initial,unique_variant_name,nt);
 		 write_fields(nt);
-
+         
+        
 
 
 

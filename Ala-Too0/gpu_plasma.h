@@ -27,6 +27,7 @@
 #include <unistd.h>
 #include <string.h>
 #include <sys/time.h>
+#include <netcdf.h>
 
 #include <sys/types.h>
 #include <sys/stat.h>
@@ -2728,6 +2729,12 @@ virtual void emh2(double *locHx,double *locHy,double *locHz,
 
 	}
 
+#define CHK_NCERR(err) { \
+     if((err) != NC_NOERR) { \
+         printf("Error %d, %s\n in %s:%d\n", err, nc_strerror(err), __FILE__, __LINE__); \
+         exit(1); \
+     } \
+     }
 	int write_fields(int nt)
 	{
 		static int first = 1;
@@ -2768,32 +2775,50 @@ virtual void emh2(double *locHx,double *locHy,double *locHz,
 		 FILE *f;
 
 
+	     if(getRank() == 0)
+         {
+          printf("bla bla bla\n");
+         int err;
+         int ncId;
+         int dim[3];
+         int dimId[3], varId_ex, varId_ey, varId_ez, varId_hx, varId_hy, varId_hz, varId_jx, varId_jy, varId_jz;
+         sprintf(fname,"fields_%s_nt%08d.nc",unique_variant_name,nt);
+         CHK_NCERR(nc_create(fname, NC_WRITE | NC_CLOBBER, &ncId));
+         
+         
+         dim[0] = c.mesh.x;
+         dim[1] = c.mesh.y;
+         dim[2] = c.mesh.z();
+         
+         CHK_NCERR(nc_def_dim(ncId, "Nx", c.mesh.x, &dimId[0]));
+         CHK_NCERR(nc_def_dim(ncId, "Ny", c.mesh.y, &dimId[1]));
+         CHK_NCERR(nc_def_dim(ncId, "Nz", c.mesh.z(), &dimId[2]));
+         
+         CHK_NCERR(nc_def_var(ncId, "Ex", NC_DOUBLE, 3, dimId, &varId_ex));
+         CHK_NCERR(nc_def_var(ncId, "Ey", NC_DOUBLE, 3, dimId, &varId_ey));
+         CHK_NCERR(nc_def_var(ncId, "Ez", NC_DOUBLE, 3, dimId, &varId_ez));
+         CHK_NCERR(nc_def_var(ncId, "Hx", NC_DOUBLE, 3, dimId, &varId_hx));
+         CHK_NCERR(nc_def_var(ncId, "Hy", NC_DOUBLE, 3, dimId, &varId_hy));
+         CHK_NCERR(nc_def_var(ncId, "Hz", NC_DOUBLE, 3, dimId, &varId_hz));
+         CHK_NCERR(nc_def_var(ncId, "Jx", NC_DOUBLE, 3, dimId, &varId_jx));
+         CHK_NCERR(nc_def_var(ncId, "Jy", NC_DOUBLE, 3, dimId, &varId_jy));
+         CHK_NCERR(nc_def_var(ncId, "Jz", NC_DOUBLE, 3, dimId, &varId_jz));
+         
+         CHK_NCERR(nc_enddef(ncId));
 
-		 sprintf(fname,"fields_%s_nt%08d.dat",unique_variant_name,nt);
-
-	 if(getRank() == 0)
-	 {
-		 if((f = fopen(fname,"wt")) == NULL) return 1;
-
-		 for(int i = 0;i < c.mesh.x;i++)
-		 {
-			 for(int l = 0;l < c.mesh.y;l++)
-			 {
-				 for(int k = 0;k < c.mesh.z();k++)
-				 {
-					 int n  = c.getGlobalCellNumber(i,l,k);
-
-					 fprintf(f,"%10.3e %10.3e %10.3e %25.15e %25.15e %25.15e %25.15e %25.15e %25.15e %25.15e %25.15e %25.15e \n",
-							 i*hx,l*hy,k*hz,
-							 h_Ex[n],h_Ey[n],h_Ez[n],
-							 h_Bx[n],h_By[n],h_Bz[n],
-							 h_Jx[n],h_Jy[n],h_Jz[n]
-							 );
-				 }
-			 }
-		 }
-		 fclose(f);
-	 }
+         CHK_NCERR(nc_put_var_double(ncId, varId_ex, h_Ex));
+         CHK_NCERR(nc_put_var_double(ncId, varId_ey, h_Ey));
+         CHK_NCERR(nc_put_var_double(ncId, varId_ez, h_Ez));
+         CHK_NCERR(nc_put_var_double(ncId, varId_hx, h_Bx));
+         CHK_NCERR(nc_put_var_double(ncId, varId_hy, h_By));
+         CHK_NCERR(nc_put_var_double(ncId, varId_hz, h_Bz));
+         CHK_NCERR(nc_put_var_double(ncId, varId_jx, h_Jx));
+         CHK_NCERR(nc_put_var_double(ncId, varId_jy, h_Jy));
+         CHK_NCERR(nc_put_var_double(ncId, varId_jz, h_Jz));
+         
+         CHK_NCERR(nc_close(ncId));
+         
+         }
 
 		 return 0;
 	}

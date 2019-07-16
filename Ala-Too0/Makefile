@@ -1,34 +1,21 @@
-LD=icc
-CUDACC=icc
-CXX=mpiicc
-CPP=mpiicc
+MPICC=mpiicc
+CC=mpiicc
+LD=mpiicc
+FLAGS=-c -g
+LDFLAGS=-fopenmp -L/opt/intel/impi/2019.4.243/intel64/lib -L /usr/lib/x86_64-linux-gnu/hdf5/serial/ -lnetcdf -lhdf5_hl -lhdf5 -lz -lm
 
-LDFLAGS= -lm  -gdwarf-2
-#CUDAFLAGS= --maxrregcount=128  -arch=sm_35 --ptxas-options=-v -I/usr/local/cuda-6.5/include/
-CUDAFLAGS= #--maxrregcount=128 -g -arch=sm_35 -fopenmp -I/usr/local/cuda-6.5/include/  -gdwarf-2
-#CUDAFLAGS= --maxrregcount=128 -g -arch=sm_35 -openmp -I/usr/local/cuda-7.5/include/  -gdwarf-2
-CUDALIBS=  -g -lm -lmpi -L/ifs/opt/2013/intel/impi/4.1.3.049/lib64 -fopenmp
-#CUDALIBS=  -g -lm -L/usr/local/cuda-6.5/lib64/ -openmp -lcuda -lcudart -lmpi -L/ifs/opt/2013/intel/impi/4.1.3.049/lib64
-#CUDALIBS=  -g -lm -L/usr/local/cuda-7.5/lib64/ -openmp -lcuda -lcudart -lmpi -L/ifs/opt/2013/intel/impi/4.1.3.049/lib64
-MPIFLAGS=
-CFLAGS= -gdwarf-2
+OBJS=main.o init.o params.o diagnose.o read_particles.o mpi_shortcut.o 
 
-OBJ = main.o mpi_shortcut.o read_particles.o init.o diagnose.o params.o
-            
-main.o: main.cpp $(DEPS)
-	$(CUDACC) -g -c -o $@ $< $(CUDAFLAGS) 
-                    
-%.o: %.cxx $(DEPS)
-	$(CXX) -g -c -o $@ $< $(MPIFLAGS)
+all: $(OBJS)
+		$(LD) -o $@ $(OBJS) $(LDFLAGS)
 
-%.o: %.cpp $(DEPS)
-	$(CPP) -g -c -o $@ $< $(CBFLAGS)
-	
-%.o: %.c $(DEPS)
-	$(CPP) -g -c -o $@ $< $(CBFLAGS)	
-                            
-all: $(OBJ)
-	$(LD)  -gdwarf-2 -g -o $@ $^ $(CFLAGS) $(DBFLAGS) $(CUDALIBS)
+%.o: %.cpp
+		$(CC) $(FLAGS) -o $@ $<
+
+%.o: %.cxx
+		$(CC) $(FLAGS) -o $@ $< 
+
 
 clean:
-	rm *.o all    
+	rm all; rm $(OBJS)
+ 
